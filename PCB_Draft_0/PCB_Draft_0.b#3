@@ -3,7 +3,7 @@
 <eagle version="9.6.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
@@ -246,6 +246,24 @@ allow for connectors, extra mounting holes, or whatever is needed there.</descri
 <pad name="3" x="11.43" y="1.27" drill="1" diameter="1.778"/>
 <pad name="2" x="8.89" y="1.27" drill="1" diameter="1.778"/>
 <pad name="1" x="6.35" y="1.27" drill="1" diameter="1.778"/>
+</package>
+<package name="3POL254">
+<description>&lt;b&gt;PHOENIX CONNECTOR&lt;/b&gt;</description>
+<wire x1="-3.94" y1="-3.1" x2="3.94" y2="-3.1" width="0.254" layer="21"/>
+<wire x1="3.94" y1="-3.1" x2="3.94" y2="3.1" width="0.254" layer="21"/>
+<wire x1="3.94" y1="3.1" x2="-3.94" y2="3.1" width="0.254" layer="21"/>
+<wire x1="-3.94" y1="3.1" x2="-3.94" y2="-3.1" width="0.254" layer="21"/>
+<wire x1="-3.175" y1="-0.508" x2="-2.032" y2="0.635" width="0.1524" layer="51"/>
+<wire x1="-0.762" y1="-0.254" x2="0.762" y2="0.127" width="0.1524" layer="51"/>
+<wire x1="2.032" y1="0.635" x2="3.048" y2="-0.635" width="0.1524" layer="51"/>
+<circle x="-2.54" y="0" radius="0.889" width="0.1524" layer="51"/>
+<circle x="0" y="0" radius="0.889" width="0.1524" layer="51"/>
+<circle x="2.54" y="0" radius="0.889" width="0.1524" layer="51"/>
+<pad name="1" x="-2.54" y="0" drill="1.2" shape="long" rot="R90"/>
+<pad name="2" x="0" y="0" drill="1.2" shape="long" rot="R90"/>
+<pad name="3" x="2.54" y="0" drill="1.2" shape="long" rot="R90"/>
+<text x="-4.064" y="4.318" size="1.27" layer="25">&gt;NAME</text>
+<text x="-4.064" y="-5.588" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 </packages>
 </library>
@@ -1797,7 +1815,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="8.128" y="21.844" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="-1.778" y="21.844" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="IC1" library="burr-brown" library_urn="urn:adsk.eagle:library:111" package="TSSOP16-PW" package3d_urn="urn:adsk.eagle:package:4949/1" value="ADS7828" x="50.8" y="7.62" smashed="yes" rot="R90">
+<element name="ADC_X" library="burr-brown" library_urn="urn:adsk.eagle:library:111" package="TSSOP16-PW" package3d_urn="urn:adsk.eagle:package:4949/1" value="ADS7828" x="50.8" y="7.62" smashed="yes" rot="R90">
 <attribute name="MF" value="TEXAS INSTRUMENTS" x="90.17" y="48.26" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="ADS7828E/250" x="90.17" y="48.26" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="53.4" y="4.695" size="1.27" layer="25" ratio="10" rot="R180"/>
@@ -1806,14 +1824,14 @@ design rules under a new name.</description>
 <attribute name="POPULARITY" value="0" x="90.17" y="48.26" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="54.05" y="11.52" size="1.27" layer="27" ratio="10" rot="R180"/>
 </element>
-<element name="IC2" library="micro-philips" library_urn="urn:adsk.eagle:library:290" package="TSSOP16" package3d_urn="urn:adsk.eagle:package:20198/1" value="PCA9534PW" x="12.7" y="15.24" smashed="yes" rot="R270">
-<attribute name="MF" value="" x="-15.24" y="-2.54" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MPN" value="PCA9534PW" x="-15.24" y="-2.54" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="NAME" x="10.6172" y="18.1356" size="1.016" layer="25" ratio="10"/>
-<attribute name="OC_FARNELL" value="1408285" x="-15.24" y="-2.54" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="OC_NEWARK" value="18M7516" x="-15.24" y="-2.54" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="POPULARITY" value="0" x="-15.24" y="-2.54" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="VALUE" x="10.6172" y="11.3538" size="1.016" layer="27" ratio="10"/>
+<element name="GPIO_X" library="micro-philips" library_urn="urn:adsk.eagle:library:290" package="TSSOP16" package3d_urn="urn:adsk.eagle:package:20198/1" value="PCA9534PW" x="12.7" y="7.62" smashed="yes" rot="R270">
+<attribute name="MF" value="" x="-15.24" y="-10.16" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN" value="PCA9534PW" x="-15.24" y="-10.16" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="NAME" x="10.6172" y="10.5156" size="1.016" layer="25" ratio="10"/>
+<attribute name="OC_FARNELL" value="1408285" x="-15.24" y="-10.16" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="OC_NEWARK" value="18M7516" x="-15.24" y="-10.16" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="POPULARITY" value="0" x="-15.24" y="-10.16" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="VALUE" x="10.6172" y="3.7338" size="1.016" layer="27" ratio="10"/>
 </element>
 <element name="MS1" library="ME507" package="FEATHERWING" value="FEATHERWINGEXTENDED_BOTH_ENDS" x="6.35" y="0" smashed="yes"/>
 <element name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="4.7k" x="50.8" y="16.51" smashed="yes" rot="R90">
@@ -1828,32 +1846,32 @@ design rules under a new name.</description>
 <attribute name="SPICEPREFIX" value="R" x="85.09" y="72.39" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="49.53" y="15.875" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="SCL" library="con-lsta" library_urn="urn:adsk.eagle:library:161" package="FE06" package3d_urn="urn:adsk.eagle:package:8191/1" value="" x="49.53" y="26.67" smashed="yes">
-<attribute name="MF" value="" x="49.53" y="26.67" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="" x="49.53" y="26.67" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="45.72" y="28.321" size="1.27" layer="25" ratio="10"/>
-<attribute name="OC_FARNELL" value="unknown" x="49.53" y="26.67" size="1.778" layer="27" display="off"/>
-<attribute name="OC_NEWARK" value="unknown" x="49.53" y="26.67" size="1.778" layer="27" display="off"/>
-<attribute name="POPULARITY" value="11" x="49.53" y="26.67" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="41.91" y="23.749" size="1.27" layer="27" ratio="10"/>
+<element name="SCL" library="con-lsta" library_urn="urn:adsk.eagle:library:161" package="FE06" package3d_urn="urn:adsk.eagle:package:8191/1" value="" x="45.72" y="26.67" smashed="yes">
+<attribute name="MF" value="" x="45.72" y="26.67" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="" x="45.72" y="26.67" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="41.91" y="28.321" size="1.27" layer="25" ratio="10"/>
+<attribute name="OC_FARNELL" value="unknown" x="45.72" y="26.67" size="1.778" layer="27" display="off"/>
+<attribute name="OC_NEWARK" value="unknown" x="45.72" y="26.67" size="1.778" layer="27" display="off"/>
+<attribute name="POPULARITY" value="11" x="45.72" y="26.67" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="38.1" y="23.749" size="1.27" layer="27" ratio="10"/>
 </element>
-<element name="SDA" library="con-lsta" library_urn="urn:adsk.eagle:library:161" package="FE06" package3d_urn="urn:adsk.eagle:package:8191/1" value="" x="49.53" y="29.21" smashed="yes">
-<attribute name="MF" value="" x="49.53" y="29.21" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="" x="49.53" y="29.21" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="45.72" y="30.861" size="1.27" layer="25" ratio="10"/>
-<attribute name="OC_FARNELL" value="unknown" x="49.53" y="29.21" size="1.778" layer="27" display="off"/>
-<attribute name="OC_NEWARK" value="unknown" x="49.53" y="29.21" size="1.778" layer="27" display="off"/>
-<attribute name="POPULARITY" value="11" x="49.53" y="29.21" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="41.91" y="26.289" size="1.27" layer="27" ratio="10"/>
+<element name="SDA" library="con-lsta" library_urn="urn:adsk.eagle:library:161" package="FE06" package3d_urn="urn:adsk.eagle:package:8191/1" value="" x="46.99" y="29.21" smashed="yes">
+<attribute name="MF" value="" x="46.99" y="29.21" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="" x="46.99" y="29.21" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="43.18" y="30.861" size="1.27" layer="25" ratio="10"/>
+<attribute name="OC_FARNELL" value="unknown" x="46.99" y="29.21" size="1.778" layer="27" display="off"/>
+<attribute name="OC_NEWARK" value="unknown" x="46.99" y="29.21" size="1.778" layer="27" display="off"/>
+<attribute name="POPULARITY" value="11" x="46.99" y="29.21" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="39.37" y="26.289" size="1.27" layer="27" ratio="10"/>
 </element>
-<element name="GND" library="con-lsta" library_urn="urn:adsk.eagle:library:161" package="FE06" package3d_urn="urn:adsk.eagle:package:8191/1" value="" x="49.53" y="31.75" smashed="yes">
-<attribute name="MF" value="" x="49.53" y="31.75" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="" x="49.53" y="31.75" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="45.72" y="33.401" size="1.27" layer="25" ratio="10"/>
-<attribute name="OC_FARNELL" value="unknown" x="49.53" y="31.75" size="1.778" layer="27" display="off"/>
-<attribute name="OC_NEWARK" value="unknown" x="49.53" y="31.75" size="1.778" layer="27" display="off"/>
-<attribute name="POPULARITY" value="11" x="49.53" y="31.75" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="41.91" y="28.829" size="1.27" layer="27" ratio="10"/>
+<element name="GND" library="con-lsta" library_urn="urn:adsk.eagle:library:161" package="FE06" package3d_urn="urn:adsk.eagle:package:8191/1" value="" x="48.26" y="31.75" smashed="yes">
+<attribute name="MF" value="" x="48.26" y="31.75" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="" x="48.26" y="31.75" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="44.45" y="33.401" size="1.27" layer="25" ratio="10"/>
+<attribute name="OC_FARNELL" value="unknown" x="48.26" y="31.75" size="1.778" layer="27" display="off"/>
+<attribute name="OC_NEWARK" value="unknown" x="48.26" y="31.75" size="1.778" layer="27" display="off"/>
+<attribute name="POPULARITY" value="11" x="48.26" y="31.75" size="1.778" layer="27" display="off"/>
+<attribute name="VALUE" x="40.64" y="28.829" size="1.27" layer="27" ratio="10"/>
 </element>
 <element name="3V" library="con-lsta" library_urn="urn:adsk.eagle:library:161" package="FE06" package3d_urn="urn:adsk.eagle:package:8191/1" value="" x="49.53" y="34.29" smashed="yes">
 <attribute name="MF" value="" x="49.53" y="34.29" size="1.778" layer="27" display="off"/>
@@ -1864,82 +1882,98 @@ design rules under a new name.</description>
 <attribute name="POPULARITY" value="11" x="49.53" y="34.29" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" x="41.91" y="31.369" size="1.27" layer="27" ratio="10"/>
 </element>
+<element name="A_COM" library="ME507" package="3POL254" value="" x="15.24" y="19.05" smashed="yes">
+<attribute name="NAME" x="11.176" y="23.368" size="1.27" layer="25"/>
+<attribute name="VALUE" x="11.176" y="13.462" size="1.27" layer="27"/>
+</element>
 </elements>
 <signals>
 <signal name="GND">
 <contactref element="MS1" pad="4"/>
-<contactref element="IC1" pad="9"/>
+<contactref element="ADC_X" pad="9"/>
 <contactref element="GND" pad="1"/>
 <contactref element="GND" pad="2"/>
 <contactref element="GND" pad="3"/>
 <contactref element="GND" pad="4"/>
 <contactref element="GND" pad="5"/>
 <contactref element="GND" pad="6"/>
-<wire x1="53.34" y1="31.75" x2="55.88" y2="31.75" width="0" layer="19" extent="1-1"/>
-<wire x1="50.8" y1="31.75" x2="53.34" y2="31.75" width="0" layer="19" extent="1-1"/>
-<wire x1="48.26" y1="31.75" x2="50.8" y2="31.75" width="0" layer="19" extent="1-1"/>
-<wire x1="45.72" y1="31.75" x2="48.26" y2="31.75" width="0" layer="19" extent="1-1"/>
-<wire x1="43.18" y1="31.75" x2="45.72" y2="31.75" width="0" layer="19" extent="1-1"/>
-<wire x1="47.775" y1="9.895" x2="48.26" y2="31.75" width="0" layer="19" extent="1-1"/>
-<wire x1="20.32" y1="1.27" x2="47.775" y2="9.895" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="VSS">
-<contactref element="IC2" pad="8"/>
+<contactref element="GPIO_X" pad="8"/>
+<contactref element="GPIO_X" pad="1"/>
+<contactref element="GPIO_X" pad="2"/>
+<contactref element="GPIO_X" pad="3"/>
+<contactref element="ADC_X" pad="13"/>
+<contactref element="ADC_X" pad="12"/>
+<contactref element="A_COM" pad="2"/>
+<wire x1="52.07" y1="31.75" x2="54.61" y2="31.75" width="0" layer="19" extent="1-1"/>
+<wire x1="49.53" y1="31.75" x2="52.07" y2="31.75" width="0" layer="19" extent="1-1"/>
+<wire x1="46.99" y1="31.75" x2="49.53" y2="31.75" width="0" layer="19" extent="1-1"/>
+<wire x1="44.45" y1="31.75" x2="46.99" y2="31.75" width="0" layer="19" extent="1-1"/>
+<wire x1="41.91" y1="31.75" x2="44.45" y2="31.75" width="0" layer="19" extent="1-1"/>
+<wire x1="47.775" y1="9.895" x2="46.99" y2="31.75" width="0" layer="19" extent="1-1"/>
+<wire x1="47.775" y1="7.945" x2="47.775" y2="9.895" width="0" layer="19" extent="1-1"/>
+<wire x1="47.775" y1="7.295" x2="47.775" y2="7.945" width="0" layer="19" extent="1-1"/>
+<wire x1="20.32" y1="1.27" x2="47.775" y2="7.295" width="0" layer="19" extent="1-1"/>
+<wire x1="9.7822" y1="5.345" x2="20.32" y2="1.27" width="0" layer="19" extent="1-1"/>
+<wire x1="9.7822" y1="8.595" x2="9.7822" y2="5.345" width="0" layer="19" extent="1-1"/>
+<wire x1="9.7822" y1="9.245" x2="9.7822" y2="8.595" width="0" layer="19" extent="1-1"/>
+<wire x1="9.7822" y1="9.895" x2="9.7822" y2="9.245" width="0" layer="19" extent="1-1"/>
+<wire x1="15.24" y1="19.05" x2="9.7822" y2="5.345" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SDA">
 <contactref element="MS1" pad="17"/>
 <contactref element="R1" pad="2"/>
-<contactref element="IC2" pad="15"/>
-<contactref element="IC1" pad="15"/>
 <contactref element="SDA" pad="6"/>
 <contactref element="SDA" pad="5"/>
 <contactref element="SDA" pad="4"/>
 <contactref element="SDA" pad="3"/>
 <contactref element="SDA" pad="2"/>
 <contactref element="SDA" pad="1"/>
-<wire x1="53.34" y1="29.21" x2="55.88" y2="29.21" width="0" layer="19" extent="1-1"/>
+<contactref element="GPIO_X" pad="15"/>
+<contactref element="ADC_X" pad="15"/>
 <wire x1="50.8" y1="29.21" x2="53.34" y2="29.21" width="0" layer="19" extent="1-1"/>
 <wire x1="48.26" y1="29.21" x2="50.8" y2="29.21" width="0" layer="19" extent="1-1"/>
 <wire x1="45.72" y1="29.21" x2="48.26" y2="29.21" width="0" layer="19" extent="1-1"/>
 <wire x1="43.18" y1="29.21" x2="45.72" y2="29.21" width="0" layer="19" extent="1-1"/>
+<wire x1="40.64" y1="29.21" x2="43.18" y2="29.21" width="0" layer="19" extent="1-1"/>
 <wire x1="50.8" y1="21.59" x2="50.8" y2="29.21" width="0" layer="19" extent="1-1"/>
 <wire x1="50.8" y1="17.46" x2="50.8" y2="21.59" width="0" layer="19" extent="1-1"/>
 <wire x1="47.775" y1="5.995" x2="50.8" y2="17.46" width="0" layer="19" extent="1-1"/>
-<wire x1="15.6178" y1="16.865" x2="43.18" y2="29.21" width="0" layer="19" extent="1-1"/>
+<wire x1="15.6178" y1="9.245" x2="40.64" y2="29.21" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SCL">
-<contactref element="MS1" pad="18"/>
 <contactref element="R2" pad="2"/>
-<contactref element="IC1" pad="14"/>
-<contactref element="IC2" pad="14"/>
 <contactref element="SCL" pad="6"/>
 <contactref element="SCL" pad="5"/>
 <contactref element="SCL" pad="4"/>
 <contactref element="SCL" pad="3"/>
 <contactref element="SCL" pad="2"/>
 <contactref element="SCL" pad="1"/>
-<wire x1="53.34" y1="26.67" x2="55.88" y2="26.67" width="0" layer="19" extent="1-1"/>
-<wire x1="50.8" y1="26.67" x2="53.34" y2="26.67" width="0" layer="19" extent="1-1"/>
-<wire x1="48.26" y1="26.67" x2="50.8" y2="26.67" width="0" layer="19" extent="1-1"/>
-<wire x1="45.72" y1="26.67" x2="48.26" y2="26.67" width="0" layer="19" extent="1-1"/>
-<wire x1="43.18" y1="26.67" x2="45.72" y2="26.67" width="0" layer="19" extent="1-1"/>
-<wire x1="48.26" y1="21.59" x2="48.26" y2="26.67" width="0" layer="19" extent="1-1"/>
+<contactref element="MS1" pad="18"/>
+<contactref element="ADC_X" pad="14"/>
+<contactref element="GPIO_X" pad="14"/>
+<wire x1="49.53" y1="26.67" x2="52.07" y2="26.67" width="0" layer="19" extent="1-1"/>
+<wire x1="46.99" y1="26.67" x2="49.53" y2="26.67" width="0" layer="19" extent="1-1"/>
+<wire x1="44.45" y1="26.67" x2="46.99" y2="26.67" width="0" layer="19" extent="1-1"/>
+<wire x1="41.91" y1="26.67" x2="44.45" y2="26.67" width="0" layer="19" extent="1-1"/>
+<wire x1="39.37" y1="26.67" x2="41.91" y2="26.67" width="0" layer="19" extent="1-1"/>
+<wire x1="48.26" y1="21.59" x2="49.53" y2="26.67" width="0" layer="19" extent="1-1"/>
 <wire x1="46.99" y1="17.46" x2="48.26" y2="21.59" width="0" layer="19" extent="1-1"/>
 <wire x1="47.775" y1="6.645" x2="46.99" y2="17.46" width="0" layer="19" extent="1-1"/>
-<wire x1="15.6178" y1="16.215" x2="43.18" y2="26.67" width="0" layer="19" extent="1-1"/>
+<wire x1="15.6178" y1="8.595" x2="39.37" y2="26.67" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="3V">
 <contactref element="R1" pad="1"/>
 <contactref element="R2" pad="1"/>
 <contactref element="MS1" pad="2"/>
-<contactref element="IC1" pad="16"/>
-<contactref element="IC2" pad="16"/>
+<contactref element="ADC_X" pad="16"/>
+<contactref element="GPIO_X" pad="16"/>
 <contactref element="3V" pad="6"/>
 <contactref element="3V" pad="5"/>
 <contactref element="3V" pad="4"/>
 <contactref element="3V" pad="3"/>
 <contactref element="3V" pad="2"/>
 <contactref element="3V" pad="1"/>
+<contactref element="A_COM" pad="1"/>
 <wire x1="53.34" y1="34.29" x2="55.88" y2="34.29" width="0" layer="19" extent="1-1"/>
 <wire x1="50.8" y1="34.29" x2="53.34" y2="34.29" width="0" layer="19" extent="1-1"/>
 <wire x1="48.26" y1="34.29" x2="50.8" y2="34.29" width="0" layer="19" extent="1-1"/>
@@ -1948,88 +1982,99 @@ design rules under a new name.</description>
 <wire x1="50.8" y1="15.56" x2="50.8" y2="34.29" width="0" layer="19" extent="1-1"/>
 <wire x1="46.99" y1="15.56" x2="50.8" y2="15.56" width="0" layer="19" extent="1-1"/>
 <wire x1="47.775" y1="5.345" x2="46.99" y2="15.56" width="0" layer="19" extent="1-1"/>
-<wire x1="15.6178" y1="17.515" x2="46.99" y2="15.56" width="0" layer="19" extent="1-1"/>
-<wire x1="15.24" y1="1.27" x2="15.6178" y2="17.515" width="0" layer="19" extent="1-1"/>
+<wire x1="15.6178" y1="9.895" x2="46.99" y2="15.56" width="0" layer="19" extent="1-1"/>
+<wire x1="15.24" y1="1.27" x2="15.6178" y2="9.895" width="0" layer="19" extent="1-1"/>
+<wire x1="12.7" y1="19.05" x2="15.24" y2="1.27" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$1">
-<contactref element="IC2" pad="4"/>
+<contactref element="GPIO_X" pad="4"/>
 <contactref element="D" pad="1"/>
-<wire x1="3.81" y1="20.32" x2="9.7822" y2="15.565" width="0" layer="19" extent="1-1"/>
+<wire x1="3.81" y1="20.32" x2="9.7822" y2="7.945" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$2">
-<contactref element="IC2" pad="5"/>
+<contactref element="GPIO_X" pad="5"/>
 <contactref element="D" pad="2"/>
-<wire x1="3.81" y1="17.78" x2="9.7822" y2="14.915" width="0" layer="19" extent="1-1"/>
+<wire x1="3.81" y1="17.78" x2="9.7822" y2="7.295" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$3">
-<contactref element="IC2" pad="6"/>
+<contactref element="GPIO_X" pad="6"/>
 <contactref element="D" pad="3"/>
-<wire x1="3.81" y1="15.24" x2="9.7822" y2="14.265" width="0" layer="19" extent="1-1"/>
+<wire x1="3.81" y1="15.24" x2="9.7822" y2="6.645" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$4">
-<contactref element="IC2" pad="7"/>
+<contactref element="GPIO_X" pad="7"/>
 <contactref element="D" pad="4"/>
-<wire x1="3.81" y1="12.7" x2="9.7822" y2="13.615" width="0" layer="19" extent="1-1"/>
+<wire x1="3.81" y1="12.7" x2="9.7822" y2="5.995" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$5">
-<contactref element="IC2" pad="9"/>
+<contactref element="GPIO_X" pad="9"/>
 <contactref element="D" pad="5"/>
-<wire x1="3.81" y1="10.16" x2="15.6178" y2="12.965" width="0" layer="19" extent="1-1"/>
+<wire x1="3.81" y1="10.16" x2="15.6178" y2="5.345" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$6">
-<contactref element="IC2" pad="10"/>
+<contactref element="GPIO_X" pad="10"/>
 <contactref element="D" pad="6"/>
-<wire x1="3.81" y1="7.62" x2="15.6178" y2="13.615" width="0" layer="19" extent="1-1"/>
+<wire x1="3.81" y1="7.62" x2="15.6178" y2="5.995" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$7">
-<contactref element="IC2" pad="11"/>
+<contactref element="GPIO_X" pad="11"/>
 <contactref element="D" pad="7"/>
-<wire x1="3.81" y1="5.08" x2="15.6178" y2="14.265" width="0" layer="19" extent="1-1"/>
+<wire x1="3.81" y1="5.08" x2="15.6178" y2="6.645" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$8">
-<contactref element="IC2" pad="12"/>
+<contactref element="GPIO_X" pad="12"/>
 <contactref element="D" pad="8"/>
-<wire x1="3.81" y1="2.54" x2="15.6178" y2="14.915" width="0" layer="19" extent="1-1"/>
+<wire x1="3.81" y1="2.54" x2="15.6178" y2="7.295" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$9">
-<contactref element="IC1" pad="1"/>
+<contactref element="ADC_X" pad="1"/>
 <contactref element="A" pad="1"/>
 <wire x1="53.825" y1="5.345" x2="59.69" y2="2.54" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$10">
-<contactref element="IC1" pad="2"/>
+<contactref element="ADC_X" pad="2"/>
 <contactref element="A" pad="2"/>
 <wire x1="53.825" y1="5.995" x2="59.69" y2="5.08" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$11">
-<contactref element="IC1" pad="3"/>
+<contactref element="ADC_X" pad="3"/>
 <contactref element="A" pad="3"/>
 <wire x1="53.825" y1="6.645" x2="59.69" y2="7.62" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$12">
-<contactref element="IC1" pad="4"/>
+<contactref element="ADC_X" pad="4"/>
 <contactref element="A" pad="4"/>
 <wire x1="53.825" y1="7.295" x2="59.69" y2="10.16" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$13">
-<contactref element="IC1" pad="5"/>
+<contactref element="ADC_X" pad="5"/>
 <contactref element="A" pad="5"/>
 <wire x1="53.825" y1="7.945" x2="59.69" y2="12.7" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$14">
-<contactref element="IC1" pad="6"/>
+<contactref element="ADC_X" pad="6"/>
 <contactref element="A" pad="6"/>
 <wire x1="53.825" y1="8.595" x2="59.69" y2="15.24" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$15">
-<contactref element="IC1" pad="7"/>
+<contactref element="ADC_X" pad="7"/>
 <contactref element="A" pad="7"/>
 <wire x1="53.825" y1="9.245" x2="59.69" y2="17.78" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$16">
-<contactref element="IC1" pad="8"/>
+<contactref element="ADC_X" pad="8"/>
 <contactref element="A" pad="8"/>
 <wire x1="53.825" y1="9.895" x2="59.69" y2="20.32" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="INT">
+<contactref element="MS1" pad="19"/>
+<contactref element="GPIO_X" pad="13"/>
+<wire x1="15.6178" y1="7.945" x2="45.72" y2="21.59" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="A_COM">
+<contactref element="A_COM" pad="3"/>
+<contactref element="ADC_X" pad="11"/>
+<wire x1="17.78" y1="19.05" x2="47.775" y2="8.595" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
