@@ -42,7 +42,9 @@ void forback();
 void stop();
 void coldetected();
 
-
+/** @brief A doxystring for the setup function
+ * 
+ * */
 
 void setup() {
   // put your setup code here, to run once:
@@ -54,6 +56,10 @@ void setup() {
     readings[thisReading] = 0;
   }
 }
+
+/** @brief A doxystring for the loop function
+ * 
+ * */
 
 
 void loop() {
