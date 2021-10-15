@@ -18,9 +18,23 @@ int analogPin = A0;   // Proximity sensor is located on Pin A0
 
 int reading = 0;   // Reading is initialized with initial value of zero
 
-int mindist = 10;  // Needs calibrating off of proximity sensor, minimum distance allowed for babybot to be from object
+int mindist = 1700;  // Needs calibrating off of proximity sensor, minimum distance allowed for babybot to be from object
 
 int dancecount = 0; //Initialize a "dance counter" to let BabyBot do something fun every now and again
+
+int randnum = 0; //Random number holder
+
+int delaytim = 0; //Delay time holder
+
+
+// Averaging variables
+
+const int numReadings = 10;
+
+int readings[numReadings];      // the readings from the analog input
+int readIndex = 0;              // the index of the current reading
+int total = 0;                  // the running total
+int average = 0;                // the average
 
 // Function Declarations
 void forward();
@@ -35,29 +49,50 @@ void setup() {
   AFMS.begin();
   leftMotor->setSpeed(100);
   rightMotor->setSpeed(100); 
+  // initialize all the readings to 0:
+  for (int thisReading = 0; thisReading < numReadings; thisReading++) {
+    readings[thisReading] = 0;
+  }
 }
+
 
 void loop() {
   // put your main code here, to run repeatedly:
-  // Read the analog pin
-  reading = analogRead(analogPin);
+  // subtract the last reading:
+  total = total - readings[readIndex];
+  // read from the sensor:
+  readings[readIndex] = analogRead(analogPin);
+  // add the reading to the total:
+  total = total + readings[readIndex];
+  // advance to the next position in the array:
+  readIndex = readIndex + 1;
+
+  // if we're at the end of the array...
+  if (readIndex >= numReadings) {
+    // ...wrap around to the beginning:
+    readIndex = 0;
+  }
+
+  // calculate the average:
+  average = total / numReadings;
+
 
   // Break looping if too close to an object
-  if (reading <= mindist) {
+  if (average >= mindist) {
     coldetected();
   }
   else {
     forward();
   }
 
-  if (dancecount >= 1000) {
+  /*if (dancecount >= 10000) {
     forback();
     coldetected();
     forback();
     coldetected();
     dancecount = 0;
   }
-
+  */
   dancecount = dancecount + 1;
 
 
@@ -84,7 +119,14 @@ void stop() {
 void coldetected() {
   stop();
   delay(1000);
+  randnum = random(5);
+  if (randnum <=3) {
+    delaytim = 300;
+  }
+  else {
+    delaytim = 600;
+  }
   leftMotor->run(FORWARD);
   rightMotor->run(BACKWARD);
-  delay(200);
+  delay(delaytim);
 }
