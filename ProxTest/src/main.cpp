@@ -7,7 +7,7 @@
 #include <Arduino.h>
 #include <PrintStream.h>
 
-int analogPin = A0; // potentiometer wiper (middle terminal) connected to analog pin 3
+int analogPin = A13; // potentiometer wiper (middle terminal) connected to analog pin 3
                     // outside leads to ground and +5V
 int val = 0;  // variable to store the value read
 
@@ -17,7 +17,7 @@ void setup() {
 }
 
 void loop() {
-  val = analogRead(analogPin);  // read the input pin
+  val = analogRead(analogPin)*2;  // read the input pin
   String valstr = String(val);
   if (val == 0) {
     Serial.print("You LOSER THERES NO DATA! \n");
