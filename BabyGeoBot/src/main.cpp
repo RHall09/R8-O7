@@ -27,6 +27,8 @@ int randnum = 0; //Random number holder
 int delaytim = 0; //Delay time holder
 
 
+
+
 // Averaging variables
 
 const int numReadings = 10;
@@ -42,18 +44,24 @@ void forback();
 void stop();
 void coldetected();
 
-
+/** @brief A doxystring for the setup function
+ * 
+ * */
 
 void setup() {
   // put your setup code here, to run once:
   AFMS.begin();
-  leftMotor->setSpeed(100);
-  rightMotor->setSpeed(100); 
+  leftMotor->setSpeed(255);
+  rightMotor->setSpeed(255); 
   // initialize all the readings to 0:
   for (int thisReading = 0; thisReading < numReadings; thisReading++) {
     readings[thisReading] = 0;
   }
 }
+
+/** @brief A doxystring for the loop function
+ * 
+ * */
 
 
 void loop() {
