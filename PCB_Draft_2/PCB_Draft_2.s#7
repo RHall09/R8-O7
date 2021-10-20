@@ -173,11 +173,11 @@ AdaFruit Featherwing footprint with both ends extended 0.250 inches to
 allow for connectors, extra mounting holes, or whatever is needed there.</description>
 <wire x1="-10.16" y1="0" x2="60.96" y2="0" width="0" layer="20"/>
 <wire x1="60.96" y1="0" x2="63.5" y2="2.54" width="0" layer="20" curve="90"/>
-<wire x1="63.5" y1="2.54" x2="63.5" y2="49.53" width="0" layer="20"/>
-<wire x1="63.5" y1="49.53" x2="60.96" y2="52.07" width="0" layer="20" curve="90"/>
-<wire x1="60.96" y1="52.07" x2="-10.16" y2="52.07" width="0" layer="20"/>
-<wire x1="-10.16" y1="52.07" x2="-12.7" y2="49.53" width="0" layer="20" curve="90"/>
-<wire x1="-12.7" y1="49.53" x2="-12.7" y2="2.54" width="0" layer="20"/>
+<wire x1="63.5" y1="2.54" x2="63.5" y2="48.26" width="0" layer="20"/>
+<wire x1="63.5" y1="48.26" x2="60.96" y2="50.8" width="0" layer="20" curve="90"/>
+<wire x1="60.96" y1="50.8" x2="-10.16" y2="50.8" width="0" layer="20"/>
+<wire x1="-10.16" y1="50.8" x2="-12.7" y2="48.26" width="0" layer="20" curve="90"/>
+<wire x1="-12.7" y1="48.26" x2="-12.7" y2="2.54" width="0" layer="20"/>
 <wire x1="-12.7" y1="2.54" x2="-10.16" y2="0" width="0" layer="20" curve="90"/>
 <hole x="48.26" y="20.32" drill="2.54"/>
 <hole x="48.26" y="2.54" drill="2.54"/>
@@ -10349,6 +10349,11 @@ high speed (Philips)</description>
 <wire x1="93.98" y1="45.72" x2="104.14" y2="45.72" width="0.1524" layer="91"/>
 <label x="99.06" y="45.72" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="FTHRWNG" gate="G$1" pin="GND"/>
+<wire x1="177.8" y1="200.66" x2="170.18" y2="200.66" width="0.1524" layer="91"/>
+<label x="170.18" y="200.66" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="SCL" class="0">
 <segment>
@@ -10407,6 +10412,11 @@ high speed (Philips)</description>
 <junction x="226.06" y="78.74"/>
 <label x="182.88" y="78.74" size="1.778" layer="95"/>
 <label x="236.22" y="78.74" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="FTHRWNG" gate="G$1" pin="3V"/>
+<wire x1="177.8" y1="205.74" x2="170.18" y2="205.74" width="0.1524" layer="91"/>
+<label x="170.18" y="205.74" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="A" gate="G$1" pin="VDD"/>
