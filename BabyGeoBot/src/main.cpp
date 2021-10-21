@@ -10,7 +10,6 @@
 #include "utility/Adafruit_MS_PWMServoDriver.h"
 #include "TinyGPS++.h"
 #include <time.h>
-#include <PrintStream.h>
 
 // Adafruit MotorFeatherWing Initialization
 Adafruit_MotorShield AFMS = Adafruit_MotorShield();
@@ -26,13 +25,23 @@ int analogPin = A0;   // Proximity sensor is located on Pin A0
 
 int reading = 0;   // Reading is initialized with initial value of zero
 
-int mindist = 1700;  // Needs calibrating off of proximity sensor, minimum distance allowed for babybot to be from object
+int mindist = 1700;  // Needs calibrating off of proximity sensor, minimum distance allowed for babybot to be from object. ONLY for IR sensor
 
 int dancecount = 0; //Initialize a "dance counter" to let BabyBot do something fun every now and again
 
 int randnum = 0; //Random number holder
 
 int delaytim = 0; //Delay time holder
+
+int avoiddist = 700;   // Value to "avoid" with natural movement techniques. ONLY for IR sensor
+
+// Speed variables for natural avoid
+
+int speed1 = 0;    // First of two speed variables
+
+int speed2 = 0;    // Second of two speed variables
+
+bool natflag = false;  // Boolflag to properly exit natavoid if path is free of obstruction
 
 
 
@@ -44,15 +53,15 @@ const int numReadings = 10;
 int readings[numReadings];      // the readings from the analog input
 int readIndex = 0;              // the index of the current reading
 int total = 0;                  // the running total
-int average = 0;                // the average
+uint16_t average = 0;                // the average
 
 
 
 // Some time variables for use with nonblocking natural collision avoidance
 // remember that these are NOT integers and are NOT valid for normal arithmetic. Use difftime() instead.
 time_t inittime;
-time_t stoptime;
-time_t starttime;
+time_t curr_time;
+time_t runtime;
 time_t extratime;
 
 // Function Declarations
@@ -60,7 +69,7 @@ void forward();
 void forback();
 void stop();
 void coldetected();
-void natavoid();
+void natavoid(uint16_t averageread, bool natflag);
 
 /** @brief A doxystring for the setup function
  * 
@@ -89,16 +98,17 @@ void setup() {
 
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
+  // Update Current Time
+  time(&curr_time);
+  
   // grab GPS data and feed to TinyGPS++
-  gps.encode(ss.read());
+  gps.encode(GPSSerial.read());
 
   // This code snippet is for testing purposes. It prints GPS data to the serial port, however it doesn't really serve a purpose when BabyBot is running.
-  if (GPSSerial.available()) {
-    char c = GPSSerial.read();
-    Serial.write(c);
-  }
+  // if (GPSSerial.available()) {
+  //   char c = GPSSerial.read();
+  //   Serial.write(c);
+  // }
 
   // subtract the last reading:
   total = total - readings[readIndex];
@@ -123,8 +133,15 @@ void loop() {
   if (average >= mindist) {
     coldetected();
   }
+  else if (average >= avoiddist) {
+    natavoid(average, natflag);
+    natflag = false;
+  }
   else {
+    natflag = true;
+    natavoid(average, natflag);
     forward();
+    
   }
 
   /*if (dancecount >= 10000) {
@@ -173,6 +190,38 @@ void coldetected() {
   delay(delaytim);
 }
 
-void natavoid() {
+void natavoid(uint16_t averageread, bool natflag) {
+
+  if (inittime) {
+    if (difftime(curr_time, inittime)>=runtime) {
+      leftMotor->setSpeed(255);
+      rightMotor->setSpeed(255);
+      inittime = NULL;
+    }
+  }
+  else if (natflag == false) {
+    time(&inittime);
+    randnum = random(10);
+    if (randnum <= 5) {
+      speed1 = 75;
+      speed2 = 175;
+    }
+    else {
+    speed1 = 175;
+    speed2 = 75;
+    }
+    if (average >= 900) {
+        // Speed up turn if distance is still closing
+        speed1 += 25;
+        speed2 += 25;
+    }
+    leftMotor->setSpeed(speed1);
+    rightMotor->setSpeed(speed2);
+  }
+  if (natflag) {
+    leftMotor->setSpeed(255);
+    rightMotor->setSpeed(255);
+    inittime = NULL;
+  }
 
 }
