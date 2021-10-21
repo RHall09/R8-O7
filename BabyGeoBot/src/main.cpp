@@ -60,6 +60,7 @@ void forward();
 void forback();
 void stop();
 void coldetected();
+void natavoid();
 
 /** @brief A doxystring for the setup function
  * 
