@@ -12648,7 +12648,7 @@ Source: www.kingbright.com</description>
 <attribute name="BOARD_NAME" value="ESP32 I2C Exp / M Driver"/>
 <attribute name="DOC_NUM" value="0"/>
 <attribute name="PROJECT_NAME" value="R8-O7 PCB"/>
-<attribute name="REVISION" value="4"/>
+<attribute name="REVISION" value="6"/>
 </attributes>
 <variantdefs>
 </variantdefs>

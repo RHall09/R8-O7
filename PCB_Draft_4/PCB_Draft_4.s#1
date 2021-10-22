@@ -12768,7 +12768,7 @@ Source: www.kingbright.com</description>
 <wire x1="251.46" y1="238.252" x2="251.46" y2="206.756" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="251.46" y1="206.756" x2="215.138" y2="206.756" width="0.1524" layer="97" style="shortdash"/>
 <wire x1="215.138" y1="206.756" x2="215.138" y2="238.252" width="0.1524" layer="97" style="shortdash"/>
-<text x="307.34" y="43.18" size="1.778" layer="97">NOTE: USER INPUTS 1 &amp; 2 ARE ENABLED AND DISABLED BY   
+<text x="307.34" y="40.64" size="1.778" layer="97">NOTE: USER INPUTS 1 &amp; 2 ARE ENABLED AND DISABLED BY   
            SWITCHING THE CORRESPONDING JUMPER BETWEEN 
            LOCATION A TO LOCATION B. THIS ALLOWS DEVICES 
            TO REMAIN CONNECTED TO TERMINALS D_TERM-7 AND 
@@ -12831,7 +12831,7 @@ ESP32 Feather Microcontroller</text>
 <attribute name="REVISION" x="309.88" y="6.35" size="2.54" layer="94"/>
 <attribute name="PROJECT_NAME" x="317.5" y="30.48" size="2.54" layer="94"/>
 <attribute name="DOC_NUM" x="336.804" y="1.27" size="2.54" layer="94"/>
-<attribute name="AUTHOR" x="322.58" y="16.51" size="2.54" layer="94"/>
+<attribute name="AUTHOR" x="320.04" y="16.51" size="2.54" layer="94"/>
 <attribute name="BOARD_NAME" x="312.42" y="22.86" size="2.54" layer="94"/>
 </instance>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes"/>

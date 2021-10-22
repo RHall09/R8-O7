@@ -12737,6 +12737,8 @@ Source: www.kingbright.com</description>
 <wire x1="17.78" y1="162.56" x2="160.02" y2="162.56" width="0.1524" layer="97" style="longdash"/>
 <wire x1="160.02" y1="162.56" x2="160.02" y2="83.82" width="0.1524" layer="97" style="longdash"/>
 <text x="22.86" y="154.94" size="5.08" layer="97">I2C Analog Input Expansion</text>
+<text x="104.14" y="228.6" size="1.778" layer="97">      Adafruit HUZZAH32
+ESP32 Feather Microcontroller</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$3" x="5.08" y="0" smashed="yes"/>

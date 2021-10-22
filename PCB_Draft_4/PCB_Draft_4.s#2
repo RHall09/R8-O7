@@ -12815,6 +12815,12 @@ ESP32 Feather Microcontroller</text>
            BE CONNECTED TO GROUND. R_COM 
            IS A 0 OHM RESISTOR TO BE ADDED 
            ONLY IF NECESSARY.</text>
+<text x="314.96" y="231.14" size="1.778" layer="97">NOTE: FOR COMPLETE MOTOR IMPLEMENTATION, EACH MOTOR HAS A 
+           4-SCREW SECTION OF THE TERMINAL - 2 MOTOR LEADS AND 
+           2 ENCODER LEADS. TO FACILITATE THIS, MOTOR POWER INPUT 
+           TERMINALS ARE LOCATED AT THE TOP OF THE SCREW TERMIAL 
+           AND LOGIC VOLTAGE TERMINALS ARE LOCATED AT THE BOTTOM 
+           OF THE TERMINAL.</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$3" x="5.08" y="0" smashed="yes"/>
@@ -13802,10 +13808,30 @@ ESP32 Feather Microcontroller</text>
 </sheet>
 </sheets>
 <errors>
+<approved hash="102,1,99.06,218.44,3V,+3V3,,,,"/>
 <approved hash="202,1,99.06,220.98,FTHRWNG,!RESET,,,,"/>
+<approved hash="104,1,289.56,210.82,MD,VS_A,V_MOT,,,"/>
+<approved hash="104,1,289.56,198.12,MD,VS_B,V_MOT,,,"/>
+<approved hash="104,1,198.12,119.38,D_I2C,VSS,GND,,,"/>
+<approved hash="104,1,198.12,142.24,D_I2C,VDD,+3V3,,,"/>
 <approved hash="202,1,101.6,129.54,A_I2C,CH6,,,,"/>
 <approved hash="202,1,101.6,127,A_I2C,CH7,,,,"/>
+<approved hash="104,1,127,144.78,A_I2C,VDD,+3V3,,,"/>
+<approved hash="117,1,142.24,205.74,USB,,,,,"/>
+<approved hash="117,1,142.24,210.82,VBAT,,,,,"/>
 <approved hash="113,1,74.7014,17.5514,FRAME1,,,,,"/>
+<approved hash="113,1,33.7957,96.4971,A_COM,,,,,"/>
+<approved hash="113,1,69.3595,50.7771,I2C,,,,,"/>
+<approved hash="113,1,27.8977,190.79,SD_READ,,,,,"/>
+<approved hash="113,1,360.748,223.543,M_TERM,,,,,"/>
+<approved hash="113,1,33.1619,119.357,A_TERM,,,,,"/>
+<approved hash="113,1,313.69,86.6817,LED1,,,,,"/>
+<approved hash="113,1,356.87,86.0383,LED2,,,,,"/>
+<approved hash="113,1,306.719,73.9546,JP1_A,,,,,"/>
+<approved hash="113,1,285.101,114.005,JP1_B,,,,,"/>
+<approved hash="113,1,363.841,75.9054,JP2_A,,,,,"/>
+<approved hash="113,1,256.469,127.023,D_TERM,,,,,"/>
+<approved hash="113,1,296.559,104.435,JP2_B,,,,,"/>
 </errors>
 </schematic>
 </drawing>
