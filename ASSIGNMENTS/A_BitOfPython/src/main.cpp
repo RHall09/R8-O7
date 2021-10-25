@@ -13,14 +13,21 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-Serial << "A random array of booleans is:     ";
 
-float why[7] = { 8.777, -15.321, 0, 255, 12, 88, 147} ;
+Serial << "Here are some random booleans: " ;
 
-print_array(why, 7) ;  
+bool what[6] = {0, 1, 0, 0, 0, 1} ;
+print_array(what, 6) ;
 
+Serial << endl << endl;
 delay(1000);
 
-Serial << "..." << endl;
+Serial << "Here are some random floats: " ;
+
+float why[7] = { 0.00001, -15.321, 0, 1e32, 1e7, 1e8, 1} ;
+print_array(why, 7) ;  
+
+Serial << endl << endl;
+delay(1000);
 
 }
