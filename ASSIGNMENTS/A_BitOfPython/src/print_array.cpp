@@ -30,14 +30,27 @@ void print_array (bool* p_array, uint8_t array_size, Print& device)
     {
         device << "[ " ;
         
-        bool* p_end_array = p_array + array_size ;
+        bool* p_end_array = p_array + (--array_size) ;
 
         for(bool* p_print = p_array; p_print < p_end_array; p_print++)
         {
-            device << *p_print << ", " ;
+            if(*p_print)
+            {
+                device << "T, " ;
+            }
+            else
+            {
+                device << "F, " ;
+            }
         }
-
-        device << *p_end_array << " ]" ;
+        if(*p_end_array)
+        {
+            device << "T" << " ]" ;
+        }
+        else
+        {
+            device << "F" << " ]" ;
+        }
     }
     else
     {
@@ -66,7 +79,7 @@ void print_array (uint8_t* p_array, uint8_t array_size, Print& device)
     {
         device << "[ " ;
         
-        uint8_t* p_end_array = p_array + array_size ;
+        uint8_t* p_end_array = p_array + (--array_size) ;
 
         for(uint8_t* p_print = p_array; p_print < p_end_array; p_print++)
         {
@@ -102,7 +115,7 @@ void print_array (int8_t* p_array, uint8_t array_size, Print& device)
     {
         device << "[ " ;
         
-        int8_t* p_end_array = p_array + array_size ;
+        int8_t* p_end_array = p_array + (--array_size) ;
 
         for(int8_t* p_print = p_array; p_print < p_end_array; p_print++)
         {
@@ -138,7 +151,7 @@ void print_array (float* p_array, uint8_t array_size, Print& device)
     {
         device << "[ " ;
         
-        float* p_end_array = p_array + array_size ;
+        float* p_end_array = p_array + (--array_size) ;
 
         for(float* p_print = p_array; p_print < p_end_array; p_print++)
         {
@@ -152,3 +165,4 @@ void print_array (float* p_array, uint8_t array_size, Print& device)
         device << "[ ]" ;
     }
 }
+
