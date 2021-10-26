@@ -43,7 +43,7 @@ class i2cdig {
     void joini2c() {
         Wire.begin()
         if (debugflag) {
-            Serial << "I2C bus joined to as master" << endl;
+            Serial << "I2C bus joined as master" << endl;
         }
     }
 
@@ -52,14 +52,33 @@ class i2cdig {
  *  @param i_o      A boolean representing the state configuration desired. True for input, false for output.
  */
     void configport(uint8_t portnum, bool i_o) {
-        uint8_t deforient = 0b11111111      // Since the default configuration is input, define a binary 255 as default
-        for(int inc = 0; inc < 8; inc++) {
-            if (inc != portnum) {
+        // Read input register for current status
+        Wire.beginTransmission((address<<1));     // Connect to this objects i2c device in read mode
+        Wire.write(byte(0b00000011));             // Point to the configuration register
+        Wire.endTransmission();                  // Send the bytes to the device and end transmission
 
-            }
+        Wire.requestFrom((address<<1), 1);     // Request 1 byte from the device
+ 
+        uint8_t deforient = Wire.read();      // Read the register and dump into deforientation
         }
-        Wire.beginTransmission(address)
-        Wire.write()
+        if (i_o) {
+            uint8_t datawrite |= deforient << portnum;     // Set the bit at portnum to turn the port into an input
+        }
+        else {
+            uint8_t datawrite &= ~(deforient << portnum);  // Clear the bit at portnum to turn the port into an output (when i_o) is false.
+        }
+        // uint8_t commandbyte = 0b00000011;
+        Wire.beginTransmission((address<<1+0b00000001));   // Connect to this objects i2c device in write mode
+        // Wire.write(byte(commandbyte));                     Point to the configuration register. Commented out since redundant from above
+        Wire.write(byte(datawrite));
+        Wire.endTransmission();
+    }
+/** @brief Read from a port configured as input. Do nothing if port is not configured as input.
+ *  @param portnum  The port to be read.
+ *  @return 
+ */
+    uint8_t readinput(uint8_t portnum) {
+
     }
 
 }
