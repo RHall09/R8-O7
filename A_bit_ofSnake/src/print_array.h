@@ -1,17 +1,14 @@
 /** @file print_array.h
- *    This file contains an overloaded function that will take in arrays of types: {boolean, unsigned 8-bit integer, signed 8-bit integer, float}
- *    and print them as a python style array in the format  [1,2,3,4].
+ *    This file acts as a header for the print_array class which takes in one of four data types as an array and prints the array in "Python" style.
+ *
  *  @author Kai Quizon
- *  @date October 24, 2021 
+ *  @date October 24, 2021
  */
+
+#define PRINT_ARRAY_H
 
 #include <Arduino.h>
 #include <PrintStream.h>
-
-/** Example string for formatting
- * void print_array (float* p_array, uint8_t size, Print& device = Serial);
- */
-
 
 /** @brief Prints an array of Booleans
  *  @details This function prints a boolean array to the specified device. True is represented with "T" and false is represented with "F" The device
@@ -26,27 +23,7 @@
  *                Defaults to the serial port, but can be specified to other objects
  *                as long as they have an appropriately defined "print" function.
  */
-
-void print_array (bool* p_array, uint8_t size, Print& device) {
-        
-    device.print("[") ;
-
-    for(bool* p_inc = p_array; p_inc < (p_array+size); p_inc++)
-        {
-            if(*p_inc) {
-                device.print("T");
-            }
-            else {
-                device.print("F");
-            }
-            if (p_inc != (p_array+size-1)) {
-                device.print(",");
-            }
-        }
-
-    device << "]" ;
-
-}
+void print_array (bool* p_array, uint8_t array_size, Print& device = Serial);
 
 /** @brief Prints an array of unsigned 8 bit integers
  *  @details This function prints an unsigned 8 bit integer array to the specified device. The device
@@ -61,22 +38,7 @@ void print_array (bool* p_array, uint8_t size, Print& device) {
  *                Defaults to the serial port, but can be specified to other objects
  *                as long as they have an appropriately defined "print" function.
  */
-
-void print_array (uint8_t* p_array, uint8_t size, Print& device) {
-        
-    device.print("[") ;
-
-    for(uint8_t* p_inc = p_array; p_inc < (p_array+size); p_inc++)
-        {
-            device.print(*p_inc);
-            if (p_inc != (p_array+size-1)) {
-                device.print(",");
-            }
-        }
-
-    device << "]" ;
-
-}
+void print_array (uint8_t* p_array, uint8_t array_size, Print& device = Serial);
 
 /** @brief Prints an array of signed 8 bit integers
  *  @details This function prints a signed 8 bit integer array to the specified device. The device
@@ -90,22 +52,7 @@ void print_array (uint8_t* p_array, uint8_t size, Print& device) {
  *                Defaults to the serial port, but can be specified to other objects
  *                as long as they have an appropriately defined "print" function.
  */
-
-void print_array (int8_t* p_array, uint8_t size, Print& device) {
-        
-    device.print("[") ;
-
-    for(int8_t* p_inc = p_array; p_inc < (p_array+size); p_inc++)
-        {
-            device.print(*p_inc);
-            if (p_inc != (p_array+size-1)) {
-                device.print(",");
-            }
-        }
-
-    device << "]" ;
-
-}
+void print_array (int8_t* p_array, uint8_t array_size, Print& device = Serial);
 
 /** @brief Prints an array of floats
  *  @details This function prints a float array to the specified device. The device
@@ -118,20 +65,6 @@ void print_array (int8_t* p_array, uint8_t size, Print& device) {
  *  @param device The device through which the function should print the array. 
  *                Defaults to the serial port, but can be specified to other objects
  *                as long as they have an appropriately defined "print" function.
+ */          any other device capable of printing. 
  */
-
-void print_array (float* p_array, uint8_t size, Print& device) {
-        
-    device.print("[") ;
-
-    for(float* p_inc = p_array; p_inc < (p_array+size); p_inc++)
-        {
-            device.print(*p_inc);
-            if (p_inc != (p_array+size-1)) {
-                device.print(",");
-            }
-        }
-
-    device << "]" ;
-
-}
+void print_array (float* p_array, uint8_t array_size, Print& device = Serial);
