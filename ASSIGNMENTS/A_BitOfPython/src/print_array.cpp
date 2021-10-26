@@ -36,11 +36,11 @@ void print_array (bool* p_array, uint8_t array_size, Print& device)
         {
             if(*p_print)
             {
-                device << "T" ;
+                device << "T, " ;
             }
             else
             {
-                device << "F" ;
+                device << "F, " ;
             }
         }
         if(*p_end_array)
