@@ -84,8 +84,8 @@ void setup() {
   GPSSerial.begin(9600);
 
   AFMS.begin();
-  leftMotor->setSpeed(255);
-  rightMotor->setSpeed(255); 
+  leftMotor->setSpeed(150);
+  rightMotor->setSpeed(150); 
   // initialize all the readings to 0:
   for (int thisReading = 0; thisReading < numReadings; thisReading++) {
     readings[thisReading] = 0;
@@ -219,8 +219,8 @@ void natavoid(uint16_t averageread, bool natflag) {
     rightMotor->setSpeed(speed2);
   }
   if (natflag) {
-    leftMotor->setSpeed(255);
-    rightMotor->setSpeed(255);
+    leftMotor->setSpeed(150);
+    rightMotor->setSpeed(150);
     inittime = NULL;
   }
 
