@@ -17,8 +17,18 @@
 class i2cdig {
 
     // Declare class objects
+    private:   // Private objects related to register addresses
+    uint8_t input_port = byte(0)
+    uint8_t output_port = byte(1)
+    uint8_t pol_port = byte(2)
+    uint8_t config_port = byte(3)
+
     public:
     uint8_t address;  // the i2c address of the chip to be controlled by this class
+    uint8_t write_addr = byte(address<<1)
+    uint8_t read_addr = byte(address<<1 +0b00000001)
+
+    
 
 /** @brief Default contructor that disables debugging printouts.
  */
@@ -53,13 +63,17 @@ class i2cdig {
  */
     void configport(uint8_t portnum, bool i_o) {
         // Read input register for current status
-        Wire.beginTransmission((address<<1));     // Connect to this objects i2c device in read mode
-        Wire.write(byte(0b00000011));             // Point to the configuration register
+        Wire.beginTransmission((write_addr));     // Connect to this objects i2c device in read mode
+        Wire.write(config_port);             // Point to the configuration register
         Wire.endTransmission();                  // Send the bytes to the device and end transmission
-
+        if (debugflag) {
+            Serial.print("Pointing to configuration port \n");
+        }
         Wire.requestFrom((address<<1), 1);     // Request 1 byte from the device
  
         uint8_t deforient = Wire.read();      // Read the register and dump into deforientation
+        if (debugflag) {
+            Serial << "The current cofiguration is: " << deforient << endl;
         }
         if (i_o) {
             uint8_t datawrite |= deforient << portnum;     // Set the bit at portnum to turn the port into an input
@@ -68,18 +82,71 @@ class i2cdig {
             uint8_t datawrite &= ~(deforient << portnum);  // Clear the bit at portnum to turn the port into an output (when i_o) is false.
         }
         // uint8_t commandbyte = 0b00000011;
-        Wire.beginTransmission((address<<1+0b00000001));   // Connect to this objects i2c device in write mode
-        // Wire.write(byte(commandbyte));                     Point to the configuration register. Commented out since redundant from above
-        Wire.write(byte(datawrite));
-        Wire.endTransmission();
+        Wire.beginTransmission((write_addr));   // Connect to this objects i2c device in write mode
+        Wire.write(byte(config_port);           // Point to Configuration Register
+        Wire.write(byte(datawrite));            // Write to configuration port data desired
+        Wire.endTransmission();                 // Send data
     }
 /** @brief Read from a port configured as input. Do nothing if port is not configured as input.
  *  @param portnum  The port to be read.
  *  @return 
  */
-    uint8_t readinput(uint8_t portnum) {
+    bool readinput(uint8_t portnum) {
+        Wire.beginTransmission(write_addr);  // Connect to device address in write mode
+        Wire.write(input_port);              // Point to the input port
+        Wire.endTransmission();              // Send Data
+        if (boolflag) {
+            Serial.print("Pointing to input port \n");
+        }
+
+        Wire.requestFrom(read_addr, 1);             // Request 1 byte from device
+
+        uint8_t inputconfig = Wire.read();           // Read a byte from the register
+        int bit = (inputconfig >> portnum) & 1;     // Locate the bit in question
+        if (bit >= 1) {                             // This value may need to be calibrated if pull-down resistors are not present
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+/** @brief Change the status of a port configured as an output. No change will be made to ports configured as inputs.
+ *  @param portnum  The port to be configured.
+ *  @param i_o      A boolean representing the state desired. True for logic high, false for logic low.
+ */
+    void setoutput(uint8_t portnum, bool i_o) {
+        Wire.beginTransmission(write_addr);       // Connect to device address in write mode
+        Wire.write(output_port);                  // Point to the output register
+        Wire.endTransmission()                    // Send Data
+
+        if (debugflag) {
+            Serial.print("Pointing to output port \n");
+        }
+        Wire.requestFrom((address<<1), 1);     // Request 1 byte from the device
+ 
+        uint8_t deforient = Wire.read();      // Read the register and dump into deforientation
+        if (debugflag) {
+            Serial << "The current output cofiguration is: " << deforient << endl;
+        }
+        if (i_o) {
+            uint8_t datawrite |= deforient << portnum;     // Set the bit at portnum to turn the port into an input
+        }
+        else {
+            uint8_t datawrite &= ~(deforient << portnum);  // Clear the bit at portnum to turn the port into an output (when i_o) is false.
+        }
+        // uint8_t commandbyte = 0b00000011;
+        Wire.beginTransmission((write_addr));   // Connect to this objects i2c device in write mode
+        Wire.write(output_port);          // Point to the output register
+        Wire.write(byte(datawrite));
+        Wire.endTransmission();
+        if (debugflag) {
+            Serial.print("Wrote to output port")
+        }
+
+
 
     }
 
-}
+};
 
