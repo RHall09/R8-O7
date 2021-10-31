@@ -4,7 +4,6 @@
  * @date   October 25, 2021
  **/
 
-#ifdef ARDUINO
 #include <Wire.h>
 #include <Arduino.h>
 #include <PrintStream.h>
@@ -130,5 +129,3 @@ void i2cdig::setoutput(uint8_t portnum, bool i_o) {
 }
 
 };
-
-#endif
