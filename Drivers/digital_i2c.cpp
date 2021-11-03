@@ -43,13 +43,13 @@ void i2cdig::joini2c() {
  */
 void i2cdig::configport(uint8_t portnum, bool i_o) {
     // Read input register for current status
-    Wire.beginTransmission((write_addr));     // Connect to this objects i2c device in read mode
+    Wire.beginTransmission(address);     // Connect to this objects i2c device in read mode
     Wire.write(config_port);             // Point to the configuration register
     Wire.endTransmission();                  // Send the bytes to the device and end transmission
     if (debugflag) {
         Serial.print("Pointing to configuration port \n");
     }
-    Wire.requestFrom((address<<1), 1);     // Request 1 byte from the device
+    Wire.requestFrom(address, 1);     // Request 1 byte from the device
 
     uint8_t deforient = Wire.read();      // Read the register and dump into deforientation
     if (debugflag) {
@@ -62,7 +62,7 @@ void i2cdig::configport(uint8_t portnum, bool i_o) {
         uint8_t datawrite &= ~(deforient << portnum);  // Clear the bit at portnum to turn the port into an output (when i_o) is false.
     }
     // uint8_t commandbyte = 0b00000011;
-    Wire.beginTransmission((write_addr));   // Connect to this objects i2c device in write mode
+    Wire.beginTransmission((address));   // Connect to this objects i2c device in write mode
     Wire.write(byte(config_port);           // Point to Configuration Register
     Wire.write(byte(datawrite));            // Write to configuration port data desired
     Wire.endTransmission();                 // Send data
@@ -72,14 +72,14 @@ void i2cdig::configport(uint8_t portnum, bool i_o) {
  *  @return 
  */
 bool i2cdig::readinput(uint8_t portnum) {
-    Wire.beginTransmission(write_addr);  // Connect to device address in write mode
+    Wire.beginTransmission(address);  // Connect to device address in write mode
     Wire.write(input_port);              // Point to the input port
     Wire.endTransmission();              // Send Data
     if (boolflag) {
         Serial.print("Pointing to input port \n");
     }
 
-    Wire.requestFrom(read_addr, 1);             // Request 1 byte from device
+    Wire.requestFrom(address, 1);             // Request 1 byte from device
 
     uint8_t inputconfig = Wire.read();           // Read a byte from the register
     int bit = (inputconfig >> portnum) & 1;     // Locate the bit in question
@@ -96,7 +96,7 @@ bool i2cdig::readinput(uint8_t portnum) {
  *  @param i_o      A boolean representing the state desired. True for logic high, false for logic low.
  */
 void i2cdig::setoutput(uint8_t portnum, bool i_o) {
-    Wire.beginTransmission(write_addr);       // Connect to device address in write mode
+    Wire.beginTransmission(address);       // Connect to device address in write mode
     Wire.write(output_port);                  // Point to the output register
     Wire.endTransmission()                    // Send Data
 
@@ -116,7 +116,7 @@ void i2cdig::setoutput(uint8_t portnum, bool i_o) {
         uint8_t datawrite &= ~(deforient << portnum);  // Clear the bit at portnum to turn the port into an output (when i_o) is false.
     }
     // uint8_t commandbyte = 0b00000011;
-    Wire.beginTransmission((write_addr));   // Connect to this objects i2c device in write mode
+    Wire.beginTransmission((address));   // Connect to this objects i2c device in write mode
     Wire.write(output_port);          // Point to the output register
     Wire.write(byte(datawrite));
     Wire.endTransmission();
