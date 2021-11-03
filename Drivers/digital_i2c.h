@@ -11,16 +11,14 @@
 
 class i2cdig {
     // Declare class objects
-    private:   // Private objects related to register addresses
+    protected:   // Private objects related to register addresses
     uint8_t input_port = byte(0);
     uint8_t output_port = byte(1);
     uint8_t pol_port = byte(2);
     uint8_t config_port = byte(3);
 
     public:
-    uint8_t address;  // the i2c address of the chip to be controlled by this class
-    uint8_t write_addr = byte(address<<1);
-    uint8_t read_addr = byte(address<<1 +0b00000001);
+    uint8_t address = 0b0100000;  // the i2c address of the chip to be controlled by this class (8 bits!!!)
 
     i2cdig();
     i2cdig(bool debugflag);
