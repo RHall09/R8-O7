@@ -42,33 +42,8 @@ void i2cana::joini2c() {
  * @param channel The desired channel to be read. (valid range 0-7). Performs no action if outside valid range.
  */
 uint16_t i2cana::readinput(uint8_t channel) {
-    if (channel == 0) {
-        commandbyte = 0b10001111;
-    }
-    else if (channel ==1) {
-        commandbyte = 0b10101111;
-    }
-    else if (channel ==2) {
-        commandbyte = 0b11001111;
-    }
-    else if (channel ==3) {
-        commandbyte = 0b10011111;
-    }
-    else if (channel ==4) {
-        commandbyte = 0b10101111;
-    }
-    else if (channel ==5) {
-        commandbyte = 0b11101111;
-    }
-    else if (channel ==6) {
-        commandbyte = 0b10111111;
-    }
-    else if (channel ==7) {
-        commandbyte = 0b11111111;
-    }
-    else {
-        return 0;
-    }
+    uint8_t commands[] = {0b10001111, 0b10101111, 0b11001111, 0b10011111, 0b10101111, 0b11101111, 0b10111111, 0b11111111};
+    uint8_t commandbyte = byte(commands[channel]);
     Wire.beginTransmission(address);
     Wire.write(commandbyte);
     Wire.endTransmission;
