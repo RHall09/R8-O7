@@ -59,7 +59,7 @@ float StatTracker :: average(void) {
  */
 float StatTracker :: std_dev(void) {
     // There is an implicit conversion from a double to a float in this next line...most cmath commands deal with doubles.
-    float stddev = sqrt(squared_sum/total_points + pow((sum/total_points), 2));
+    float stddev = sqrt((squared_sum/total_points) - (pow((sum/total_points), 2)));
     return stddev;
 }
 

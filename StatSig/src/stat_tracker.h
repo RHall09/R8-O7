@@ -9,20 +9,24 @@
 #include <Arduino.h>
 #include <cmath>
 
-/** @brief 
- *  @details
+/** @brief   Class that returns some statistical values for a data set. The data is not stored
+ *  @details Class that holds data in the form of its impact on the data set. That is, only the sum, squared
+ *           sum, and total number of points is stored. With these values, statistics for the set are calculated and returned.
+ *           The data can also be cleared for new sets to be created.
  */
 
 class StatTracker {
     // Declare class objects
-    protected:   // Initialized Variables for sums and number of points
-    float sum;  // Sum of all currently added points
-    uint32_t total_points;  // Total number of points
-    float squared_sum;      // Squared Sum of all points (for std. dev.)
+    protected:   // Initialized Variables for sums and number of points all of these are reset by clear.
+    /// Sum of all currently added points
+    float sum;
+    /// Total number of active points in set
+    uint32_t total_points;
+    /// Squared sum of all points (for std. dev.)
+    float squared_sum;
     
-
     public:
-
+    
     StatTracker();    // Default constructor initializes zero data set.
     // Overloaded function to add different data types to set
     void add_data(float datapoint);
