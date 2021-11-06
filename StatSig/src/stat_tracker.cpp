@@ -43,12 +43,14 @@ void StatTracker :: add_data(uint32_t datapoint) {
 }
 
 /** @brief Return the number of currently active points in the set.
+ *  @return The number of data points as an unisigned 32 bit integer
  */
 uint32_t StatTracker :: num_points(void) {
     return total_points;
 }
 
 /** @brief Return the average of all currently active data points.
+ *  @return The avearge of all the data points as a float
  */
 float StatTracker :: average(void) {
     float aver = sum/total_points;
@@ -56,6 +58,7 @@ float StatTracker :: average(void) {
 }
 
 /** @brief Return the standard deviation of all the currently active data points in teh set.
+ *  @return The standard deviation of the data set in the variable stddev as a float
  */
 float StatTracker :: std_dev(void) {
     // There is an implicit conversion from a double to a float in this next line...most cmath commands deal with doubles.
