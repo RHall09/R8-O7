@@ -1,5 +1,5 @@
 /** @file stat_tracker.h
- *          This file contains the declaration of a class that acts as a driver for the PCA9534 8-bit I2C-bus with 8 digital I/O pins.
+ *          This file contains the declaration of a class that contains some simple statistics calcs.
  * @author Kai Quizon
  * @date   October 25, 2021
  **/
