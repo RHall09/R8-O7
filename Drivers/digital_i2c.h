@@ -1,5 +1,8 @@
-// digital_i2c.h
-
+/** @file digital_i2c.h
+ *          This file contains the declaration of a class that acts as a driver for the PCA9534 8-bit I2C-bus with 8 digital I/O pins.
+ * @author Kai Quizon
+ * @date   October 25, 2021
+ **/
 #ifndef DIGITAL_I2C_H
 #define DIGITAL_I2C_H
 #include <Arduino.h>
