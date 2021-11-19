@@ -1,0 +1,42 @@
+\hypertarget{main_8cpp}{}\doxysection{src/main.cpp File Reference}
+\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$Print\+Stream.\+h$>$}\newline
+{\ttfamily \#include $<$stat\+\_\+tracker.\+h$>$}\newline
+Include dependency graph for main.\+cpp\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8cpp_ad255c9eadfc3ac536d7ba3688cf5e902}\label{main_8cpp_ad255c9eadfc3ac536d7ba3688cf5e902}} 
+\#define {\bfseries array\+\_\+length}~11
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}\label{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}} 
+void {\bfseries setup} ()
+\item 
+\mbox{\Hypertarget{main_8cpp_afe461d27b9c48d5921c00d521181f12f}\label{main_8cpp_afe461d27b9c48d5921c00d521181f12f}} 
+void {\bfseries loop} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8cpp_adce168d1797a2a99d6a451bc92c910ce}\label{main_8cpp_adce168d1797a2a99d6a451bc92c910ce}} 
+\mbox{\hyperlink{classStatTracker}{Stat\+Tracker}} {\bfseries track\+\_\+pts}
+\item 
+\mbox{\Hypertarget{main_8cpp_acd380147c24bcb24899b9d5240786aa5}\label{main_8cpp_acd380147c24bcb24899b9d5240786aa5}} 
+int32\+\_\+t \mbox{\hyperlink{main_8cpp_acd380147c24bcb24899b9d5240786aa5}{point\+\_\+array}} \mbox{[}array\+\_\+length\mbox{]} = \{4,-\/7, 3, 2, -\/4, 7, 4, -\/8, 9, 12, 1\}
+\begin{DoxyCompactList}\small\item\em A manually inserted array to test. Make sure to update array\+\_\+length appropriately. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A basic testing file for the Stat Tracker class
+
+\begin{DoxyAuthor}{Author}
+Rick Hall 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2020-\/5-\/Nov 
+\end{DoxyDate}

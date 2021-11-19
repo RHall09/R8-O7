@@ -15,24 +15,25 @@
 #include <Arduino.h>
 
 /** @brief A class to track statistics of a dataset
- *  @details 
- * 
+ *  @details This class tracks the average and standard
+ *           deviation of a set of data, provided to the
+ *           object one point at a time. 
  */
 class StatTracker
 {
 protected:
 
-    // Number of points provided
+    /// Number of points provided
     uint32_t n_pts = 0;
-    // Sum of points provided 
+    /// Sum of points provided 
     float sum = 0;
-    // Sum of (points provided squared)
+    /// Sum of (points provided squared)
     float sqrd_sum = 0;
-    // Most recently calculated average
+    /// Most recently calculated average
     float avg = 0;
-    // Most recently calculated standard deviation
+    /// Most recently calculated standard deviation
     float sdev = 0;
-    // Boolean flag to determine if avg and sdev are up-to-date
+    /// Boolean flag to determine if avg and sdev are up-to-date
     bool new_points = false;
 
 
