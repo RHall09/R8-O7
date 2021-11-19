@@ -17,7 +17,6 @@ void loop() {
 Serial << "Here are some random booleans: " ;
 
 bool what[6] = {0, 1, 0, 0, 0, 1} ;
-print_array(what, 6) ;
 
 Serial << endl << endl;
 delay(1000);
