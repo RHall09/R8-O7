@@ -14,7 +14,7 @@
 #include "shares.h"
 #include "geofencing.h"
 
-#define EVER (::)
+#define EVER (;;)
 
 void geofence_task (void* p_params) {
     float lat;                    // Holds lattitude of bot from sensor suite task
