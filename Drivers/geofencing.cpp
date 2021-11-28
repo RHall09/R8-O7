@@ -1,5 +1,5 @@
 /** @file geofencing.cpp
- *          This file contains member functions of a class for return the shortest straight line distance from a point
+ *          This file contains a single function for returning the shortest straight line distance from a point
  *          to the edge of a user define geofence.
  * @author Kai Quizon
  * @date   October 25, 2021
@@ -10,17 +10,6 @@
 
 #define PI 3.14159265
 
-/** @brief Calculate the shortest distance from current position to geofence
- *  @details Taking in the structured KD Tree, perform the search for the nearest neighbors. Index the data
- *           and find its closest neighbors. Then calculate the closest distance to a point or line based on
- *           the Rickolas Solution.
- *  @param lat Updated lattitude value from the processed GPS data.
- *  @param longit Updated longitude value from the processed GPS data.
- *  @param p_arr_lat Pointer to an array of latitude floats containing the data that comprises the geofence.
- *  @param p_arr_long Pointer to an array of longitude floats containing the data that comprises the geofence.
- *  @param geofence_size An unsigned integer representing the number of points in the geofence array
- *  @return The distance from the current position to the nearest edge, and a heading in the form: distance, heading
- */
 float geofencing(float lat, float longitude, float p_arr_lat, float p_arr_long, uint8_t geofence_size) {
     // Create empty array of length of geofence size
     float residuals_lat[geofence_size];
