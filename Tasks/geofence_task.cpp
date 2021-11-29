@@ -34,8 +34,8 @@ void geofence_task (void* p_params) {
         longitude = longitude_queue.get();
 
         distance, heading = geofencing(lat, longitude, fence_lat, fence_long, fence_size);
-        fence_distance.put(distance)
-        fence_heading.put(heading)
+        fence_distance.put(distance);
+        fence_heading.put(heading);
         // vTaskDelay(5)    Currently delays for 5 seconds
 
     }

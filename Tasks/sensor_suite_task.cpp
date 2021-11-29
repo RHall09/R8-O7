@@ -1,4 +1,4 @@
-/** @file sensor_suite_task.cpp
+s/** @file sensor_suite_task.cpp
  *  This file contains a task which updates the read values off of *all* sensors
  *  directly related to guest safety. This includes the crowd interaction suite
  *  and the foot mounted checks.

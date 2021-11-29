@@ -9,7 +9,8 @@
 #if (defined STM32L4xx || defined STM32F4xx)
     #include <STM32FreeRTOS.h>
 #endif
-#include "shares.h"
+
+#include "shares.h"                          // Header for shares used in this project
 #include "MotorCS.h"
 #include "Motor.h"
 
@@ -26,13 +27,11 @@ void motor_task (void* p_params)
     motorB.enable();
 
 
-    bool tog = true;        // boolean to average out minor variations in motor opearation
-
 
     for EVER 
     {
         // Get motor flag register from share
-        current_flag = motFlag.get();
+        current_flag = motorFlagRegister.get();
 
         // Check motors for overcurrent fault
         motorA.checkOvercurrent();
@@ -41,42 +40,48 @@ void motor_task (void* p_params)
         if(!(motorA.FlagChk(ERROR) && motorB.FlagChk(ERROR)))
         {
 
-            // Grab the last encoder velocity value and delta time, then run the 
-            encA_vel = encoderA_velocity_queue.get();
-            encB_vel = encoderB_velocity_queue.get();
-            encA_dt  = encoderA_dtime_queue.get();
-            encB_dt  = encoderB_dtime_queue.get();
-            
-            // Get new setpoints and load into CS, if necessary
+            // Grab the last encoder velocity value and delta time, then run the
             if()
-            {
-                motAc.newSetpoint(              );
-            }
-            if()
-            {
-                motBc.newSetpoint(              );
-            }        
+            { 
+                encA_vel = encoderA_velocity_queue.get();
+                encB_vel = encoderB_velocity_queue.get();
+                encA_dt  = encoderA_dtime_queue.get();
+                encB_dt  = encoderB_dtime_queue.get();
+                
+                // Get new setpoints and load into CS, if necessary
+                if()
+                {
+                    motAc.newSetpoint(motorA_Set.get());
+                }
+                if()
+                {
+                    motBc.newSetpoint(motorB_Set.get());
+                }        
 
-            // Run control systems (toggle each time to average out computational difference in time between motors)
-            if(tog)
-            {
-                motAc.run(motorA,encA_vel,encA_dt);
-                motBC.run(motorB,encB_vel,encB_dt);
-            }
-            else
-            {
-                motBc.run(motorB,encB_vel,encB_dt);
-                motAC.run(motorA,encA_vel,encA_dt);
-            }
-            tog = !tog;      
-
-
-
+                // Run control systems (toggle each time to average out computational difference in time between motors)
+                static bool tog = true;     // boolean to average out minor variations in motor opearation
+                if(tog)
+                {
+                    motAc.run(motorA,encA_vel,encA_dt);
+                    motBC.run(motorB,encB_vel,encB_dt);
+                }
+                else
+                {
+                    motBc.run(motorB,encB_vel,encB_dt);
+                    motAC.run(motorA,encA_vel,encA_dt);
+                }
+                tog = !tog;    
+            }  
             
         }
         else
         {
-            
+            // When clear overcurrent flag is raised, clear motors to run again.
+            if()
+            {
+                motorA.clearOvercurrent()
+                motorB.clearOvercurrent()
+            }
         }
 
     }
