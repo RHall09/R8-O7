@@ -34,6 +34,8 @@ protected:
 
     /// Last error
     float last_error = 0;
+    /// Integral sum
+    int16_t integral = 0;
 
     /// CS Control Boolean
     bool runCS = false;

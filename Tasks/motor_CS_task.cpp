@@ -31,6 +31,9 @@ void motor_task (void* p_params)
 
     for EVER 
     {
+        // Get motor flag register from share
+        current_flag = motFlag.get();
+
         // Check motors for overcurrent fault
         motorA.checkOvercurrent();
         motorB.checkOvercurrent();
@@ -69,9 +72,15 @@ void motor_task (void* p_params)
 
 
 
-            // vTaskDelay(5)    Currently delays for 5 seconds
+            
+        }
+        else
+        {
+            
         }
 
     }
+
+    // vTaskDelay(5)    Currently delays for 5 seconds
 
 }
