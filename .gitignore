@@ -347,3 +347,27 @@ UltrasonicTest/.vscode/c_cpp_properties.json
 UltrasonicTest/.vscode/launch.json
 PCB Stuff/PCB_R8-O7_Final/eagle.epf
 PCB Stuff/PCB_R8-O7_Final/eagle.epf
+R8-O7_ProgramDesign.docx
+BabyGeoBot/.pio/libdeps/featheresp32/AccelStepper/src/AccelStepper.cpp
+BabyGeoBot/.pio/libdeps/featheresp32/AccelStepper/src/AccelStepper.h
+BabyGeoBot/.pio/libdeps/featheresp32/AccelStepper/src/MultiStepper.cpp
+BabyGeoBot/.pio/libdeps/featheresp32/AccelStepper/src/MultiStepper.h
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/src/Servo.h
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/src/avr/Servo.cpp
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/src/avr/ServoTimers.h
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/src/mbed/Servo.cpp
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/src/mbed/ServoTimers.h
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/src/megaavr/Servo.cpp
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/src/megaavr/ServoTimers.h
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/src/nrf52/Servo.cpp
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/src/nrf52/ServoTimers.h
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/src/sam/Servo.cpp
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/src/sam/ServoTimers.h
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/src/samd/Servo.cpp
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/src/samd/ServoTimers.h
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/src/stm32f4/Servo.cpp
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/src/stm32f4/ServoTimers.h
+PCB Stuff/PCB_R8-O7_Final/eagle.epf
+R8-O7_ProgramDesign.docx
+PCB Stuff/PCB_R8-O7_Final/eagle.epf
+R8-O7_ProgramDesign.docx
