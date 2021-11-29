@@ -10,8 +10,9 @@
 #ifndef _SHARES_H_
 #define _SHARES_H_
 
-#include "ME507_Support/taskqueue.h"
-#include "ME507_Support/taskshare.h"
+#include <ME507_Support/taskqueue.h>
+#include <ME507_Support/taskshare.h>
+#include <Misc_Drivers/RegOperators.h>
 
 // A queue which stores the latitude from the GPS module
 extern Queue<float> latitude_queue;
@@ -22,13 +23,22 @@ extern Queue<float> fence_distance;
 //
 extern Queue<float> fence_heading;
 
+// Motor A Setpoint queue
+extern Queue<int16_t> motorSet_A;
+// Motor B Setpoint queue
+extern Queue<int16_t> motorSet_B;
 //
-extern Queue<float> motorA_velocity_queue;
+extern Queue<float> encVel_A_queue;
 //
-extern Queue<float> motorA_dtime_queue;
+extern Queue<float> encVel_B_queue;
 //
-extern Queue<float> motorB_velocity_queue;
+extern Queue<float> enc_dt_A_queue;
 //
-extern Queue<float> motorB_dtime_queue;
+extern Queue<float> enc_dt_B_queue;
+//
+extern Share<uint8_t> motorFlagRegister;
+#define OverC_Clear   current_flag, 6
+#define Overcurrent_A current_flag, 7
+#define Overcurrent_B current_flag, 8
 
 #endif // _SHARES_H_

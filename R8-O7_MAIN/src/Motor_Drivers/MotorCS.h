@@ -10,11 +10,11 @@
 #define MOTOR_CS_H
 
 #include <Arduino.h>
-#include <Motor.h>
+#include <Motor_Drivers/Motor.h>
 
 
 
-enum CS_Gains {Prop, Int, Der};
+enum CS_Gains {Prop, Integ, Der};
 
 // Motor Control System Class Declaration
 class MotorCS
@@ -50,6 +50,7 @@ public:
     // Start & stop CS computations
     void startCS(void);
     void stopCS(void);
+    bool checkCS(void);
 
     // Change setpoint
     void newSetpoint(int16_t set);

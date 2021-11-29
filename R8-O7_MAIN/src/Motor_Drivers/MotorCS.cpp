@@ -6,21 +6,33 @@
 
 
 #include <Arduino.h>
-#include <Motor.h>
-#include <MotorCS.h>
+#include <Motor_Drivers/Motor.h>
+#include <Motor_Drivers/MotorCS.h>
 
 
 // Constructor Function
-MotorCS::MotorCS(float kProportional = 1, float kIntegral = 0.1, float kDerivative = 4)
+MotorCS::MotorCS(float kProportional, float kIntegral, float kDerivative)
 {
-
-
+    kP = kProportional;
+    kI = kIntegral;
+    kD = kDerivative;
 }
 
 // Set Gain
 void MotorCS::gainSet(CS_Gains k, float gain)
 {
-
+    if(k = Prop)
+    {
+        kP = gain;
+    }
+    else if(k = Integ)
+    {
+        kI = gain;
+    }
+    else
+    {
+        kD = gain;
+    }
 
 }
 
@@ -33,6 +45,10 @@ void MotorCS::stopCS(void)
 {
     runCS = false;
     integral = 0;
+}
+bool MotorCS::checkCS(void)
+{
+    return runCS;
 }
 
 // Change setpoint

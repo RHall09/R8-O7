@@ -43,12 +43,12 @@ public:
     void stop(void);
 
     //Set error-overcurrent flag
-    bool checkOvercurrent(void);
+    void checkOvercurrent(void);
     //Clear error-overcurrent flag
     void clearOvercurrent(void);
 
     //Check Flags
-    bool motFlagChk(MotFlag flag);
+    bool FlagChk(MotFlag flag);
 
 };
 

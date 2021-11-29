@@ -7,7 +7,8 @@
  */
 
 #include <Arduino.h>
-#include <Motor.h>
+#include <Motor_Drivers/Motor.h>
+#include <Misc_Drivers/analogWrite.h>
 
 //Constructor Function
 Motor::Motor(int Pin_En, int Pin_1, int Pin_2)

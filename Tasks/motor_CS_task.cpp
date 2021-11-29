@@ -31,7 +31,7 @@ void motor_task (void* p_params)
     for EVER 
     {
         // Get motor flag register from share
-        current_flag = motFlag.get();
+        current_flag = motorFlagRegister.get();
 
         // Check motors for overcurrent fault
         motorA.checkOvercurrent();
