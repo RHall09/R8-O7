@@ -11,7 +11,7 @@
 #if (defined STM32L4xx || defined STM32F4xx)
     #include <STM32FreeRTOS.h>
 #endif
-#include "geofence_task.h"
+#include "sensor_suite_task.h"
 #include "shares.h"
 #include "analog_i2c.h"
 #include "digital_i2c.h"
