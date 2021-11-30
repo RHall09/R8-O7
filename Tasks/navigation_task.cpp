@@ -31,5 +31,25 @@ void navigation_task(void* p_param) {
     If the shares are set from the bluetooth task, this task is essentially disabled, data collection is disabled, geofencing calculations
     are disabled, and the bot is simply controlled via bluetooth. The overrides take place in their respective tasks, including navigation.
     */
-   
+   if (navigation_enable) {
+       // Grab the Ultrasonic data. We want 5 readings before acting on it
+       float ultra1_readings[5];
+       float ultra2_readings[5];
+       float ultra3_readings[5];
+       for(uint8_t counter=0; counter<5; counter++) {
+           ultra1_readings[counter] = sonic1_queue.get()
+           ultra2_readings[counter] = sonic2_queue.get()
+           ultra3_readings[counter] = sonic3_queue.get()
+       }
+
+       // Average all the above data readings but through out any potential misfires
+
+       // Grab 5 readings off the tof safety array sensor
+       float tof_readings[5];
+       for(uint8_t counter=0; counter<5; counter++) {
+           tof_readings[counter] = tof_safetysuite_queue.get()
+       }
+
+       
+   }
 }

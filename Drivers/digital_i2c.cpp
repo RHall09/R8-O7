@@ -28,7 +28,7 @@ i2cdig::i2cdig(bool debugflag) {
         
     }
 }
-/** @brief Join i2c bus to the specified address for this class object
+/** @brief Join i2c bus as a master.
  */
 void i2cdig::joini2c() {
     Wire.begin()
@@ -110,10 +110,10 @@ void i2cdig::setoutput(uint8_t portnum, bool i_o) {
         Serial << "The current output cofiguration is: " << deforient << endl;
     }
     if (i_o) {
-        uint8_t datawrite |= deforient << portnum;     // Set the bit at portnum to turn the port into an input
+        uint8_t datawrite |= deforient << portnum;     // Set the bit at portnum to turn the port on (logic 1)
     }
     else {
-        uint8_t datawrite &= ~(deforient << portnum);  // Clear the bit at portnum to turn the port into an output (when i_o) is false.
+        uint8_t datawrite &= ~(deforient << portnum);  // Clear the bit at portnum to turn the port off (logic 0)
     }
     // uint8_t commandbyte = 0b00000011;
     Wire.beginTransmission((address));   // Connect to this objects i2c device in write mode
