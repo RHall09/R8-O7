@@ -30,14 +30,15 @@ void geofence_task (void* p_params) {
         // This line is blocking, meaning that this task only runs when the GPS data
         // is updated. For now this means we aren't using a delay, however it may be needed
         // depending on how often GPS data is updated.
-        lat       = latitude_queue.get();
-        longitude = longitude_queue.get();
+        if (geofence_enable.get()) {
+            lat       = latitude_queue.get();
+            longitude = longitude_queue.get();
 
-        distance, heading = geofencing(lat, longitude, fence_lat, fence_long, fence_size);
-        fence_distance.put(distance);
-        fence_heading.put(heading);
-        // vTaskDelay(5)    Currently delays for 5 seconds
-
+            distance, heading = geofencing(lat, longitude, fence_lat, fence_long, fence_size);
+            fence_distance.put(distance);
+            fence_heading.put(heading);
+            // vTaskDelay(5)    Currently delays for 5 seconds
+        }
     }
 
 }

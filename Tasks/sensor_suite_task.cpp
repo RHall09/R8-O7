@@ -66,62 +66,63 @@ void sensor_suite_task(void* p_param) {
     pinMode(5, INPUT)
     
     for EVER {
-        // First update the GPS data from the GPS featherwing. We'll need to use the TinyGPS++ library to extract lattitude
-        // and longitude from the NMEA string
-        if (GPSSerial.available()) {
-            gps.encode(GPSSerial.read());
+        if (sensor_suite_enable.get()) {
+            // First update the GPS data from the GPS featherwing. We'll need to use the TinyGPS++ library to extract lattitude
+            // and longitude from the NMEA string
+            if (GPSSerial.available()) {
+                gps.encode(GPSSerial.read());
+            }
+            // Update the lattitude and longitude queues if there is data to add to them
+            if (gps.location.isUpdated()) {
+                latitude_queue.put(gps.location.lat());
+                longitude_queue.put(gps.location.lng());
+            }
+            
+            // Now update the ultrasonic sensors in the crowd sensor suite. THIS CODE IS BLOCKING. PRIORITY IS DISTRUBTED SUCH THAT
+            // THIS CODE WILL EXECUTE ABOVE ALL OTHERS.
+
+            // Ultrasonic 1
+            dig_io.setoutput(sonic1_trig, low);
+            delayMicroseconds(2);
+            dig_io.setoutput(sonic1_trig, high);
+            delaayMicroseconds(10);
+            dig_io.setoutput(sonic1_trig, low);
+            noInterrupts();
+            float d = pulseIn(5, HIGH);
+            interrupts();
+            float sonic1_reading = d/58.0;
+            sonic1_queue.put(sonic1_reaading);
+
+            // Ultrasonic 2
+            dig_io.setoutput(sonic2_trig, low);
+            delayMicroseconds(2);
+            dig_io.setoutput(sonic2_trig, high);
+            delaayMicroseconds(10);
+            dig_io.setoutput(sonic2_trig, low);
+            noInterrupts();
+            float d = pulseIn(5, HIGH);
+            interrupts();
+            float sonic2_reading = d/58.0;
+            sonic2_queue.put(sonic2_reaading);
+
+
+            // Ultrasonic 3
+            dig_io.setoutput(sonic3_trig, low);
+            delayMicroseconds(2);
+            dig_io.setoutput(sonic3_trig, high);
+            delaayMicroseconds(10);
+            dig_io.setoutput(sonic3_trig, low);
+            noInterrupts();
+            float d = pulseIn(5, HIGH);
+            interrupts();
+            float sonic3_reading = d/58.0;
+            sonic3_queue.put(sonic3_reaading);
+
+            // Now we need to grab the time of flight sensor
+            lox.rangingTest(&tofmeasure, false);   // Disable debug prinout
+            if (tofmeasure.RangeStatus != 4) {     // Only pass data if its meaningful
+                tof_safetysuite_queue.put(tofmeasure.RangeMilliMeter);  // Stick the reading in the queue
+            }
         }
-        // Update the lattitude and longitude queues if there is data to add to them
-        if (gps.location.isUpdated()) {
-            latitude_queue.put(gps.location.lat());
-            longitude_queue.put(gps.location.lng());
-        }
-        
-        // Now update the ultrasonic sensors in the crowd sensor suite. THIS CODE IS BLOCKING. PRIORITY IS DISTRUBTED SUCH THAT
-        // THIS CODE WILL EXECUTE ABOVE ALL OTHERS.
-
-        // Ultrasonic 1
-        dig_io.setoutput(sonic1_trig, low);
-        delayMicroseconds(2);
-        dig_io.setoutput(sonic1_trig, high);
-        delaayMicroseconds(10);
-        dig_io.setoutput(sonic1_trig, low);
-        noInterrupts();
-        float d = pulseIn(5, HIGH);
-        interrupts();
-        float sonic1_reading = d/58.0;
-        sonic1_queue.put(sonic1_reaading);
-
-        // Ultrasonic 2
-        dig_io.setoutput(sonic2_trig, low);
-        delayMicroseconds(2);
-        dig_io.setoutput(sonic2_trig, high);
-        delaayMicroseconds(10);
-        dig_io.setoutput(sonic2_trig, low);
-        noInterrupts();
-        float d = pulseIn(5, HIGH);
-        interrupts();
-        float sonic2_reading = d/58.0;
-        sonic2_queue.put(sonic2_reaading);
-
-
-        // Ultrasonic 3
-        dig_io.setoutput(sonic3_trig, low);
-        delayMicroseconds(2);
-        dig_io.setoutput(sonic3_trig, high);
-        delaayMicroseconds(10);
-        dig_io.setoutput(sonic3_trig, low);
-        noInterrupts();
-        float d = pulseIn(5, HIGH);
-        interrupts();
-        float sonic3_reading = d/58.0;
-        sonic3_queue.put(sonic3_reaading);
-
-        // Now we need to grab the time of flight sensor
-        lox.rangingTest(&tofmeasure, false);   // Disable debug prinout
-        if (tofmeasure.RangeStatus != 4) {     // Only pass data if its meaningful
-            tof_safetysuite_queue.put(tofmeasure.RangeMilliMeter);  // Stick the reading in the queue
-        }
-
     }
 }
