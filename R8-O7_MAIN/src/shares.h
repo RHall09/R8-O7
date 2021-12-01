@@ -24,19 +24,20 @@ extern Queue<float> fence_distance;
 extern Queue<float> fence_heading;
 
 // Motor A Setpoint queue
-extern Queue<int16_t> motorSet_A;
+extern Queue<int16_t> motorSet_A_q;
 // Motor B Setpoint queue
-extern Queue<int16_t> motorSet_B;
+extern Queue<int16_t> motorSet_B_q;
 //
-extern Queue<float> encVel_A_queue;
+extern Queue<float> encVel_A_q;
 //
-extern Queue<float> encVel_B_queue;
+extern Queue<float> encVel_B_q;
 //
-extern Queue<float> enc_dt_A_queue;
+extern Queue<float> enc_dt_A_q;
 //
-extern Queue<float> enc_dt_B_queue;
+extern Queue<float> enc_dt_B_q;
 //
 extern Share<uint8_t> motorFlagRegister;
+#define Run_Motor_CS  current_flag, 5
 #define OverC_Clear   current_flag, 6
 #define Overcurrent_A current_flag, 7
 #define Overcurrent_B current_flag, 8
