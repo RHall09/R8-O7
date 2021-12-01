@@ -29,6 +29,7 @@ void motor_task_A (void* p_params)
     
     float enc_vel = 0;
     float enc_dt = 0;
+    int16_t current_setpoint = 0;
 
     for EVER 
     {
@@ -51,18 +52,17 @@ void motor_task_A (void* p_params)
                 { 
 
                     enc_vel = encVel_A_q.get();
-                    enc_dt  = enc_dt_A_q.get();
-
                     
                     // Get new setpoints and load into CS, if necessary
                     if(motorSet_A_q.any())
                     {
-                        motC.newSetpoint(motorSet_A_q.get());
+                        current_setpoint = motorSet_A_q.get();
+                        motC.newSetpoint(current_setpoint);
                     }
       
 
                     // Run control system
-                    motC.run(motor,enc_vel,enc_dt);
+                    motC.run(motor,enc_vel);
 
                 }  
             }
@@ -73,9 +73,15 @@ void motor_task_A (void* p_params)
                     motC.stopCS();
                 }
 
+                if(motorSet_A_q.any())
+                {
+                    current_setpoint = motorSet_A_q.get();
+                    motC.newSetpoint(current_setpoint);
+                }
                 
                 //Run motor directly, without CS here
 
+                motor.set(current_setpoint);
 
             }
         }

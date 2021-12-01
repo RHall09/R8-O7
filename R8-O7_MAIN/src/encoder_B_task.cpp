@@ -1,4 +1,4 @@
-/** @file encoder_A_task.cpp
+/** @file encoder_B_task.cpp
  *  This file contains a task which... 
  * 
  *  @author Rick Hall
@@ -20,7 +20,7 @@
 
 #define EVER (;;)
 
-void encoder_A (void* p_params) 
+void encoder_B (void* p_params) 
 {
     
     ESP32Encoder my_encoder;
@@ -48,7 +48,7 @@ void encoder_A (void* p_params)
         encoder_diff = encoder_current_read - encoder_last_read;
         encoder_velocity = (float)encoder_diff / ENCODER_PPR;
 
-        encVel_A_q.put(encoder_velocity);
+        encVel_B_q.put(encoder_velocity);
 
         if(count_overflow)
         {

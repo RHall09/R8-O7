@@ -56,9 +56,9 @@ public:
     void newSetpoint(int16_t set);
 
     // Run CS with new setpoint
-    void run(Motor motor, int16_t enc_velocity, uint16_t enc_dtime, int16_t set);
+    void run(Motor motor, int16_t enc_velocity, int16_t set);
     // Run CS without new setpoint
-    void run(Motor motor, int16_t enc_velocity, uint16_t enc_dtime);
+    void run(Motor motor, int16_t enc_velocity);
 
 };
 

@@ -58,13 +58,13 @@ void MotorCS::newSetpoint(int16_t set)
 }
 
 // Run CS
-void MotorCS::run(Motor motor, int16_t enc_velocity, uint16_t enc_dtime, int16_t set)
+void MotorCS::run(Motor motor, int16_t enc_velocity, int16_t set)
 {
     if (runCS)
     {
         setpoint = set;
         float e = (float)setpoint - (float)enc_velocity;
-        integral += e*enc_dtime;
+        integral += e;
 
         int8_t new_pwm = (int8_t)round(e*kP + integral*kI + (e - last_error)*kD);
 
@@ -83,12 +83,12 @@ void MotorCS::run(Motor motor, int16_t enc_velocity, uint16_t enc_dtime, int16_t
 }
 
 // Run CS
-void MotorCS::run(Motor motor, int16_t enc_velocity, uint16_t enc_dtime)
+void MotorCS::run(Motor motor, int16_t enc_velocity)
 {
     if (runCS)
     {
         float e = (float)setpoint - (float)enc_velocity;
-        integral += e*enc_dtime;
+        integral += e;
 
         int8_t new_pwm = (int8_t)round(e*kP + integral*kI + (e - last_error)*kD);
 
