@@ -22,12 +22,17 @@
 
 #define GPSSerial Serial1
 
+#define IRQ_PIN 2
+#define XSHUT_PIN 3
+
+Adafruit_VL53L1X vl53 = Adafruit_VL53L1X(XSHUT_PIN, IRQ_PIN);
+
 
 void sensor_suite_task(void* p_param) {
     // Setup for TinyGPS++
     TinyGPSPlus gps;
     // Couple of intermediate variables for handling data processing
-    uint8_t num_ultra = 3;     // Number of ultrasonic sensor in use in the safety sensor suite
+    // uint8_t num_ultra = 3;     // Number of ultrasonic sensor in use in the safety sensor suite
 
     
     for EVER {
@@ -42,6 +47,18 @@ void sensor_suite_task(void* p_param) {
             longitude_queue.put(gps.location.lng());
         }
         
-        // Now update the crowd sensor suite.
+        // Now update the main Time of Flight Sensor
+          int16_t distance;
+
+        if (vl53.dataReady()) {
+            // new measurement for the taking!
+            distance = vl53.distance();
+            if (distance == -1) {
+            // something went wrong!
+            return;
+            }
+            else {
+                tof_main.put(distance);
+            }
     }
 }
