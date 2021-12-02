@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include <STM32FreeRTOS.h>
 #include <ME507_Support/taskshare.h>
 #include <ME507_Support/taskqueue.h>
 #include <shares.h>
@@ -7,12 +8,7 @@
 #include <navigation_task.h>
 #include <geofence_task.h>
 
-void setup() {
-  // Start the serial port, wait a short time, then say hello. Use the
-  // non-RTOS delay() function because the RTOS hasn't been started yet
-  Serial.begin (115200);
-  delay (2000);
-  Serial << endl << endl << "Hello, I am an RTOS demonstration" << endl;
+
 
   Queue<float> fence_distance(1, "Fence Distance");
   //
@@ -21,6 +17,13 @@ void setup() {
   Queue<int16_t> motorSet_A_q(1, "Left Motor PWM Setting");
 
   Queue<int16_t> motorSet_B_q(1, "Right Motor PWM Setting");
+
+void setup() {
+  // Start the serial port, wait a short time, then say hello. Use the
+  // non-RTOS delay() function because the RTOS hasn't been started yet
+  Serial.begin (115200);
+  delay (2000);
+  Serial << endl << endl << "Hello, I am an RTOS demonstration" << endl;
 
   // Create a task which prints a slightly disagreeable message
   xTaskCreate (baby_motor_task,

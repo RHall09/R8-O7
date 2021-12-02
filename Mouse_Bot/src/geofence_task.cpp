@@ -27,9 +27,12 @@ void geofence_task (void* p_params)
     float local_heading;                // The heading returned by the geofence task locating hte nearest geofence point
     float local_distance;               // The distance returned by the geofence task indicating the closest geofence point
 
+    HardwareSerial Serial4(UART4);
+
+
     // GPS Initialization
     TinyGPSPlus gps;     // Start the TinyGPS++ module
-    #define GPSSerial Serial1    // Define the serial port with the gps featherwing attached
+    #define GPSSerial Serial4    // Define the serial port with the gps featherwing attached
 
     for EVER 
     {

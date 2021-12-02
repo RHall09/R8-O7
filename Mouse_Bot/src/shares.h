@@ -2,7 +2,7 @@
  *  This file contains extern declarations of shares and queues which are used
  *  in more than one file of a demonstration project.
  * 
- *  @author JR Ridgely
+ *  @author Rick Hall
  *  @date   2021-Oct-23 Original file
  *  @copyright (c) 2021 by JR Ridgely, released under the LGPL 3.0. 
  */
