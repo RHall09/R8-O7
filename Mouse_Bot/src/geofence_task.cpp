@@ -13,6 +13,7 @@
 #include "geofence_task.h"
 #include "shares.h"
 #include "Geofence_Drivers/geofencing.h"
+#include "Geofence_Drivers/TinyGPS++.h"
 
 #define EVER (;;)
 
@@ -25,13 +26,17 @@ void geofence_task (void* p_params) {
     float heading;                // The heading returned by the geofence task locating hte nearest geofence point
     float distance;               // The distance returned by the geofence task indicating the closest geofence point
 
+    // GPS Initialization
+    TinyGPSPlus gps;     // Start the TinyGPS++ module
+    #define GPSSerial Serial1    // Define the serial port with the gps featherwing attached
+
     for EVER {
         // Grab the updated GPS data from the sensor suite task, if available.
         // This line is blocking, meaning that this task only runs when the GPS data
         // is updated. For now this means we aren't using a delay, however it may be needed
         // depending on how often GPS data is updated.
-        lat       = latitude_queue.get();
-        longitude = longitude_queue.get();
+        lat       = gps.location.lat();
+        longitude = gps.location.lng();
 
         distance, heading = geofencing(lat, longitude, fence_lat, fence_long, fence_size);
         fence_distance.put(distance);

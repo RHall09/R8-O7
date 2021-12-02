@@ -12,16 +12,19 @@
 
 #include <ME507_Support/taskqueue.h>
 #include <ME507_Support/taskshare.h>
-#include <Misc_Drivers/RegOperators.h>
 
-// A queue which stores the latitude from the GPS module
-extern Queue<float> latitude_queue;
-// A queue which stores the longitude from the GPS module
-extern Queue<float> longitude_queue;
+// // A queue which stores the latitude from the GPS module
+// extern Queue<float> latitude_queue;
+// // A queue which stores the longitude from the GPS module
+// extern Queue<float> longitude_queue;
 //
 extern Queue<float> fence_distance;
 //
 extern Queue<float> fence_heading;
+
+// extern Queue<int16_t> Motor_A_pwm;
+
+// extern Queue<int16_t> Motor_B_pwm;
 
 
 
