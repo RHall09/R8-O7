@@ -28,6 +28,10 @@ void setup() {
 
     delay(1000);
 
+    my_motor.stop();
+
+    delay (1000);
+
   }
 }
 

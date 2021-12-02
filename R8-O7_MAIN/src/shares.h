@@ -23,6 +23,9 @@ extern Queue<float> fence_distance;
 //
 extern Queue<float> fence_heading;
 
+// Main Time of Flight Sensor Reading Queue (reads in mm)
+extern Queue<int16_t> tof_main;
+
 // Motor A Setpoint queue
 extern Queue<int16_t> motorSet_A_q;
 // Motor B Setpoint queue
@@ -37,6 +40,8 @@ extern Queue<float> enc_dt_A_q;
 extern Queue<float> enc_dt_B_q;
 //
 extern Share<uint8_t> motorFlagRegister;
+
+
 #define Run_Motor_CS  current_flag, 5
 #define OverC_Clear   current_flag, 6
 #define Overcurrent_A current_flag, 7

@@ -18,6 +18,9 @@ extern Share<bool> sensor_suite_enable;
 // A share which holds a boolean to enable or disable the safety sensor suite data collection. Written to by bluetooth or setup, read by geofence
 extern Share<bool> geofence_enable;
 
+// A share which enables or disables the navigation task when bluetooth takes control. Written to by setup or bluetooth, read by navigation.
+extern Share<bool> navigation_enable;
+
 // Two shares which hold the distance to the nearest point on the geofence. Written to by the geofence task, read by navigation
 extern Share<float> fence_distance;
 extern Share<float> fence_heading;

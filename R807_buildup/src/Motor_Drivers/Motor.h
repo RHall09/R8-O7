@@ -11,6 +11,8 @@
 
 #include <Arduino.h>
 
+enum Motor_Number {Motor_0 = 0, Motor_1 =  2, Motor_2 =  4, Motor_3 =  6,
+                   Motor_4 = 8, Motor_5 = 10, Motor_6 = 12, Motor_7 = 14};
 enum MotFlag {ENABLED, ERROR};
 // Motor Class Declaration
 class Motor
@@ -28,9 +30,17 @@ protected:
     int Pin1 = 0;
     int Pin2 = 0;
 
+    // PWM Channels
+    uint8_t motor_channel_1 = 0;
+    uint8_t motor_channel_2 = 0;
+
+    // Current Set Points
+    int16_t current_pwm = 0;
+    int16_t curr_abs_pwm = 0;
+
 public:
     //Constructor Function
-    Motor(int Pin_En, int Pin_1, int Pin_2);
+    Motor(int Pin_En, int Pin_1, int Pin_2, Motor_Number mot_num);
 
     //Enable Motors
     void enable(void);
@@ -49,6 +59,7 @@ public:
 
     //Check Flags
     bool FlagChk(MotFlag flag);
+
 
 };
 
