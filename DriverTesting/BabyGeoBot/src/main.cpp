@@ -17,13 +17,13 @@ Adafruit_DCMotor *leftMotor = AFMS.getMotor(1);
 Adafruit_DCMotor *rightMotor = AFMS.getMotor(3);
 
 // GPS Initialization
-TinyGPSPlus gps;     // Start the TinyGPS++ module
-#define GPSSerial Serial1    // Define the serial port with the gps featherwing attached
+// TinyGPSPlus gps;     // Start the TinyGPS++ module
+// #define GPSSerial Serial1    // Define the serial port with the gps featherwing attached
 
 // Initiate analog pin for proximity sensor
 int analogPin = A0;   // Proximity sensor is located on Pin A0
 
-int reading = 0;   // Reading is initialized with initial value of zero
+int reading = 2500;   // Reading is initialized with initial value of zero
 
 int mindist = 1700;  // Needs calibrating off of proximity sensor, minimum distance allowed for babybot to be from object. ONLY for IR sensor
 
@@ -81,7 +81,7 @@ void setup() {
   while (!Serial);
 
   // 9600 baud is the default rate for the Ultimate GPS
-  GPSSerial.begin(9600);
+  //GPSSerial.begin(9600);
 
   AFMS.begin();
   leftMotor->setSpeed(150);
@@ -102,7 +102,7 @@ void loop() {
   time(&curr_time);
   
   // grab GPS data and feed to TinyGPS++
-  gps.encode(GPSSerial.read());
+  // gps.encode(GPSSerial.read());
 
   // This code snippet is for testing purposes. It prints GPS data to the serial port, however it doesn't really serve a purpose when BabyBot is running.
   // if (GPSSerial.available()) {
@@ -126,7 +126,7 @@ void loop() {
   }
 
   // calculate the average:
-  average = total / numReadings;
+  average = 2500;
 
 
   // Break looping if too close to an object

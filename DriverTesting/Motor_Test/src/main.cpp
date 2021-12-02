@@ -47,14 +47,7 @@ void setup() {
 
   for(;;)
   {
-    if(set < 255)
-    {
-      set = set + 1;
-    }
-    else
-    {
-      set = 0;
-    }
+    set = 255;
 
     current_count = (float)my_encoder.getCount();
     enc_vel = (int16_t)round(current_count - last_count);
