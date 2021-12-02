@@ -31,17 +31,24 @@ void geofence_task (void* p_params) {
     #define GPSSerial Serial1    // Define the serial port with the gps featherwing attached
 
     for EVER {
-        // Grab the updated GPS data from the sensor suite task, if available.
-        // This line is blocking, meaning that this task only runs when the GPS data
-        // is updated. For now this means we aren't using a delay, however it may be needed
-        // depending on how often GPS data is updated.
-        lat       = gps.location.lat();
-        longitude = gps.location.lng();
+        // Grab the updated GPS data from the sensor and feed the hungry hungry
+        // tiny gps hippo. Once the beast is satiated, check for updated lattitude
+        // and longggggitude values. Then run the geofence to update the distance 
+        // and heading. Pretty cool if I do say so myself.
+
+        while (GPSSerial.available > 0) {
+            gps.encode(GPSSerial.read());
+        }
+        if (gps.location.isUpdated()) {
+            lat       = gps.location.lat();
+            longitude = gps.location.lng();
+        }
 
         distance, heading = geofencing(lat, longitude, fence_lat, fence_long, fence_size);
         fence_distance.put(distance);
         fence_heading.put(heading);
-        // vTaskDelay(5)    Currently delays for 5 seconds
+        
+        vTaskDelay(250)    // Run this task every 250 ms
 
     }
 
