@@ -8,8 +8,6 @@
 #include <cmath>
 #include <Arduino.h>
 
-#define PI 3.14159265
-
 float geofencing(float lat, float longitude, float* p_arr_lat, float* p_arr_long, uint8_t geofence_size) {
     // Create empty array of length of geofence size
     float residuals_lat[geofence_size];
@@ -52,13 +50,13 @@ float geofencing(float lat, float longitude, float* p_arr_lat, float* p_arr_long
     float A = (float) sqrt(pow(lat - low_point_lat, 2) + pow(longitude - low_point_long, 2) * 1.0);
 
     // Get the straight line distance between bot point and high point (called E)
-    float E = (float) sqrt(pow(lat - high_point_lat, 2) + pow(longitude - high_point_long, 2) * 1.0);
+    // float E = (float) sqrt(pow(lat - high_point_lat, 2) + pow(longitude - high_point_long, 2) * 1.0);
 
     // Get the straight line distance between low point and main point (called C)
     float C = (float) sqrt(pow(main_point_lat - low_point_lat, 2) + pow(main_point_long - low_point_long, 2) * 1.0);
 
     // Get the straight line distance between high point and main point (called D)
-    float D = (float) sqrt(pow(main_point_lat - high_point_lat, 2) + pow(main_point_long - high_point_long, 2) * 1.0);
+    // float D = (float) sqrt(pow(main_point_lat - high_point_lat, 2) + pow(main_point_long - high_point_long, 2) * 1.0);
 
     /*
     Now we apply the following logic to determine whether the closest distance to the point is the main point itself or a perpendicular to
@@ -80,5 +78,5 @@ float geofencing(float lat, float longitude, float* p_arr_lat, float* p_arr_long
        float distance = B*sin(angle_a);
    }
 
-   return distance, angle_a;
+   return distance; //, angle_a;
 }

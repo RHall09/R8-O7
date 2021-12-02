@@ -1,5 +1,8 @@
 #include <Arduino.h>
+#include <ME507_Support/taskshare.h>
+#include <ME507_Support/taskqueue.h>
 #include <shares.h>
+#include <Misc_Drivers/PrintStream.h>
 #include <baby_motor_task.h>
 #include <navigation_task.h>
 #include <geofence_task.h>
@@ -10,6 +13,15 @@ void setup() {
   Serial.begin (115200);
   delay (2000);
   Serial << endl << endl << "Hello, I am an RTOS demonstration" << endl;
+
+  Queue<float> fence_distance(1, "Fence Distance");
+  //
+  // Queue<float> fence_heading(1, "Fence Heading");
+
+  Queue<int16_t> motorSet_A_q(1, "Left Motor PWM Setting");
+
+  Queue<int16_t> motorSet_B_q(1, "Right Motor PWM Setting");
+
   // Create a task which prints a slightly disagreeable message
   xTaskCreate (baby_motor_task,
                 "Motor Task",                          // Name for printouts

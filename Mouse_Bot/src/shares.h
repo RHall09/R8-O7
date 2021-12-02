@@ -20,7 +20,7 @@
 //
 extern Queue<float> fence_distance;
 //
-extern Queue<float> fence_heading;
+// extern Queue<float> fence_heading;
 
 extern Queue<int16_t> motorSet_A_q;
 

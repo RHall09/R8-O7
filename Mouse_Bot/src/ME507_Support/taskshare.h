@@ -41,6 +41,7 @@
 #ifndef _TASKSHARE_H_
 #define _TASKSHARE_H_
 
+#include <Misc_Drivers/PrintStream.h>
 #include "baseshare.h"                      // Base class for shared data items
 #include "FreeRTOS.h"                       // Main header for FreeRTOS
 

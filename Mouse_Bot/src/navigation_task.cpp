@@ -20,7 +20,7 @@
 
 void navigation_task(void* p_param) {
     // Geofence Heading variable
-    float fence_head;
+    // float fence_head;
     // Geofence Distance variable
     float fence_dist;
 
@@ -28,7 +28,7 @@ void navigation_task(void* p_param) {
     for EVER {
 
         // First update the distance to the fence and the heading
-        fence_head = fence_heading.get();
+        // fence_head = fence_heading.get();
         fence_dist = fence_distance.get();
 
         if (fence_dist <= 5) {

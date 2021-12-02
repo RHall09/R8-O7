@@ -30,7 +30,7 @@
 
 #include "Motor_Drivers/Adafruit_MotorShield.h"
 #include "Arduino.h"
-#include <Motor_Drivers/Adafruit_MS_PWMServoDriver.h>
+#include <Motor_Drivers/utility/Adafruit_MS_PWMServoDriver.h>
 
 #if (MICROSTEPS == 8)
 ///! A sinusoial microstepping curve for the PWM output (8-bit range) with 9
