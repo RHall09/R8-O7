@@ -17,8 +17,8 @@ Adafruit_DCMotor *leftMotor = AFMS.getMotor(1);
 Adafruit_DCMotor *rightMotor = AFMS.getMotor(3);
 
 // GPS Initialization
-// TinyGPSPlus gps;     // Start the TinyGPS++ module
-// #define GPSSerial Serial1    // Define the serial port with the gps featherwing attached
+TinyGPSPlus gps;     // Start the TinyGPS++ module
+#define GPSSerial Serial1    // Define the serial port with the gps featherwing attached
 
 // Initiate analog pin for proximity sensor
 int analogPin = A0;   // Proximity sensor is located on Pin A0

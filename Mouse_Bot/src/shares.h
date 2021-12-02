@@ -22,9 +22,9 @@ extern Queue<float> fence_distance;
 //
 extern Queue<float> fence_heading;
 
-// extern Queue<int16_t> Motor_A_pwm;
+extern Queue<int16_t> motorSet_A_q;
 
-// extern Queue<int16_t> Motor_B_pwm;
+extern Queue<int16_t> motorSet_B_q;
 
 
 

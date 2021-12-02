@@ -11,6 +11,7 @@
 #if (defined STM32L4xx || defined STM32F4xx)
     #include <STM32FreeRTOS.h>
 #endif
+
 #include "shares.h"
 
 #define EVER (;;)

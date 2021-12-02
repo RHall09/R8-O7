@@ -20,9 +20,9 @@
 void geofence_task (void* p_params) {
     float lat;                    // Holds lattitude of bot from sensor suite task
     float longitude;              // Holds longitude of bot from sensor suite task
-    float fence_lat[] = {0,0,0};  // The geofence lattitude points to be used
-    float fence_long[] = {0,0,0}; // The geofence longitude points to be used
-    uint8_t fence_size = 3;       // The number of points defining the geofence
+    float fence_lat[] =  { 35.30242, 35.30249, 35.30239, 35.30238};  // The geofence lattitude points to be used
+    float fence_long[] = {120.66457,120.66477,120.66472,120.66461};  // The geofence longitude points to be used
+    uint8_t fence_size = 4;       // The number of points defining the geofence
     float heading;                // The heading returned by the geofence task locating hte nearest geofence point
     float distance;               // The distance returned by the geofence task indicating the closest geofence point
 
