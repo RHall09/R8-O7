@@ -21,7 +21,7 @@
 void motor_task_A (void* p_params) 
 {
     
-    Motor motor(GPIO_NUM_13,GPIO_NUM_12,GPIO_NUM_11);     // Set up Left Motor
+    Motor motor(13,12,27, Motor_0);     // Set up Left Motor
     MotorCS motC;
     motor.enable();
 
@@ -81,7 +81,7 @@ void motor_task_A (void* p_params)
                 
                 //Run motor directly, without CS here
 
-                motor.set(current_setpoint);
+                motC.run(motor,0);
 
             }
         }
