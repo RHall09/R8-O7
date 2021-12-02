@@ -15,7 +15,7 @@
   BSD license, all text above must be included in any redistribution
  ****************************************************/
 
-#include <Adafruit_MS_PWMServoDriver.h>
+#include <Motor_Drivers/utility/Adafruit_MS_PWMServoDriver.h>
 
 Adafruit_MS_PWMServoDriver::Adafruit_MS_PWMServoDriver(uint8_t addr) {
   _i2caddr = addr;
