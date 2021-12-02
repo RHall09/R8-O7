@@ -1,0 +1,373 @@
+~WRL3126.tmp
+R8-O7_ProgramDesign.docx
+BabyGeoBot/.pio/build/project.checksum
+BabyGeoBot/.pio/build/featheresp32/idedata.json
+BabyGeoBot/.pio/libdeps/featheresp32/AccelStepper/.gitignore
+BabyGeoBot/.pio/libdeps/featheresp32/AccelStepper/.piopm
+BabyGeoBot/.pio/libdeps/featheresp32/AccelStepper/keywords.txt
+BabyGeoBot/.pio/libdeps/featheresp32/AccelStepper/library.properties
+BabyGeoBot/.pio/libdeps/featheresp32/AccelStepper/LICENSE
+BabyGeoBot/.pio/libdeps/featheresp32/AccelStepper/README.md
+BabyGeoBot/.pio/libdeps/featheresp32/AccelStepper/examples/AFMotor_ConstantSpeed/AFMotor_ConstantSpeed.pde
+BabyGeoBot/.pio/libdeps/featheresp32/AccelStepper/examples/AFMotor_MultiStepper/AFMotor_MultiStepper.pde
+BabyGeoBot/.pio/libdeps/featheresp32/AccelStepper/examples/Blocking/Blocking.pde
+BabyGeoBot/.pio/libdeps/featheresp32/AccelStepper/examples/Bounce/Bounce.pde
+BabyGeoBot/.pio/libdeps/featheresp32/AccelStepper/examples/ConstantSpeed/ConstantSpeed.pde
+BabyGeoBot/.pio/libdeps/featheresp32/AccelStepper/examples/DualMotorShield/DualMotorShield.pde
+BabyGeoBot/.pio/libdeps/featheresp32/AccelStepper/examples/MotorShield/MotorShield.pde
+BabyGeoBot/.pio/libdeps/featheresp32/AccelStepper/examples/MultipleSteppers/MultipleSteppers.pde
+BabyGeoBot/.pio/libdeps/featheresp32/AccelStepper/examples/MultiStepper/MultiStepper.pde
+BabyGeoBot/.pio/libdeps/featheresp32/AccelStepper/examples/Overshoot/Overshoot.pde
+BabyGeoBot/.pio/libdeps/featheresp32/AccelStepper/examples/ProportionalControl/ProportionalControl.pde
+BabyGeoBot/.pio/libdeps/featheresp32/AccelStepper/examples/Quickstop/Quickstop.pde
+BabyGeoBot/.pio/libdeps/featheresp32/AccelStepper/examples/Random/Random.pde
+R8-O7_ProgramDesign.docx
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit BusIO/.piopm
+.gitignore
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit BusIO/Adafruit_BusIO_Register.cpp
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit BusIO/Adafruit_BusIO_Register.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit BusIO/Adafruit_I2CDevice.cpp
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit BusIO/Adafruit_I2CDevice.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit BusIO/Adafruit_I2CRegister.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit BusIO/Adafruit_SPIDevice.cpp
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit BusIO/Adafruit_SPIDevice.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit BusIO/library.properties
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit BusIO/LICENSE
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit BusIO/README.md
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit BusIO/.github/ISSUE_TEMPLATE.md
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit BusIO/.github/PULL_REQUEST_TEMPLATE.md
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit BusIO/.github/workflows/githubci.yml
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit BusIO/examples/i2c_address_detect/i2c_address_detect.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit BusIO/examples/i2c_readwrite/i2c_readwrite.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit BusIO/examples/i2c_registers/i2c_registers.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit BusIO/examples/i2corspi_register/i2corspi_register.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit BusIO/examples/spi_modetest/spi_modetest.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit BusIO/examples/spi_readwrite/spi_readwrite.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit BusIO/examples/spi_register_bits/spi_register_bits.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit BusIO/examples/spi_registers/spi_registers.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/.gitignore
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/.piopm
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Adafruit_GFX.cpp
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Adafruit_GFX.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Adafruit_GrayOLED.cpp
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Adafruit_GrayOLED.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Adafruit_SPITFT_Macros.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Adafruit_SPITFT.cpp
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Adafruit_SPITFT.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/gfxfont.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/glcdfont.c
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/library.properties
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/license.txt
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/README.md
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/.github/ISSUE_TEMPLATE.md
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/.github/PULL_REQUEST_TEMPLATE.md
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/.github/workflows/githubci.yml
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/examples/GFXcanvas/GFXcanvas.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/examples/GFXcanvas/GFXcanvasSerialDemo.cpp
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/examples/GFXcanvas/GFXcanvasSerialDemo.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/examples/mock_ili9341/mock_ili9341.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/fontconvert/bdf2adafruit.py
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/fontconvert/fontconvert_win.md
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/fontconvert/fontconvert.c
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/fontconvert/Makefile
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/fontconvert/makefonts.sh
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeMono9pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeMono12pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeMono18pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeMono24pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeMonoBold9pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeMonoBold12pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeMonoBold18pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeMonoBold24pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeMonoBoldOblique9pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeMonoBoldOblique12pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeMonoBoldOblique18pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeMonoBoldOblique24pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeMonoOblique9pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeMonoOblique12pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeMonoOblique18pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeMonoOblique24pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSans9pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSans12pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSans18pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSans24pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSansBold9pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSansBold12pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSansBold18pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSansBold24pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSansBoldOblique9pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSansBoldOblique12pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSansBoldOblique18pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSansBoldOblique24pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSansOblique9pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSansOblique12pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSansOblique18pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSansOblique24pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSerif9pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSerif12pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSerif18pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSerif24pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSerifBold9pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSerifBold12pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSerifBold18pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSerifBold24pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSerifBoldItalic9pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSerifBoldItalic12pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSerifBoldItalic18pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSerifBoldItalic24pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSerifItalic9pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSerifItalic12pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSerifItalic18pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/FreeSerifItalic24pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/Org_01.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/Picopixel.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/Tiny3x3a2pt7b.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit GFX Library/Fonts/TomThumb.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit ILI9341/.gitignore
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit ILI9341/.piopm
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit ILI9341/Adafruit_ILI9341.cpp
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit ILI9341/Adafruit_ILI9341.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit ILI9341/library.properties
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit ILI9341/README.md
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit ILI9341/.github/ISSUE_TEMPLATE.md
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit ILI9341/.github/PULL_REQUEST_TEMPLATE.md
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit ILI9341/.github/workflows/githubci.yml
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit ILI9341/examples/breakouttouchpaint/.esp8266.test.skip
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit ILI9341/examples/breakouttouchpaint/breakouttouchpaint.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit ILI9341/examples/graphicstest/graphicstest.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit ILI9341/examples/graphicstest_featherwing/graphicstest_featherwing.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit ILI9341/examples/graphicstest_pyportal/graphicstest_pyportal.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit ILI9341/examples/mandelbrot/mandelbrot.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit ILI9341/examples/onoffbutton/onoffbutton.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit ILI9341/examples/onoffbutton_breakout/.esp8266.test.skip
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit ILI9341/examples/onoffbutton_breakout/onoffbutton_breakout.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit ILI9341/examples/pictureEmbed/.leonardo.test.skip
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit ILI9341/examples/pictureEmbed/dragon.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit ILI9341/examples/pictureEmbed/pictureEmbed.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit ILI9341/examples/pyportal_boing/.pyportal.test.only
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit ILI9341/examples/pyportal_boing/graphics.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit ILI9341/examples/pyportal_boing/pyportal_boing.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit ILI9341/examples/touchpaint/touchpaint.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit ILI9341/examples/touchpaint_featherwing/touchpaint_featherwing.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit ILI9341/examples/touchpaint_pyportal/.pyportal.test.only
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit ILI9341/examples/touchpaint_pyportal/touchpaint_pyportal.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit SSD1306/.gitignore
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit SSD1306/.piopm
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit SSD1306/Adafruit_SSD1306.cpp
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit SSD1306/Adafruit_SSD1306.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit SSD1306/library.properties
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit SSD1306/license.txt
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit SSD1306/README.md
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit SSD1306/splash.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit SSD1306/.github/ISSUE_TEMPLATE.md
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit SSD1306/.github/PULL_REQUEST_TEMPLATE.md
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit SSD1306/.github/workflows/githubci.yml
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit SSD1306/examples/OLED_featherwing/OLED_featherwing.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit SSD1306/examples/ssd1306_128x32_i2c/ssd1306_128x32_i2c.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit SSD1306/examples/ssd1306_128x32_spi/ssd1306_128x32_spi.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit SSD1306/examples/ssd1306_128x64_i2c/ssd1306_128x64_i2c.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit SSD1306/examples/ssd1306_128x64_spi/ssd1306_128x64_spi.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit SSD1306/scripts/make_splash.py
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit SSD1306/scripts/Makefile
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit SSD1306/scripts/splash1.png
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit SSD1306/scripts/splash2.png
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit STMPE610/.gitignore
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit STMPE610/.piopm
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit STMPE610/Adafruit_STMPE610.cpp
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit STMPE610/Adafruit_STMPE610.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit STMPE610/code-of-conduct.md
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit STMPE610/library.properties
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit STMPE610/LICENSE
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit STMPE610/README.md
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit STMPE610/.github/ISSUE_TEMPLATE.md
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit STMPE610/.github/PULL_REQUEST_TEMPLATE.md
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit STMPE610/.github/workflows/githubci.yml
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit STMPE610/assets/board.jpg
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit STMPE610/examples/TouchTest/TouchTest.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit TouchScreen/.piopm
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit TouchScreen/code-of-conduct.md
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit TouchScreen/library.properties
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit TouchScreen/license.txt
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit TouchScreen/README.md
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit TouchScreen/TouchScreen.cpp
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit TouchScreen/TouchScreen.h
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit TouchScreen/.github/ISSUE_TEMPLATE.md
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit TouchScreen/.github/PULL_REQUEST_TEMPLATE.md
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit TouchScreen/.github/workflows/githubci.yml
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit TouchScreen/examples/touchscreendemo/.esp8266.test.skip
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit TouchScreen/examples/touchscreendemo/touchscreendemo.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit TouchScreen/examples/touchscreendemoshield/.esp8266.test.skip
+BabyGeoBot/.pio/libdeps/featheresp32/Adafruit TouchScreen/examples/touchscreendemoshield/touchscreendemoshield.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/.codespellrc
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/.piopm
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/keywords.txt
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/library.properties
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/LICENSE.txt
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/README.adoc
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/.github/dependabot.yml
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/.github/workflows/check-arduino.yml
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/.github/workflows/compile-examples.yml
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/.github/workflows/report-size-deltas.yml
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/.github/workflows/spell-check.yml
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/examples/Knob/Knob.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/examples/Knob/readme.md
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/examples/Knob/images/knob_BB.png
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/examples/Knob/images/knob_schem.png
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/examples/Sweep/readme.md
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/examples/Sweep/Sweep.ino
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/examples/Sweep/images/sweep_bb.png
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/examples/Sweep/images/sweep_schem.png
+BabyGeoBot/.vscode/c_cpp_properties.json
+BabyGeoBot/.vscode/launch.json
+BaseGPSTest/.pio/build/project.checksum
+BaseGPSTest/.pio/build/featheresp32/idedata.json
+BaseGPSTest/.vscode/c_cpp_properties.json
+BaseGPSTest/.vscode/launch.json
+Drivers/LinkstoGithubs.txt
+i2c_test/.pio/build/project.checksum
+i2c_test/.pio/build/featheresp32/.sconsign39.dblite
+i2c_test/.pio/build/featheresp32/firmware.bin
+i2c_test/.pio/build/featheresp32/firmware.elf
+i2c_test/.pio/build/featheresp32/idedata.json
+i2c_test/.pio/build/featheresp32/libFrameworkArduino.a
+i2c_test/.pio/build/featheresp32/libFrameworkArduinoVariant.a
+i2c_test/.pio/build/featheresp32/partitions.bin
+i2c_test/.pio/build/featheresp32/FrameworkArduino/base64.cpp.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/cbuf.cpp.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/Esp.cpp.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/esp32-hal-adc.c.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/esp32-hal-bt.c.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/esp32-hal-cpu.c.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/esp32-hal-dac.c.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/esp32-hal-gpio.c.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/esp32-hal-i2c.c.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/esp32-hal-ledc.c.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/esp32-hal-log.c.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/esp32-hal-matrix.c.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/esp32-hal-misc.c.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/esp32-hal-psram.c.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/esp32-hal-rmt.c.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/esp32-hal-sigmadelta.c.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/esp32-hal-spi.c.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/esp32-hal-time.c.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/esp32-hal-timer.c.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/esp32-hal-touch.c.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/esp32-hal-uart.c.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/FunctionalInterrupt.cpp.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/HardwareSerial.cpp.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/IPAddress.cpp.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/IPv6Address.cpp.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/main.cpp.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/MD5Builder.cpp.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/Print.cpp.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/stdlib_noniso.c.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/Stream.cpp.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/StreamString.cpp.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/wiring_pulse.c.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/wiring_shift.c.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/WMath.cpp.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/WString.cpp.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/libb64/cdecode.c.o
+i2c_test/.pio/build/featheresp32/FrameworkArduino/libb64/cencode.c.o
+i2c_test/.pio/build/featheresp32/libaa2/libWire.a
+i2c_test/.pio/build/featheresp32/libaa2/Wire/Wire.cpp.o
+i2c_test/.pio/build/featheresp32/src/main.cpp.o
+i2c_test/.vscode/c_cpp_properties.json
+i2c_test/.vscode/launch.json
+PCB Stuff/PCB_R8-O7_Final/eagle.epf
+RTOS Example/baseshare.cpp
+RTOS Example/baseshare.h
+RTOS Example/main_i2c.cpp
+RTOS Example/main.cpp
+RTOS Example/spinny_main.cpp
+RTOS Example/taskqueue.h
+RTOS Example/taskshare.h
+StatSig/Doxyfile
+StatSig/.pio/build/project.checksum
+StatSig/.pio/build/featheresp32/.sconsign39.dblite
+StatSig/.pio/build/featheresp32/firmware.bin
+StatSig/.pio/build/featheresp32/firmware.elf
+StatSig/.pio/build/featheresp32/idedata.json
+StatSig/.pio/build/featheresp32/libFrameworkArduino.a
+StatSig/.pio/build/featheresp32/libFrameworkArduinoVariant.a
+StatSig/.pio/build/featheresp32/partitions.bin
+StatSig/.pio/build/featheresp32/FrameworkArduino/base64.cpp.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/cbuf.cpp.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/Esp.cpp.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/esp32-hal-adc.c.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/esp32-hal-bt.c.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/esp32-hal-cpu.c.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/esp32-hal-dac.c.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/esp32-hal-gpio.c.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/esp32-hal-i2c.c.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/esp32-hal-ledc.c.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/esp32-hal-log.c.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/esp32-hal-matrix.c.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/esp32-hal-misc.c.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/esp32-hal-psram.c.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/esp32-hal-rmt.c.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/esp32-hal-sigmadelta.c.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/esp32-hal-spi.c.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/esp32-hal-time.c.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/esp32-hal-timer.c.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/esp32-hal-touch.c.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/esp32-hal-uart.c.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/FunctionalInterrupt.cpp.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/HardwareSerial.cpp.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/IPAddress.cpp.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/IPv6Address.cpp.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/main.cpp.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/MD5Builder.cpp.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/Print.cpp.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/stdlib_noniso.c.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/Stream.cpp.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/StreamString.cpp.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/wiring_pulse.c.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/wiring_shift.c.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/WMath.cpp.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/WString.cpp.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/libb64/cdecode.c.o
+StatSig/.pio/build/featheresp32/FrameworkArduino/libb64/cencode.c.o
+StatSig/.pio/build/featheresp32/lib8ff/libPrintStream.a
+StatSig/.pio/build/featheresp32/lib8ff/PrintStream/PrintStream.cpp.o
+StatSig/.pio/build/featheresp32/src/main.cpp.o
+StatSig/.pio/build/featheresp32/src/stat_tracker.cpp.o
+StatSig/.vscode/c_cpp_properties.json
+StatSig/.vscode/launch.json
+StatSig/DoxyAwesome/doxygen-awesome-darkmode-toggle.js
+StatSig/DoxyAwesome/doxygen-awesome-sidebar-only-darkmode-toggle.css
+StatSig/DoxyAwesome/doxygen-awesome-sidebar-only.css
+StatSig/DoxyAwesome/doxygen-awesome.css
+StatSig/DoxyAwesome/LICENSE
+StatSig/DoxyAwesome/logo.drawio.svg
+StatSig/DoxyAwesome/README.md
+UltrasonicTest/.pio/build/project.checksum
+UltrasonicTest/.pio/build/featheresp32/idedata.json
+UltrasonicTest/.vscode/c_cpp_properties.json
+UltrasonicTest/.vscode/launch.json
+PCB Stuff/PCB_R8-O7_Final/eagle.epf
+PCB Stuff/PCB_R8-O7_Final/eagle.epf
+R8-O7_ProgramDesign.docx
+BabyGeoBot/.pio/libdeps/featheresp32/AccelStepper/src/AccelStepper.cpp
+BabyGeoBot/.pio/libdeps/featheresp32/AccelStepper/src/AccelStepper.h
+BabyGeoBot/.pio/libdeps/featheresp32/AccelStepper/src/MultiStepper.cpp
+BabyGeoBot/.pio/libdeps/featheresp32/AccelStepper/src/MultiStepper.h
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/src/Servo.h
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/src/avr/Servo.cpp
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/src/avr/ServoTimers.h
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/src/mbed/Servo.cpp
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/src/mbed/ServoTimers.h
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/src/megaavr/Servo.cpp
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/src/megaavr/ServoTimers.h
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/src/nrf52/Servo.cpp
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/src/nrf52/ServoTimers.h
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/src/sam/Servo.cpp
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/src/sam/ServoTimers.h
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/src/samd/Servo.cpp
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/src/samd/ServoTimers.h
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/src/stm32f4/Servo.cpp
+BabyGeoBot/.pio/libdeps/featheresp32/Servo/src/stm32f4/ServoTimers.h
+PCB Stuff/PCB_R8-O7_Final/eagle.epf
+R8-O7_ProgramDesign.docx
+PCB Stuff/PCB_R8-O7_Final/eagle.epf
+R8-O7_ProgramDesign.docx
