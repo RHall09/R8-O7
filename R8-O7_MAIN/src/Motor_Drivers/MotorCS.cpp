@@ -54,7 +54,18 @@ bool MotorCS::checkCS(void)
 // Change setpoint
 void MotorCS::newSetpoint(int16_t set)
 {
-    setpoint = set;
+    if ( (-255 < set) && (set < 255))
+    {
+        setpoint = set;
+    }
+    else if (255 < set)
+    {
+        setpoint = 255;
+    }
+    else
+    {
+        setpoint = -255;
+    }
 }
 
 // Run CS
@@ -62,7 +73,8 @@ void MotorCS::run(Motor motor, int16_t enc_velocity, int16_t set)
 {
     if (runCS)
     {
-        setpoint = set;
+        this -> newSetpoint(set);
+
         float e = (float)setpoint - (float)enc_velocity;
         integral += e;
 
@@ -88,9 +100,19 @@ void MotorCS::run(Motor motor, int16_t enc_velocity)
     if (runCS)
     {
         float e = (float)setpoint - (float)enc_velocity;
-        integral += e;
 
-        int8_t new_pwm = (int8_t)round(e*kP + integral*kI + (e - last_error)*kD);
+        integral += e;
+        // Saturation Limit for integral
+        if ( 32767 < integral)
+        {
+            integral = 32767;
+        }
+        else if (integral < -32767)
+        {
+            integral = -32767;
+        }
+
+        int16_t new_pwm = (int16_t)round(e*kP + integral*kI + (e - last_error)*kD);
 
         // Saturation Catch
         if(!(-255 <= new_pwm <= 255))
