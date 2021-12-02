@@ -27,14 +27,88 @@ void geofence_task (void* p_params)
     Adafruit_DCMotor *leftMotor = AFMS.getMotor(1);
     Adafruit_DCMotor *rightMotor = AFMS.getMotor(3);
 
-    
+    int16_t setA = 0;
+    int16_t setB = 0;
+    uint8_t pwmA = 0;
+    uint8_t pwmB = 0;
+
+    bool dirA = true;
+    bool dirB = true;
+    bool stopA = true;
+    bool stopB = true;
 
     for EVER
     {
-        if(Motor_A_pwm.any())
+        if(motorSet_A_q.any())
         {
-            pwmA = Motor_A_pwm.get()
-        }                                                                                                           
+            setA = motorSet_A_q.get();
+            if (setA > 0)
+            {
+                pwmA = (uint8_t)abs(setA);
+                dirA = true;
+                stopA = false;
+            }
+            else if (setA < 0)
+            {
+                pwmA = (uint8_t)abs(setA);
+                dirA = false;
+                stopA = false;
+            }
+            else
+            {
+                stopA = true;
+            }
+        } 
+        if(motorSet_B_q.any())
+        {
+            setA = motorSet_B_q.get();
+            if (setB > 0)
+            {
+                pwmB = (uint8_t)abs(setB);
+                dirB = true;
+                stopB = false;
+            }
+            else if (setB < 0)
+            {
+                pwmB = (uint8_t)abs(setB);
+                dirB = false;
+                stopB = false;
+            }
+            else
+            {
+                stopB = true;
+            }
+        }
+
+        if(stopA)
+        {
+            leftMotor -> run(RELEASE);
+        }
+        else if(dirA)
+        {
+            leftMotor -> setSpeed(setA);
+            leftMotor -> run(FORWARD);
+        }
+        else
+        {
+            leftMotor -> setSpeed(setA);
+            leftMotor -> run(BACKWARD);
+        }
+
+        if(stopB)
+        {
+            rightMotor -> run(RELEASE);
+        }
+        else if(dirB)
+        {
+            rightMotor -> setSpeed(setB);
+            rightMotor -> run(FORWARD);
+        }
+        else
+        {
+            rightMotor -> setSpeed(setB);
+            rightMotor -> run(BACKWARD);
+        }
 
     }
 }

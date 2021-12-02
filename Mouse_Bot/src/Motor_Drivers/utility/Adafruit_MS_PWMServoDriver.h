@@ -24,7 +24,7 @@
 #include "WProgram.h"
 #endif
 
-#include <Adafruit_I2CDevice.h>
+#include <I2C_Drivers/Adafruit_I2CDevice.h>
 
 #define PCA9685_SUBADR1 0x2
 #define PCA9685_SUBADR2 0x3
