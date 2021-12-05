@@ -35,6 +35,7 @@ void sensor_suite_task(void* p_param) {
     // uint8_t num_ultra = 3;     // Number of ultrasonic sensor in use in the safety sensor suite
 
     
+    
     for EVER {
         // First update the GPS data from the GPS featherwing. We'll need to use the TinyGPS++ library to extract lattitude
         // and longitude from the NMEA string

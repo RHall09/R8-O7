@@ -41,7 +41,6 @@ extern Queue<float> enc_dt_B_q;
 //
 extern Share<uint8_t> motorFlagRegister;
 
-
 #define Run_Motor_CS  current_flag, 5
 #define OverC_Clear   current_flag, 6
 #define Overcurrent_A current_flag, 7

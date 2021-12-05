@@ -10,6 +10,7 @@
             "includePath": [
                 "C:/Users/hallm/Documents/aa--Mechanical_Engineering--aa/Mechatronics/ME507/R8-O7/Mouse_Bot/include",
                 "C:/Users/hallm/Documents/aa--Mechanical_Engineering--aa/Mechatronics/ME507/R8-O7/Mouse_Bot/src",
+                "C:/Users/hallm/Documents/aa--Mechanical_Engineering--aa/Mechatronics/ME507/R8-O7/Mouse_Bot/.pio/libdeps/nucleo_l476rg/Adafruit NeoPixel",
                 "C:/Users/hallm/Documents/aa--Mechanical_Engineering--aa/Mechatronics/ME507/R8-O7/Mouse_Bot/.pio/libdeps/nucleo_l476rg/STM32duino FreeRTOS/src",
                 "C:/Users/hallm/Documents/aa--Mechanical_Engineering--aa/Mechatronics/ME507/R8-O7/Mouse_Bot/.pio/libdeps/nucleo_l476rg/PrintStream/src",
                 "C:/Users/hallm/Documents/aa--Mechanical_Engineering--aa/Mechatronics/ME507/R8-O7/Mouse_Bot/.pio/libdeps/nucleo_l476rg/TinyGPSPlus/src",
@@ -63,6 +64,7 @@
                 "path": [
                     "C:/Users/hallm/Documents/aa--Mechanical_Engineering--aa/Mechatronics/ME507/R8-O7/Mouse_Bot/include",
                     "C:/Users/hallm/Documents/aa--Mechanical_Engineering--aa/Mechatronics/ME507/R8-O7/Mouse_Bot/src",
+                    "C:/Users/hallm/Documents/aa--Mechanical_Engineering--aa/Mechatronics/ME507/R8-O7/Mouse_Bot/.pio/libdeps/nucleo_l476rg/Adafruit NeoPixel",
                     "C:/Users/hallm/Documents/aa--Mechanical_Engineering--aa/Mechatronics/ME507/R8-O7/Mouse_Bot/.pio/libdeps/nucleo_l476rg/STM32duino FreeRTOS/src",
                     "C:/Users/hallm/Documents/aa--Mechanical_Engineering--aa/Mechatronics/ME507/R8-O7/Mouse_Bot/.pio/libdeps/nucleo_l476rg/PrintStream/src",
                     "C:/Users/hallm/Documents/aa--Mechanical_Engineering--aa/Mechatronics/ME507/R8-O7/Mouse_Bot/.pio/libdeps/nucleo_l476rg/TinyGPSPlus/src",
