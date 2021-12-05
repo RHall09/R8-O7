@@ -98,7 +98,7 @@ public:
   friend class Adafruit_DCMotor; ///< Let DCMotors control the Shield
 
   void setPWM(uint8_t pin, uint16_t val);
-  void setPin(uint8_t pin, boolean val);
+  void setPin(uint8_t pin, bool val);
 
 private:
   uint8_t _addr;

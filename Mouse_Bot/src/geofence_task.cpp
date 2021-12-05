@@ -12,6 +12,7 @@
 #endif
 #include "geofence_task.h"
 #include "shares.h"
+#include "PrintStream.h"
 #include "Geofence_Drivers/geofencing.h"
 #include "Geofence_Drivers/TinyGPS++.h"
 
@@ -34,8 +35,13 @@ void geofence_task (void* p_params)
     TinyGPSPlus gps;     // Start the TinyGPS++ module
     #define GPSSerial Serial4    // Define the serial port with the gps featherwing attached
 
+    Serial << "Geofence is setup" << endl;
+
     for EVER 
     {
+
+        //Serial << "Geofence Task ---------------" << endl;
+
         // Grab the updated GPS data from the sensor and feed the hungry hungry
         // tiny gps hippo. Once the beast is satiated, check for updated lattitude
         // and longggggitude values. Then run the geofence to update the distance 
@@ -45,20 +51,29 @@ void geofence_task (void* p_params)
         {
         
             gps.encode(GPSSerial.read());
+
+            Serial << "Hi" << endl;
         }
         if (gps.location.isUpdated()) 
         {
             latitude  = gps.location.lat();
             longitude = gps.location.lng();
+
+            local_distance = geofencing(latitude, longitude, fence_lat, fence_long, fence_size); // , local_heading
+            fence_distance.put(local_distance);
+
+            Serial << "Bot is at: " << latitude << " and " << longitude << endl;
+
+            Serial << "And the distance is " << local_distance << endl;
+
         }
 
-        local_distance = geofencing(latitude, longitude, fence_lat, fence_long, fence_size); // , local_heading
-        fence_distance.put(local_distance);
+
         //fence_heading.put(local_heading);
 
-        Serial << "Fence at: " << local_distance << endl;
+        //Serial << "Fence at: " << local_distance << endl;
         
-        vTaskDelay(250);    // Run this task every 250 ms
+        vTaskDelay(100);    // Run this task every 100 ms
 
     }
 

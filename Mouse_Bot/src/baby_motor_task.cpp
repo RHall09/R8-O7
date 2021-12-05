@@ -13,6 +13,7 @@
 #endif
 #include <Motor_Drivers/Adafruit_MotorShield.h>
 #include <Motor_Drivers/utility/Adafruit_MS_PWMServoDriver.h>
+#include <PrintStream.h>
 #include <shares.h>
 
 #define EVER (;;)
@@ -34,10 +35,14 @@ void baby_motor_task (void* p_params)
     bool stopA = true;
     bool stopB = true;
 
+    Serial << "Motors are setup" << endl;
+
     for EVER
     {
+        //Serial << "Motor Task -----------" << endl;
         if(motorSet_A_q.any())
         {
+            //Serial << "Motor A updated" << endl;
             setA = motorSet_A_q.get();
             if (setA > 0)
             {
@@ -58,7 +63,8 @@ void baby_motor_task (void* p_params)
         } 
         if(motorSet_B_q.any())
         {
-            setA = motorSet_B_q.get();
+            //Serial << "Motor B updated" << endl;
+            setB = motorSet_B_q.get();
             if (setB > 0)
             {
                 pwmB = (uint8_t)abs(setB);
@@ -77,35 +83,45 @@ void baby_motor_task (void* p_params)
             }
         }
 
+        //Serial << "Now we're setting the motors to run" << endl;
         if(stopA)
         {
-            leftMotor -> run(RELEASE);
+            //Serial << "Motor A Stopped" << endl;
+            // leftMotor -> run(RELEASE);
         }
         else if(dirA)
         {
-            leftMotor -> setSpeed(setA);
-            leftMotor -> run(FORWARD);
+            //Serial << "Motor A Forward" << endl;
+            // leftMotor -> setSpeed(setA);
+            // leftMotor -> run(FORWARD);
         }
         else
         {
-            leftMotor -> setSpeed(setA);
-            leftMotor -> run(BACKWARD);
+            //Serial << "Motor A Backward" << endl;
+            // leftMotor -> setSpeed(setA);
+            // leftMotor -> run(BACKWARD);
         }
 
         if(stopB)
         {
-            rightMotor -> run(RELEASE);
+            //Serial << "Motor B Stopped" << endl;
+            // rightMotor -> run(RELEASE);
         }
         else if(dirB)
         {
-            rightMotor -> setSpeed(setB);
-            rightMotor -> run(FORWARD);
+            //Serial << "Motor B Forward" << endl;
+            // rightMotor -> setSpeed(setB);
+            // rightMotor -> run(FORWARD);
         }
         else
         {
-            rightMotor -> setSpeed(setB);
-            rightMotor -> run(BACKWARD);
+            //Serial << "Motor B Backward" << endl;
+            // rightMotor -> setSpeed(setB);
+            // rightMotor -> run(BACKWARD);
         }
+
+        //Serial << "Motors are set at: " << setA << " and " << setB << endl;
+        vTaskDelay(250);
 
     }
 }

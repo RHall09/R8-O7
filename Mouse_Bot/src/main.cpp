@@ -15,7 +15,6 @@
   // Queue<float> fence_heading(1, "Fence Heading");
 
   Queue<int16_t> motorSet_A_q(1, "Left Motor PWM Setting");
-
   Queue<int16_t> motorSet_B_q(1, "Right Motor PWM Setting");
 
 void setup() {
@@ -37,7 +36,7 @@ void setup() {
                 "Navigation",                          // Name for printouts
                 256,                             // Stack size
                 NULL,                            // Parameters for task fn.
-                1,                               // Priority
+                4,                               // Priority
                 NULL);                           // Task handle
 
   xTaskCreate (geofence_task,

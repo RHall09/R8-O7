@@ -12,6 +12,7 @@
     #include <STM32FreeRTOS.h>
 #endif
 
+#include <PrintStream.h>
 #include "shares.h"
 
 #define EVER (;;)
@@ -24,9 +25,15 @@ void navigation_task(void* p_param) {
     // Geofence Distance variable
     float fence_dist;
 
+    motorSet_A_q.put(150);
+    motorSet_B_q.put(150);
+
+    Serial << "Nav task is setup" << endl;
+
     
     for EVER {
 
+        Serial << "Nav Task ------------ " << endl;
         // First update the distance to the fence and the heading
         // fence_head = fence_heading.get();
         fence_dist = fence_distance.get();

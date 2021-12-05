@@ -97,7 +97,7 @@ void Adafruit_MotorShield::setPWM(uint8_t pin, uint16_t value) {
     @param  value HIGH or LOW depending on the value you want!
 */
 /**************************************************************************/
-void Adafruit_MotorShield::setPin(uint8_t pin, boolean value) {
+void Adafruit_MotorShield::setPin(uint8_t pin, bool value) {
   if (value == LOW)
     _pwm.setPWM(pin, 0, 0);
   else
