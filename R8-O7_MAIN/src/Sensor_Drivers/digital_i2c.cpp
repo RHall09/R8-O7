@@ -1,7 +1,8 @@
 /** @file digital_i2c.cpp
- *          This file contains the member functions of a class that acts as a driver for the PCA9534 8-bit I2C-bus with 8 digital I/O pins.
+ *          This file contains the member functions of a class that acts as a driver for the \b PCA9534 8-bit I2C-bus with 8 digital I/O pins.
  * @author Kai Quizon
  * @date   October 25, 2021
+ * @copyright (c) 2021 by Kai Quizon, released under the LGPL 3.0.
  **/
 
 #include <Wire.h>
@@ -13,7 +14,7 @@
 /** @brief Default contructor that disables debugging printouts.
  */
 i2cdig::i2cdig() {
-    bool debugflag = false;
+    debugflag = false;
     
 }
 
@@ -31,7 +32,7 @@ i2cdig::i2cdig(bool debugflag) {
 /** @brief Join i2c bus to the specified address for this class object
  */
 void i2cdig::joini2c() {
-    Wire.begin()
+    Wire.begin();
     if (debugflag) {
         Serial << "I2C bus joined as master" << endl;
     }
@@ -46,6 +47,7 @@ void i2cdig::configport(uint8_t portnum, bool i_o) {
     Wire.beginTransmission(address);     // Connect to this objects i2c device in read mode
     Wire.write(config_port);             // Point to the configuration register
     Wire.endTransmission();                  // Send the bytes to the device and end transmission
+    uint8_t datawrite = 0b0;
     if (debugflag) {
         Serial.print("Pointing to configuration port \n");
     }
@@ -56,26 +58,26 @@ void i2cdig::configport(uint8_t portnum, bool i_o) {
         Serial << "The current cofiguration is: " << deforient << endl;
     }
     if (i_o) {
-        uint8_t datawrite |= deforient << portnum;     // Set the bit at portnum to turn the port into an input
+        datawrite |= deforient << portnum;     // Set the bit at portnum to turn the port into an input
     }
     else {
-        uint8_t datawrite &= ~(deforient << portnum);  // Clear the bit at portnum to turn the port into an output (when i_o) is false.
+        datawrite &= ~(deforient << portnum);  // Clear the bit at portnum to turn the port into an output (when i_o) is false.
     }
     // uint8_t commandbyte = 0b00000011;
     Wire.beginTransmission((address));   // Connect to this objects i2c device in write mode
-    Wire.write(byte(config_port);           // Point to Configuration Register
+    Wire.write(byte(config_port));           // Point to Configuration Register
     Wire.write(byte(datawrite));            // Write to configuration port data desired
     Wire.endTransmission();                 // Send data
 }
 /** @brief Read from a port configured as input. Do nothing if port is not configured as input.
  *  @param portnum  The port to be read.
- *  @return 
+ *  @return A boolean representing the state of the input. True for logical high, false, for logical low.
  */
 bool i2cdig::readinput(uint8_t portnum) {
     Wire.beginTransmission(address);  // Connect to device address in write mode
     Wire.write(input_port);              // Point to the input port
     Wire.endTransmission();              // Send Data
-    if (boolflag) {
+    if (debugflag) {
         Serial.print("Pointing to input port \n");
     }
 
@@ -98,22 +100,24 @@ bool i2cdig::readinput(uint8_t portnum) {
 void i2cdig::setoutput(uint8_t portnum, bool i_o) {
     Wire.beginTransmission(address);       // Connect to device address in write mode
     Wire.write(output_port);                  // Point to the output register
-    Wire.endTransmission()                    // Send Data
+    Wire.endTransmission();                    // Send Data
 
     if (debugflag) {
         Serial.print("Pointing to output port \n");
     }
     Wire.requestFrom((address<<1), 1);     // Request 1 byte from the device
 
+    uint8_t datawrite = 0b0;
+
     uint8_t deforient = Wire.read();      // Read the register and dump into deforientation
     if (debugflag) {
         Serial << "The current output cofiguration is: " << deforient << endl;
     }
     if (i_o) {
-        uint8_t datawrite |= deforient << portnum;     // Set the bit at portnum to turn the port into an input
+        datawrite |= deforient << portnum;     // Set the bit at portnum to turn the port into an input
     }
     else {
-        uint8_t datawrite &= ~(deforient << portnum);  // Clear the bit at portnum to turn the port into an output (when i_o) is false.
+        datawrite &= ~(deforient << portnum);  // Clear the bit at portnum to turn the port into an output (when i_o) is false.
     }
     // uint8_t commandbyte = 0b00000011;
     Wire.beginTransmission((address));   // Connect to this objects i2c device in write mode
@@ -121,11 +125,9 @@ void i2cdig::setoutput(uint8_t portnum, bool i_o) {
     Wire.write(byte(datawrite));
     Wire.endTransmission();
     if (debugflag) {
-        Serial.print("Wrote to output port")
+        Serial.print("Wrote to output port");
     }
 
 
-
-}
 
 };
