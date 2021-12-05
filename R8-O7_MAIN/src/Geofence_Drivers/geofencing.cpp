@@ -1,8 +1,13 @@
 /** @file geofencing.cpp
  *          This file contains a single function for returning the shortest straight line distance from a point
- *          to the edge of a user define geofence.
+ *          to the edge of a user define geofence. The geofence must be built as two arrays (one of lattitude points
+ *          and one of longitude points) that have matching dimensions. This dimension must be contained as an unsigned 8-bit
+ *          integer. Thereby, in this configuration the maximum geofence point definition is 255 pairs of lattitude longitude points.
+ *          The sorting algorithm used to determine the nearest matching geofence point is calculation intensive. Optimization may be
+ *          necessary if larger geofences are required. This file is dependent on the Arduino framework and the Arduino cmath header.
  * @author Kai Quizon
  * @date   October 25, 2021
+ * @copyright (c) 2021 by Kai Quizon, released under the LGPL 3.0.
  **/
 
 #include <cmath>

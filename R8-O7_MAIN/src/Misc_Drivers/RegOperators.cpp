@@ -6,6 +6,7 @@
  *
  *  @author Rick Hall
  *  @date 2020-2-Nov
+ *  @copyright (c) 2021 by Rick Hall, released under the LGPL 3.0.
  */
 
 #include <Arduino.h>

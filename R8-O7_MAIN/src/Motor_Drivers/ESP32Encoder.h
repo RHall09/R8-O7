@@ -1,3 +1,9 @@
+/**  @file ESP32Encoder.cpp
+ *   		Header for the encoder functions contained in \ref ESP32Encoder.cpp.
+ *   @date Oct 15, 2018
+ *   @author hephaestus
+ **/
+
 #pragma once
 #include <Arduino.h>
 #include <driver/gpio.h>

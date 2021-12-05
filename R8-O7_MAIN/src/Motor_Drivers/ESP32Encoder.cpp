@@ -1,9 +1,9 @@
-/*
- * ESP32Encoder.cpp
- *
- *  Created on: Oct 15, 2018
- *      Author: hephaestus
- */
+/**  @file ESP32Encoder.cpp
+ *   		Member functions of an Encoder class by contributor Hephaestus. Capable of handling multiple times of encoders
+ *			designed for use with the ESP32 MCU.
+ *   @date Oct 15, 2018
+ *   @author hephaestus
+ **/
 
 #include <ESP32Encoder.h>
 #include <soc/pcnt_struct.h>

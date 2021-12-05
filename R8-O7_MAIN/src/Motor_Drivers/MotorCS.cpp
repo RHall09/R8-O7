@@ -1,9 +1,11 @@
-
-
-
-
-
-
+/** @file MotorCS.cpp
+ *      This file contains the member functions of a class designed to drive a motor with two PWM signals
+ *      and an enable pin using the \b MD-L6205D motor driverchip. This class implements a 
+ *      PID control loop with user defined gains.
+ *  @author Rick Hall
+ *  @date 2020-4-Nov
+ *  @copyright (c) 2021 by Rick Hall, released under the LGPL 3.0.
+ */
 
 #include <Arduino.h>
 #include <Motor_Drivers/Motor.h>
@@ -54,15 +56,15 @@ bool MotorCS::checkCS(void)
 // Change setpoint
 void MotorCS::newSetpoint(int16_t set)
 {
-    if ( (-255 < set) && (set < 255))
+    if ( (-255 < set) && (set < 255))   // If setpoint is a valid PWM signal, set equal to input
     {
         setpoint = set;
     }
-    else if (255 < set)
+    else if (255 < set)                 // If setpoint is too large, feed largest allowable PWM signal
     {
         setpoint = 255;
     }
-    else
+    else                                // If setpoint is too low, feed lowest allowable PWM signal
     {
         setpoint = -255;
     }

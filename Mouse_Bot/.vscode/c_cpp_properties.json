@@ -10,6 +10,7 @@
             "includePath": [
                 "C:/Users/quizk/OneDrive/Documents/GitHub/R8-O7/Mouse_Bot/include",
                 "C:/Users/quizk/OneDrive/Documents/GitHub/R8-O7/Mouse_Bot/src",
+                "C:/Users/quizk/OneDrive/Documents/GitHub/R8-O7/Mouse_Bot/.pio/libdeps/nucleo_l476rg/Adafruit NeoPixel",
                 "C:/Users/quizk/OneDrive/Documents/GitHub/R8-O7/Mouse_Bot/.pio/libdeps/nucleo_l476rg/STM32duino FreeRTOS/src",
                 "C:/Users/quizk/OneDrive/Documents/GitHub/R8-O7/Mouse_Bot/.pio/libdeps/nucleo_l476rg/PrintStream/src",
                 "C:/Users/quizk/OneDrive/Documents/GitHub/R8-O7/Mouse_Bot/.pio/libdeps/nucleo_l476rg/TinyGPSPlus/src",
@@ -64,6 +65,7 @@
                 "path": [
                     "C:/Users/quizk/OneDrive/Documents/GitHub/R8-O7/Mouse_Bot/include",
                     "C:/Users/quizk/OneDrive/Documents/GitHub/R8-O7/Mouse_Bot/src",
+                    "C:/Users/quizk/OneDrive/Documents/GitHub/R8-O7/Mouse_Bot/.pio/libdeps/nucleo_l476rg/Adafruit NeoPixel",
                     "C:/Users/quizk/OneDrive/Documents/GitHub/R8-O7/Mouse_Bot/.pio/libdeps/nucleo_l476rg/STM32duino FreeRTOS/src",
                     "C:/Users/quizk/OneDrive/Documents/GitHub/R8-O7/Mouse_Bot/.pio/libdeps/nucleo_l476rg/PrintStream/src",
                     "C:/Users/quizk/OneDrive/Documents/GitHub/R8-O7/Mouse_Bot/.pio/libdeps/nucleo_l476rg/TinyGPSPlus/src",
