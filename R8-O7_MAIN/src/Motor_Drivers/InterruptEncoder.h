@@ -1,9 +1,8 @@
-/*
- * InterruptEncoder.h
- *
- *  Created on: Oct 8, 2020
- *      Author: hephaestus
- */
+/**  @headerfile InterruptEncoder.h ""
+ *   		Member functions of a dependency of the \ref ESP32Encoder class. Allows for operation of encoders with interrupt service routines.
+ *   @date Oct 8, 2020
+ *   @author hephaestus
+ **/
 
 #ifndef INTERRUPTENCODER_H_
 #define INTERRUPTENCODER_H_
