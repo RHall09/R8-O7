@@ -17,7 +17,13 @@
 
 enum CS_Gains {Prop, Integ, Der};
 
-// Motor Control System Class Declaration
+/** @brief A class containing functions for driving a single motor using the \b MD-L6205D chip.
+ *  @details   A class containing functions for driving a single motor using a control system and the \b MD-L6205D chip. Methods include declaraing
+ *             PWM setpoints, changing controller gains, and toggling the control system on and off. This class is dependent
+ *             on the \ref Motor class.
+ *             This class \b does implements a control system for driving the motor with a speed, allowing for consisten speed under
+ *             varying load conditions.
+ **/
 class MotorCS
 {
 protected:
