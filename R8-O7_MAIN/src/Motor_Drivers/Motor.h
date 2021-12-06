@@ -100,7 +100,8 @@ public:
 
 /** @brief Check Motor flags.
  *  @details   Check the motor flags to see if an error has been detected, otherwise return enabled.
- *  @param flag The flag of type MotFlag as defined by the class. 
+ *  @param flag The flag of type MotFlag as defined by the class.
+ *  @return The status of the "flag register" representing the state of the motors. If all is good, this is true. Errors drive it false. 
  **/
     bool FlagChk(MotFlag flag);
 

@@ -33,7 +33,7 @@ class i2cdig {
     bool debugflag;
 
     public:
-    
+    // Doxystrings are in the .cpp file. Yea I was weird back then.
     i2cdig();
     i2cdig(bool debugflag);
     void joini2c();

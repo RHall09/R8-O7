@@ -72,6 +72,7 @@ public:
     void stopCS(void);
 
 /** @brief Check the status of the control system enable boolean.
+ *  @return A boolean representing the status of the Control System. True for on, false for off.
  **/
     bool checkCS(void);
 
