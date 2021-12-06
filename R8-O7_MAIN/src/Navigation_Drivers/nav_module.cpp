@@ -1,4 +1,10 @@
-
+/** @headerfile nav_module.cpp ""
+ *      This file contains the class declaration of a class for naturally driving the bot within a geofence.
+ *      This class provides all motor set points unless overriden by the Bluetooth control task.
+ *  @author Rick Hall
+ *  @date 2021-4-Nov
+ *  @copyright (c) 2021 by Rick Hall, released under the LGPL 3.0.
+ **/
 
 
 
@@ -14,6 +20,7 @@
 
 Navigation::Navigation(float v_cal, float t_cal)
 {
+    // Initialize Variables
     motor_set_A = 0;
     motor_set_B = 0;
 
@@ -27,8 +34,8 @@ void Navigation::nav_conv(float set_velocity, float set_turnrate)
     motor_set_A = (int16_t)round(set_velocity * v_calibration);
     motor_set_B = (int16_t)round(set_velocity * v_calibration);
 
-    motor_set_A += (int16_t)round(set_turnrate * t_calibration);
-    motor_set_B -= (int16_t)round(set_turnrate * t_calibration);
+    motor_set_A -= (int16_t)round(set_turnrate * t_calibration);
+    motor_set_B += (int16_t)round(set_turnrate * t_calibration);
 
     // Overflow protection
     if ( (-255 > motor_set_A) | (motor_set_A < 255) )

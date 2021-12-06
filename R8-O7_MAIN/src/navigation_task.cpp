@@ -105,7 +105,7 @@ void navigation_task(void* p_param) {
                     set_turn = 5;
 
                     // Set timer to turn until robot is parallel to the fence plus a random angle between 30 and 150 degrees
-                    nav_timer = (uint16_t)round(abs(((((float)90 - fence_heading) + (rand() % 120 + 30))/set_turn)));
+                    nav_timer = (uint16_t)round(abs(((((float)90 - fnc_head) + (rand() % 120 + 30))/set_turn)));
 
                 }
 

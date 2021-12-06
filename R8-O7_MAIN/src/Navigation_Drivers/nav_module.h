@@ -24,9 +24,9 @@ protected:
     /// The set point of motor B for natural pathing
     int16_t motor_set_B = 0;
 
-    /// Distance from bot center to wheel
+    /// The velocity calibration constant. Empirically determined. Converts ft/s to PWM.
     float v_calibration = 0;
-    /// Radius of bot wheels
+    /// The turn rate calibration constant. Empirically determined. Converts ft/s to PWM; left turn is considered +.
     float t_calibration = 0;
 
 public:
@@ -34,8 +34,8 @@ public:
 /** @brief Initialize an object of the Navigation class by defining the two calibration parameters.
  *  @details   Initialize an object of the Navigation class by feeding it two geometric paramters of the
  *             bot to be controlled. These parameters are fixed within the class object
- *  @param v_cal 
- *  @param t_cal
+ *  @param v_cal The velocity calibration constant. Empirically determined.
+ *  @param t_cal The turn rate calibration constant. Empirically determined.
  **/
 Navigation(float v_cal, float t_cal);
 
