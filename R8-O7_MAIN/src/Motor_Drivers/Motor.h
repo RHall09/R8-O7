@@ -8,13 +8,14 @@
  *  @copyright (c) 2021 by Rick Hall, released under the LGPL 3.0.
  */
 
-#ifndef MOTOR_H
-#define MOTOR_H
+#ifndef _MOTOR_H_
+#define _MOTOR_H_
 
 #include <Arduino.h>
 
 enum Motor_Number {Motor_0 = 0, Motor_1 =  2, Motor_2 =  4, Motor_3 =  6,
                    Motor_4 = 8, Motor_5 = 10, Motor_6 = 12, Motor_7 = 14};
+
 enum MotFlag {ENABLED, ERROR};
 
 
@@ -28,24 +29,28 @@ enum MotFlag {ENABLED, ERROR};
 class Motor
 {
 protected:
-    // Current Motor PWM
+    /// Current Motor PWM
     int8_t bot_mot_A = 0;       // +|- %
-    // Motor Enable Flag
+    /// Motor Enable Flag
     bool enabled = false;
-    // Motor Overcurrent Flag
+    /// Motor Overcurrent Flag
     bool mot_error = false;
 
-    //Motor Pins
+    /// Motor Enable Pin
     int PinE = 0;
+    /// Motor Pin 1
     int Pin1 = 0;
+    /// Motor Pin 2
     int Pin2 = 0;
 
-    // PWM Channels
+    /// PWM Channel 1
     uint8_t motor_channel_1 = 0;
+    /// PWM Channel 2
     uint8_t motor_channel_2 = 0;
 
-    // Current Set Points
+    /// Current Motor PWM
     int16_t current_pwm = 0;
+    /// Current absolute PWM
     int16_t curr_abs_pwm = 0;
 
 public:
@@ -101,4 +106,4 @@ public:
 
 };
 
-#endif
+#endif // _MOTOR_H_
