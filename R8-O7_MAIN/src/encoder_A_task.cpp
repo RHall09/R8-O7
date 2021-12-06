@@ -1,5 +1,5 @@
 /** @file encoder_A_task.cpp
- *  This file contains a task which... 
+ *  This file contains a task which periodically reads the encoder for the left motor. 
  * 
  *  @author Rick Hall
  *  @date   2021-Nov-27 Original file

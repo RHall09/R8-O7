@@ -1,0 +1,46 @@
+\hypertarget{navigation__task_8cpp}{}\doxysection{src/navigation\+\_\+task.cpp File Reference}
+\label{navigation__task_8cpp}\index{src/navigation\_task.cpp@{src/navigation\_task.cpp}}
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$Print\+Stream.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}shares.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cmath\char`\"{}}\newline
+{\ttfamily \#include $<$Navigation\+\_\+\+Drivers/nav\+\_\+module.\+h$>$}\newline
+Include dependency graph for navigation\+\_\+task.\+cpp\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{navigation__task_8cpp_a50e1bce80bb6e832117b1d1ebe1f2aa3}\label{navigation__task_8cpp_a50e1bce80bb6e832117b1d1ebe1f2aa3}} 
+\#define {\bfseries F\+E\+N\+C\+E\+\_\+\+M\+IN}~(float)3
+\item 
+\mbox{\Hypertarget{navigation__task_8cpp_ac3ec78a2fc11fcf630aae7c65952d226}\label{navigation__task_8cpp_ac3ec78a2fc11fcf630aae7c65952d226}} 
+\#define {\bfseries V\+\_\+\+C\+AL}~(float)0.\+3
+\item 
+\mbox{\Hypertarget{navigation__task_8cpp_ab24ec0162584d2189e0e87797e3631da}\label{navigation__task_8cpp_ab24ec0162584d2189e0e87797e3631da}} 
+\#define {\bfseries T\+\_\+\+C\+AL}~(float)0.\+25
+\item 
+\mbox{\Hypertarget{navigation__task_8cpp_a09ae44e902a21e163b94fbaf65f80e1b}\label{navigation__task_8cpp_a09ae44e902a21e163b94fbaf65f80e1b}} 
+\#define {\bfseries C\+R\+U\+I\+S\+E\+\_\+\+V\+EL}~(float) 3
+\item 
+\mbox{\Hypertarget{navigation__task_8cpp_a2b912ed39df233b43d7a093814705afb}\label{navigation__task_8cpp_a2b912ed39df233b43d7a093814705afb}} 
+\#define {\bfseries E\+V\+ER}~(;;)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{navigation__task_8cpp_ab2732dea6312e7252c824970394c0ad8}\label{navigation__task_8cpp_ab2732dea6312e7252c824970394c0ad8}} 
+void {\bfseries navigation\+\_\+task} (void $\ast$p\+\_\+param)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains a task which takes inputs from all sensors and the G\+PS to determine the path of the robot and output motor P\+WM values accordingly.
+
+Update as of 12/4/21\+: Due to limitations in the current sensor module, only G\+PS data is currently implemented in the navigation calculation.
+
+\begin{DoxyAuthor}{Author}
+Rick Hall 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2021-\/Dec-\/02 Original file 
+\end{DoxyDate}

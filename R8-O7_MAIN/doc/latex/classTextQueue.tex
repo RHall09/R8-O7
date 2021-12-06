@@ -1,0 +1,112 @@
+\hypertarget{classTextQueue}{}\doxysection{Text\+Queue Class Reference}
+\label{classTextQueue}\index{TextQueue@{TextQueue}}
+
+
+Implements a queue to transmit text from one R\+T\+OS task to another.  
+
+
+
+
+{\ttfamily \#include $<$textqueue.\+h$>$}
+
+
+
+Inheritance diagram for Text\+Queue\+:
+% FIG 0
+
+
+Collaboration diagram for Text\+Queue\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTextQueue_a16098feae9a37a69f65dd3c1fa081491}{Text\+Queue}} (Base\+Type\+\_\+t queue\+\_\+size, const char $\ast$p\+\_\+name=N\+U\+LL, Tick\+Type\+\_\+t wait\+\_\+time=port\+M\+A\+X\+\_\+\+D\+E\+L\+AY)
+\begin{DoxyCompactList}\small\item\em Construct a queue object, allocating memory for the buffer. \end{DoxyCompactList}\item 
+virtual size\+\_\+t \mbox{\hyperlink{classTextQueue_a615f4828126919020a11e9335c93040f}{write}} (uint8\+\_\+t a\+\_\+char)
+\begin{DoxyCompactList}\small\item\em Write a character into the queue in the {\ttfamily Print} style. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Implements a queue to transmit text from one R\+T\+OS task to another. 
+
+Since multithreaded tasks must not use unprotected shared data items for communication, queues are a primary means of intertask communication. Other means include shared data items (see {\ttfamily \mbox{\hyperlink{taskshare_8h}{taskshare.\+h}}}) and carrier pigeons. The use of a C++ class template allows the compiler to check that you\textquotesingle{}re putting the correct type of data into each queue and getting the correct type of data out, thus helping to prevent programming mistakes that can corrupt your data.
+
+The size of Free\+R\+T\+OS queues is limited to 255 items in 8-\/bit microcontrollers whose {\ttfamily port\+B\+A\+S\+E\+\_\+\+T\+Y\+PE} is an 8-\/bit number. This is a Free\+R\+T\+OS feature.\hypertarget{classTextQueue_textqueue_usage}{}\doxysubsection{Usage}\label{classTextQueue_textqueue_usage}
+The following bits of code show how to set up and use a queue to transfer text from one hypothetical task called {\ttfamily task\+\_\+A} to another called {\ttfamily task\+\_\+B}.
+
+Near the top of the file which contains {\ttfamily \mbox{\hyperlink{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}{setup()}}} we create a queue. The constructor of the {\ttfamily \mbox{\hyperlink{classTextQueue}{Text\+Queue}}} class is given the maximum number of characters which can be stored in the queue (100 in this example) and an optional name for the queue\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <PrintStream.h>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include "\mbox{\hyperlink{textqueue_8h}{textqueue.h}}"}}
+\DoxyCodeLine{...}
+\DoxyCodeLine{TextQueue whiny\_queue (100, \textcolor{stringliteral}{"Complaints"});}
+\end{DoxyCode}
+ In a location which is before we use the queue in any other file than the one in which the queue was created, we re-\/declare the queue with the keyword {\ttfamily extern} to make it accessible to any task within that file\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{extern} \mbox{\hyperlink{classTextQueue}{TextQueue}} whiny\_queue;}
+\end{DoxyCode}
+ In the sending task, {\ttfamily task\+\_\+A}, text is put into the queue\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{int16\_t n\_fish = -\/3;                  }
+\DoxyCodeLine{...}
+\DoxyCodeLine{whiny\_queue << \textcolor{stringliteral}{"I only have "} << fish << \textcolor{stringliteral}{" fish!"} << endl;}
+\end{DoxyCode}
+ In the receiving task, data is read from the queue one character at a time using the {\ttfamily $>$$>$} operator. In typical usage, the call to {\ttfamily $>$$>$} will block the receiving task until data has been put into the queue by the sending task\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{char} recv\_ch;                         }
+\DoxyCodeLine{...}
+\DoxyCodeLine{for (;;)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    whiny\_queue.\mbox{\hyperlink{classQueue_a14df528749e226183df3fa5472368e82}{get}} (recv\_ch);        \textcolor{comment}{// Get data from the queue}}
+\DoxyCodeLine{    Serial.print (recv\_ch);           \textcolor{comment}{// Or use << to print}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTextQueue_a16098feae9a37a69f65dd3c1fa081491}\label{classTextQueue_a16098feae9a37a69f65dd3c1fa081491}} 
+\index{TextQueue@{TextQueue}!TextQueue@{TextQueue}}
+\index{TextQueue@{TextQueue}!TextQueue@{TextQueue}}
+\doxysubsubsection{\texorpdfstring{TextQueue()}{TextQueue()}}
+{\footnotesize\ttfamily Text\+Queue\+::\+Text\+Queue (\begin{DoxyParamCaption}\item[{Base\+Type\+\_\+t}]{queue\+\_\+size,  }\item[{const char $\ast$}]{p\+\_\+name = {\ttfamily NULL},  }\item[{Tick\+Type\+\_\+t}]{wait\+\_\+time = {\ttfamily portMAX\+\_\+DELAY} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a queue object, allocating memory for the buffer. 
+
+This constructor creates the Free\+R\+T\+OS queue which is wrapped by the {\ttfamily \mbox{\hyperlink{classQueue}{Queue}}} class. 
+\begin{DoxyParams}{Parameters}
+{\em queue\+\_\+size} & The number of chars which can be stored in the queue \\
+\hline
+{\em p\+\_\+name} & A name to be shown in the list of task shares (default empty String) \\
+\hline
+{\em wait\+\_\+time} & How long, in R\+T\+OS ticks, to wait for a queue to empty before a character can be sent. (Default\+: {\ttfamily port\+M\+A\+X\+\_\+\+D\+E\+L\+AY}, which causes the sending task to block until sending occurs.) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTextQueue_a615f4828126919020a11e9335c93040f}\label{classTextQueue_a615f4828126919020a11e9335c93040f}} 
+\index{TextQueue@{TextQueue}!write@{write}}
+\index{write@{write}!TextQueue@{TextQueue}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily virtual size\+\_\+t Text\+Queue\+::write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{a\+\_\+char }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Write a character into the queue in the {\ttfamily Print} style. 
+
+This method is pure virtual in class {\ttfamily Print}, so it must be specified here. It puts one character into the queue. 
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+char} & The character to be queued \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of characters written, which is one when returning 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+M\+E507\+\_\+\+Support/\mbox{\hyperlink{textqueue_8h}{textqueue.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,48 @@
+\hypertarget{sensor__suite__task_8cpp}{}\doxysection{src/sensor\+\_\+suite\+\_\+task.cpp File Reference}
+\label{sensor__suite__task_8cpp}\index{src/sensor\_suite\_task.cpp@{src/sensor\_suite\_task.cpp}}
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}geofence\+\_\+task.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shares.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}analog\+\_\+i2c.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}digital\+\_\+i2c.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Tiny\+G\+P\+S++.\+h\char`\"{}}\newline
+Include dependency graph for sensor\+\_\+suite\+\_\+task.\+cpp\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sensor__suite__task_8cpp_a2b912ed39df233b43d7a093814705afb}\label{sensor__suite__task_8cpp_a2b912ed39df233b43d7a093814705afb}} 
+\#define {\bfseries E\+V\+ER}~(;;)
+\item 
+\mbox{\Hypertarget{sensor__suite__task_8cpp_a2e81a3da2c16c2835fbdc871086767ef}\label{sensor__suite__task_8cpp_a2e81a3da2c16c2835fbdc871086767ef}} 
+\#define {\bfseries G\+P\+S\+Serial}~Serial1
+\item 
+\mbox{\Hypertarget{sensor__suite__task_8cpp_affe1756c211a5cb663bb38443fd5e307}\label{sensor__suite__task_8cpp_affe1756c211a5cb663bb38443fd5e307}} 
+\#define {\bfseries I\+R\+Q\+\_\+\+P\+IN}~2
+\item 
+\mbox{\Hypertarget{sensor__suite__task_8cpp_aa3df47cfc735a7cb385c3c7ca9f51709}\label{sensor__suite__task_8cpp_aa3df47cfc735a7cb385c3c7ca9f51709}} 
+\#define {\bfseries X\+S\+H\+U\+T\+\_\+\+P\+IN}~3
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sensor__suite__task_8cpp_a5e27bcbaee2183a3fe52dacb62ed31cd}\label{sensor__suite__task_8cpp_a5e27bcbaee2183a3fe52dacb62ed31cd}} 
+void {\bfseries sensor\+\_\+suite\+\_\+task} (void $\ast$p\+\_\+param)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{sensor__suite__task_8cpp_acd60012263847b4cf0e1aaedd735d53a}\label{sensor__suite__task_8cpp_acd60012263847b4cf0e1aaedd735d53a}} 
+Adafruit\+\_\+\+V\+L53\+L1X {\bfseries vl53} = Adafruit\+\_\+\+V\+L53\+L1X(X\+S\+H\+U\+T\+\_\+\+P\+IN, I\+R\+Q\+\_\+\+P\+IN)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains a task which updates the read values off of {\itshape all} sensors directly related to guest safety. This includes the crowd interaction suite and the foot mounted checks.
+
+\begin{DoxyAuthor}{Author}
+Kai Quizon 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2021-\/Nov-\/27 Original file 
+\end{DoxyDate}

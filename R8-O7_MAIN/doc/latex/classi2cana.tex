@@ -1,0 +1,85 @@
+\hypertarget{classi2cana}{}\doxysection{i2cana Class Reference}
+\label{classi2cana}\index{i2cana@{i2cana}}
+
+
+Class containing functions for interacting with the {\bfseries{A\+D\+S7828}} Analog i2c expansion bus chip.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classi2cana_af3a33dc5effbc732147be02fe2981ab6}\label{classi2cana_af3a33dc5effbc732147be02fe2981ab6}} 
+\mbox{\hyperlink{classi2cana_af3a33dc5effbc732147be02fe2981ab6}{i2cana}} ()
+\begin{DoxyCompactList}\small\item\em Default contructor that disables debugging printouts. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classi2cana_afbba4c86a72b650e7262812a1ab91f09}{i2cana}} (bool debugflag)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor that enables debugging prinouts if debugflag == True. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classi2cana_afd80872d3bb7305a10ce1f8b1ed0634a}\label{classi2cana_afd80872d3bb7305a10ce1f8b1ed0634a}} 
+void \mbox{\hyperlink{classi2cana_afd80872d3bb7305a10ce1f8b1ed0634a}{joini2c}} ()
+\begin{DoxyCompactList}\small\item\em Join i2c bus as master. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{classi2cana_a2c80560945a40a88cb7eb4b39b1aaae1}{readinput}} (uint8\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em Read an analog pin from the expansion bus. Really want to speed this code up... \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classi2cana_ac299882679eb7de19450a0471c03c075}\label{classi2cana_ac299882679eb7de19450a0471c03c075}} 
+uint8\+\_\+t \mbox{\hyperlink{classi2cana_ac299882679eb7de19450a0471c03c075}{address}} = 0b1001000
+\begin{DoxyCompactList}\small\item\em Default address of the {\bfseries{A\+D\+S7828}} chip. This address is used if all address pins are grounded. May be changed via the change\+\_\+addr method. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classi2cana_a750dd9b3295f2008ade920d8ca04473d}\label{classi2cana_a750dd9b3295f2008ade920d8ca04473d}} 
+uint8\+\_\+t \mbox{\hyperlink{classi2cana_a750dd9b3295f2008ade920d8ca04473d}{commandbyte}} = 0b100011
+\begin{DoxyCompactList}\small\item\em Portion of each command necessary to leave internal reference on and appropriate filtering desired for mechatronics use case. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class containing functions for interacting with the {\bfseries{A\+D\+S7828}} Analog i2c expansion bus chip. 
+
+This file contains the header for a class that acts as a driver for the {\bfseries{A\+D\+S7828}} 8 Channel Analog I2C expansion bus. Member functions are contained in analog\+\_\+i2c.\+cpp \begin{DoxyAuthor}{Author}
+Kai Quizon 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+October 25, 2021 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+(c) 2021 by Kai Quizon, released under the L\+G\+PL 3.\+0.
+\end{DoxyCopyright}
+This class allows for interaction with the {\bfseries{A\+D\+S7828}} Analog I2C Expansion Bus Chip. It contains methods for joining the i2c bus as a master and reading inputs from chip. The chip does not support outputs. There is also a method to configure the chip address if a different address is used via manipulation of the address pins. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classi2cana_afbba4c86a72b650e7262812a1ab91f09}\label{classi2cana_afbba4c86a72b650e7262812a1ab91f09}} 
+\index{i2cana@{i2cana}!i2cana@{i2cana}}
+\index{i2cana@{i2cana}!i2cana@{i2cana}}
+\doxysubsubsection{\texorpdfstring{i2cana()}{i2cana()}}
+{\footnotesize\ttfamily i2cana\+::i2cana (\begin{DoxyParamCaption}\item[{bool}]{debugflag }\end{DoxyParamCaption})}
+
+
+
+Parameterized constructor that enables debugging prinouts if debugflag == True. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em debugflag} & A boolean that turns on debugging prinouts if true. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classi2cana_a2c80560945a40a88cb7eb4b39b1aaae1}\label{classi2cana_a2c80560945a40a88cb7eb4b39b1aaae1}} 
+\index{i2cana@{i2cana}!readinput@{readinput}}
+\index{readinput@{readinput}!i2cana@{i2cana}}
+\doxysubsubsection{\texorpdfstring{readinput()}{readinput()}}
+{\footnotesize\ttfamily uint16\+\_\+t i2cana\+::readinput (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel }\end{DoxyParamCaption})}
+
+
+
+Read an analog pin from the expansion bus. Really want to speed this code up... 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel} & The desired channel to be read. (valid range 0-\/7). Performs no action if outside valid range. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sensor\+\_\+\+Drivers/anagloc\+\_\+i2c.\+h\item 
+src/\+Sensor\+\_\+\+Drivers/analog\+\_\+i2c.\+cpp\end{DoxyCompactItemize}

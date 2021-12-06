@@ -1,0 +1,390 @@
+\hypertarget{RegOperators_8cpp}{}\doxysection{src/\+Misc\+\_\+\+Drivers/\+Reg\+Operators.cpp File Reference}
+\label{RegOperators_8cpp}\index{src/Misc\_Drivers/RegOperators.cpp@{src/Misc\_Drivers/RegOperators.cpp}}
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include $<$Misc\+\_\+\+Drivers/\+Reg\+Operators.\+h$>$}\newline
+Include dependency graph for Reg\+Operators.\+cpp\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{RegOperators_8cpp_ae5db26aa84987f7b169a898bf4c02034}{bit\+\_\+clr}} (uint8\+\_\+t reg, uint8\+\_\+t bit)
+\begin{DoxyCompactList}\small\item\em Clears the bit. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{RegOperators_8cpp_a097cbf922172ebc72de6e3243f3a7a2a}{bit\+\_\+set}} (uint8\+\_\+t reg, uint8\+\_\+t bit)
+\begin{DoxyCompactList}\small\item\em Sets the bit. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{RegOperators_8cpp_a7f1e929794a4886756c2fd4b96e554e2}{bit\+\_\+tog}} (uint8\+\_\+t reg, uint8\+\_\+t bit)
+\begin{DoxyCompactList}\small\item\em Toggles the bit. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{RegOperators_8cpp_a8e31f128522baa08e19a4476b056e0c7}{bit\+\_\+chk}} (uint8\+\_\+t reg, uint8\+\_\+t bit)
+\begin{DoxyCompactList}\small\item\em Checks the bit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{RegOperators_8cpp_a795988e0e718af4b2f9a7d6b96cf154f}{bit\+\_\+clr}} (uint8\+\_\+t $\ast$p\+\_\+reg, uint8\+\_\+t bit)
+\begin{DoxyCompactList}\small\item\em Clears the bit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{RegOperators_8cpp_a539a827c978605e95ef8427f9fc4a8f8}{bit\+\_\+set}} (uint8\+\_\+t $\ast$p\+\_\+reg, uint8\+\_\+t bit)
+\begin{DoxyCompactList}\small\item\em Sets the bit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{RegOperators_8cpp_a2151b55207c483e77f2260619dc1bc59}{bit\+\_\+tog}} (uint8\+\_\+t $\ast$p\+\_\+reg, uint8\+\_\+t bit)
+\begin{DoxyCompactList}\small\item\em Toggles the bit. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{RegOperators_8cpp_a57ebe61520ef306ef0edbb27c746a92e}{bit\+\_\+chk}} (uint8\+\_\+t $\ast$p\+\_\+reg, uint8\+\_\+t bit)
+\begin{DoxyCompactList}\small\item\em Checks the bit. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{RegOperators_8cpp_a67e12d4f09b6794e3e67be1bf76769d4}{bit\+\_\+clr}} (uint16\+\_\+t reg, uint8\+\_\+t bit)
+\begin{DoxyCompactList}\small\item\em Clears the bit. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{RegOperators_8cpp_ab41fbcb858aa9f35e8039246b1bfb528}{bit\+\_\+set}} (uint16\+\_\+t reg, uint8\+\_\+t bit)
+\begin{DoxyCompactList}\small\item\em Sets the bit. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{RegOperators_8cpp_ab9bffb574a36fb7903847c2d5b8d196f}{bit\+\_\+tog}} (uint16\+\_\+t reg, uint8\+\_\+t bit)
+\begin{DoxyCompactList}\small\item\em Toggles the bit. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{RegOperators_8cpp_a7129afe4f377fa46fc5ad2f38ed515ba}{bit\+\_\+chk}} (uint16\+\_\+t reg, uint8\+\_\+t bit)
+\begin{DoxyCompactList}\small\item\em Checks the bit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{RegOperators_8cpp_ada285298d7abddc4d8b83747e71d0955}{bit\+\_\+clr}} (uint16\+\_\+t $\ast$p\+\_\+reg, uint8\+\_\+t bit)
+\begin{DoxyCompactList}\small\item\em Clears the bit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{RegOperators_8cpp_aa6afbd961a542f5da9d98927bcc34b49}{bit\+\_\+set}} (uint16\+\_\+t $\ast$p\+\_\+reg, uint8\+\_\+t bit)
+\begin{DoxyCompactList}\small\item\em Sets the bit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{RegOperators_8cpp_a6ff18eaa42881d2d919f73eea4748e3c}{bit\+\_\+tog}} (uint16\+\_\+t $\ast$p\+\_\+reg, uint8\+\_\+t bit)
+\begin{DoxyCompactList}\small\item\em Toggles the bit. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{RegOperators_8cpp_ac2c8e62c98342132c52e581f5eb50f12}{bit\+\_\+chk}} (uint16\+\_\+t $\ast$p\+\_\+reg, uint8\+\_\+t bit)
+\begin{DoxyCompactList}\small\item\em Checks the bit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains a compilation of functions that may be used to set, clear, toggle, and check the bits of a flag register in memory. All functions are overloaded for 8 or 16 bit flag registers.
+
+\begin{DoxyAuthor}{Author}
+Rick Hall 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2020-\/2-\/Nov 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+(c) 2021 by Rick Hall, released under the L\+G\+PL 3.\+0. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{RegOperators_8cpp_ac2c8e62c98342132c52e581f5eb50f12}\label{RegOperators_8cpp_ac2c8e62c98342132c52e581f5eb50f12}} 
+\index{RegOperators.cpp@{RegOperators.cpp}!bit\_chk@{bit\_chk}}
+\index{bit\_chk@{bit\_chk}!RegOperators.cpp@{RegOperators.cpp}}
+\doxysubsubsection{\texorpdfstring{bit\_chk()}{bit\_chk()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily bool bit\+\_\+chk (\begin{DoxyParamCaption}\item[{uint16\+\_\+t $\ast$}]{p\+\_\+reg,  }\item[{uint8\+\_\+t}]{bit }\end{DoxyParamCaption})}
+
+
+
+Checks the bit. 
+
+This function returns a boolean representing the current state of the specified bit in the register provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & The register to be checked\\
+\hline
+{\em bit} & The bit to be returned (0 -\/ 7)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean representing the state of the bit. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{RegOperators_8cpp_a7129afe4f377fa46fc5ad2f38ed515ba}\label{RegOperators_8cpp_a7129afe4f377fa46fc5ad2f38ed515ba}} 
+\index{RegOperators.cpp@{RegOperators.cpp}!bit\_chk@{bit\_chk}}
+\index{bit\_chk@{bit\_chk}!RegOperators.cpp@{RegOperators.cpp}}
+\doxysubsubsection{\texorpdfstring{bit\_chk()}{bit\_chk()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily bool bit\+\_\+chk (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{reg,  }\item[{uint8\+\_\+t}]{bit }\end{DoxyParamCaption})}
+
+
+
+Checks the bit. 
+
+This function returns a boolean representing the current state of the specified bit in the register provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & The register to be checked\\
+\hline
+{\em bit} & The bit to be returned (0 -\/ 7)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean representing the state of the bit. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{RegOperators_8cpp_a57ebe61520ef306ef0edbb27c746a92e}\label{RegOperators_8cpp_a57ebe61520ef306ef0edbb27c746a92e}} 
+\index{RegOperators.cpp@{RegOperators.cpp}!bit\_chk@{bit\_chk}}
+\index{bit\_chk@{bit\_chk}!RegOperators.cpp@{RegOperators.cpp}}
+\doxysubsubsection{\texorpdfstring{bit\_chk()}{bit\_chk()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily bool bit\+\_\+chk (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{p\+\_\+reg,  }\item[{uint8\+\_\+t}]{bit }\end{DoxyParamCaption})}
+
+
+
+Checks the bit. 
+
+This function returns a boolean representing the current state of the bit specified in the register located at the pointer provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+reg} & The pointer to the register to be checked\\
+\hline
+{\em bit} & The bit to be returned (0 -\/ 7)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean representing the state of the bit. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{RegOperators_8cpp_a8e31f128522baa08e19a4476b056e0c7}\label{RegOperators_8cpp_a8e31f128522baa08e19a4476b056e0c7}} 
+\index{RegOperators.cpp@{RegOperators.cpp}!bit\_chk@{bit\_chk}}
+\index{bit\_chk@{bit\_chk}!RegOperators.cpp@{RegOperators.cpp}}
+\doxysubsubsection{\texorpdfstring{bit\_chk()}{bit\_chk()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily bool bit\+\_\+chk (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg,  }\item[{uint8\+\_\+t}]{bit }\end{DoxyParamCaption})}
+
+
+
+Checks the bit. 
+
+This function returns a boolean representing the current state of the bit specified in the register provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & The register to be checked\\
+\hline
+{\em bit} & The bit to be returned (0 -\/ 7)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean representing the state of the bit. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{RegOperators_8cpp_ada285298d7abddc4d8b83747e71d0955}\label{RegOperators_8cpp_ada285298d7abddc4d8b83747e71d0955}} 
+\index{RegOperators.cpp@{RegOperators.cpp}!bit\_clr@{bit\_clr}}
+\index{bit\_clr@{bit\_clr}!RegOperators.cpp@{RegOperators.cpp}}
+\doxysubsubsection{\texorpdfstring{bit\_clr()}{bit\_clr()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void bit\+\_\+clr (\begin{DoxyParamCaption}\item[{uint16\+\_\+t $\ast$}]{p\+\_\+reg,  }\item[{uint8\+\_\+t}]{bit }\end{DoxyParamCaption})}
+
+
+
+Clears the bit. 
+
+This function clears the specified bit in the register provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & The register to be operated on\\
+\hline
+{\em bit} & The bit to be operated on (0 -\/ 7) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{RegOperators_8cpp_a67e12d4f09b6794e3e67be1bf76769d4}\label{RegOperators_8cpp_a67e12d4f09b6794e3e67be1bf76769d4}} 
+\index{RegOperators.cpp@{RegOperators.cpp}!bit\_clr@{bit\_clr}}
+\index{bit\_clr@{bit\_clr}!RegOperators.cpp@{RegOperators.cpp}}
+\doxysubsubsection{\texorpdfstring{bit\_clr()}{bit\_clr()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily uint16\+\_\+t bit\+\_\+clr (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{reg,  }\item[{uint8\+\_\+t}]{bit }\end{DoxyParamCaption})}
+
+
+
+Clears the bit. 
+
+This function clears the specified bit in the register provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & The register to be operated on\\
+\hline
+{\em bit} & The bit to be operated on (0 -\/ 7)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The adjusted register 
+\end{DoxyReturn}
+\mbox{\Hypertarget{RegOperators_8cpp_a795988e0e718af4b2f9a7d6b96cf154f}\label{RegOperators_8cpp_a795988e0e718af4b2f9a7d6b96cf154f}} 
+\index{RegOperators.cpp@{RegOperators.cpp}!bit\_clr@{bit\_clr}}
+\index{bit\_clr@{bit\_clr}!RegOperators.cpp@{RegOperators.cpp}}
+\doxysubsubsection{\texorpdfstring{bit\_clr()}{bit\_clr()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void bit\+\_\+clr (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{p\+\_\+reg,  }\item[{uint8\+\_\+t}]{bit }\end{DoxyParamCaption})}
+
+
+
+Clears the bit. 
+
+This function clears the specified bit in the register provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+reg} & The pointer to the register to be operated on\\
+\hline
+{\em bit} & The bit to be operated on (0 -\/ 7) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{RegOperators_8cpp_ae5db26aa84987f7b169a898bf4c02034}\label{RegOperators_8cpp_ae5db26aa84987f7b169a898bf4c02034}} 
+\index{RegOperators.cpp@{RegOperators.cpp}!bit\_clr@{bit\_clr}}
+\index{bit\_clr@{bit\_clr}!RegOperators.cpp@{RegOperators.cpp}}
+\doxysubsubsection{\texorpdfstring{bit\_clr()}{bit\_clr()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily uint8\+\_\+t bit\+\_\+clr (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg,  }\item[{uint8\+\_\+t}]{bit }\end{DoxyParamCaption})}
+
+
+
+Clears the bit. 
+
+This function clears the specified bit in the register provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & The register to be operated on\\
+\hline
+{\em bit} & The bit to be operated on (0 -\/ 7)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The adjusted register 
+\end{DoxyReturn}
+\mbox{\Hypertarget{RegOperators_8cpp_aa6afbd961a542f5da9d98927bcc34b49}\label{RegOperators_8cpp_aa6afbd961a542f5da9d98927bcc34b49}} 
+\index{RegOperators.cpp@{RegOperators.cpp}!bit\_set@{bit\_set}}
+\index{bit\_set@{bit\_set}!RegOperators.cpp@{RegOperators.cpp}}
+\doxysubsubsection{\texorpdfstring{bit\_set()}{bit\_set()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void bit\+\_\+set (\begin{DoxyParamCaption}\item[{uint16\+\_\+t $\ast$}]{p\+\_\+reg,  }\item[{uint8\+\_\+t}]{bit }\end{DoxyParamCaption})}
+
+
+
+Sets the bit. 
+
+This function sets the specified bit in the register provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & The register to be operated on\\
+\hline
+{\em bit} & The bit to be operated on (0 -\/ 7) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{RegOperators_8cpp_ab41fbcb858aa9f35e8039246b1bfb528}\label{RegOperators_8cpp_ab41fbcb858aa9f35e8039246b1bfb528}} 
+\index{RegOperators.cpp@{RegOperators.cpp}!bit\_set@{bit\_set}}
+\index{bit\_set@{bit\_set}!RegOperators.cpp@{RegOperators.cpp}}
+\doxysubsubsection{\texorpdfstring{bit\_set()}{bit\_set()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily uint16\+\_\+t bit\+\_\+set (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{reg,  }\item[{uint8\+\_\+t}]{bit }\end{DoxyParamCaption})}
+
+
+
+Sets the bit. 
+
+This function sets the specified bit in the register provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & The register to be operated on\\
+\hline
+{\em bit} & The bit to be operated on (0 -\/ 7)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The adjusted register 
+\end{DoxyReturn}
+\mbox{\Hypertarget{RegOperators_8cpp_a539a827c978605e95ef8427f9fc4a8f8}\label{RegOperators_8cpp_a539a827c978605e95ef8427f9fc4a8f8}} 
+\index{RegOperators.cpp@{RegOperators.cpp}!bit\_set@{bit\_set}}
+\index{bit\_set@{bit\_set}!RegOperators.cpp@{RegOperators.cpp}}
+\doxysubsubsection{\texorpdfstring{bit\_set()}{bit\_set()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void bit\+\_\+set (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{p\+\_\+reg,  }\item[{uint8\+\_\+t}]{bit }\end{DoxyParamCaption})}
+
+
+
+Sets the bit. 
+
+This function sets the specified bit in the register provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+reg} & The pointer to the register to be operated on\\
+\hline
+{\em bit} & The bit to be operated on (0 -\/ 7) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{RegOperators_8cpp_a097cbf922172ebc72de6e3243f3a7a2a}\label{RegOperators_8cpp_a097cbf922172ebc72de6e3243f3a7a2a}} 
+\index{RegOperators.cpp@{RegOperators.cpp}!bit\_set@{bit\_set}}
+\index{bit\_set@{bit\_set}!RegOperators.cpp@{RegOperators.cpp}}
+\doxysubsubsection{\texorpdfstring{bit\_set()}{bit\_set()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily uint8\+\_\+t bit\+\_\+set (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg,  }\item[{uint8\+\_\+t}]{bit }\end{DoxyParamCaption})}
+
+
+
+Sets the bit. 
+
+This function sets the specified bit in the register provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & The register to be operated on\\
+\hline
+{\em bit} & The bit to be operated on (0 -\/ 7)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The adjusted register 
+\end{DoxyReturn}
+\mbox{\Hypertarget{RegOperators_8cpp_a6ff18eaa42881d2d919f73eea4748e3c}\label{RegOperators_8cpp_a6ff18eaa42881d2d919f73eea4748e3c}} 
+\index{RegOperators.cpp@{RegOperators.cpp}!bit\_tog@{bit\_tog}}
+\index{bit\_tog@{bit\_tog}!RegOperators.cpp@{RegOperators.cpp}}
+\doxysubsubsection{\texorpdfstring{bit\_tog()}{bit\_tog()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void bit\+\_\+tog (\begin{DoxyParamCaption}\item[{uint16\+\_\+t $\ast$}]{p\+\_\+reg,  }\item[{uint8\+\_\+t}]{bit }\end{DoxyParamCaption})}
+
+
+
+Toggles the bit. 
+
+This function toggles the specified bit in the register provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & The register to be operated on\\
+\hline
+{\em bit} & The bit to be operated on (0 -\/ 7) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{RegOperators_8cpp_ab9bffb574a36fb7903847c2d5b8d196f}\label{RegOperators_8cpp_ab9bffb574a36fb7903847c2d5b8d196f}} 
+\index{RegOperators.cpp@{RegOperators.cpp}!bit\_tog@{bit\_tog}}
+\index{bit\_tog@{bit\_tog}!RegOperators.cpp@{RegOperators.cpp}}
+\doxysubsubsection{\texorpdfstring{bit\_tog()}{bit\_tog()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily uint16\+\_\+t bit\+\_\+tog (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{reg,  }\item[{uint8\+\_\+t}]{bit }\end{DoxyParamCaption})}
+
+
+
+Toggles the bit. 
+
+This function toggles the specified bit in the register provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & The register to be operated on\\
+\hline
+{\em bit} & The bit to be operated on (0 -\/ 7)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The adjusted register 
+\end{DoxyReturn}
+\mbox{\Hypertarget{RegOperators_8cpp_a2151b55207c483e77f2260619dc1bc59}\label{RegOperators_8cpp_a2151b55207c483e77f2260619dc1bc59}} 
+\index{RegOperators.cpp@{RegOperators.cpp}!bit\_tog@{bit\_tog}}
+\index{bit\_tog@{bit\_tog}!RegOperators.cpp@{RegOperators.cpp}}
+\doxysubsubsection{\texorpdfstring{bit\_tog()}{bit\_tog()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void bit\+\_\+tog (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{p\+\_\+reg,  }\item[{uint8\+\_\+t}]{bit }\end{DoxyParamCaption})}
+
+
+
+Toggles the bit. 
+
+This function toggles the specified bit in the register provided. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+reg} & The pointer to the register to be operated on\\
+\hline
+{\em bit} & The bit to be operated on (0 -\/ 7) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{RegOperators_8cpp_a7f1e929794a4886756c2fd4b96e554e2}\label{RegOperators_8cpp_a7f1e929794a4886756c2fd4b96e554e2}} 
+\index{RegOperators.cpp@{RegOperators.cpp}!bit\_tog@{bit\_tog}}
+\index{bit\_tog@{bit\_tog}!RegOperators.cpp@{RegOperators.cpp}}
+\doxysubsubsection{\texorpdfstring{bit\_tog()}{bit\_tog()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily uint8\+\_\+t bit\+\_\+tog (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg,  }\item[{uint8\+\_\+t}]{bit }\end{DoxyParamCaption})}
+
+
+
+Toggles the bit. 
+
+This function toggles the specified bit in the register provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & The register to be operated on\\
+\hline
+{\em bit} & The bit to be operated on (0 -\/ 7)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The adjusted register 
+\end{DoxyReturn}

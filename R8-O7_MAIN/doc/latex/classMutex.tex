@@ -1,0 +1,74 @@
+\hypertarget{classMutex}{}\doxysection{Mutex Class Reference}
+\label{classMutex}\index{Mutex@{Mutex}}
+
+
+Class which implements a mutex which can guard a resource.  
+
+
+
+
+{\ttfamily \#include $<$mutex.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMutex_a1fa013189d4335e8c1963b3ae799c435}{Mutex}} (Tick\+Type\+\_\+t \mbox{\hyperlink{classMutex_a1bd8d9978c427a9f314595214c4e605e}{timeout}}=port\+M\+A\+X\+\_\+\+D\+E\+L\+AY)
+\begin{DoxyCompactList}\small\item\em Create a mutex and save a handle to it. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMutex_ae45adddf5c24ba65ef16767437f9c032}{take}} (void)
+\begin{DoxyCompactList}\small\item\em Take the mutex, preventing other tasks from using whatever resource the mutex protects. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMutex_a3c7db240ed634989205e2b17a3c8fe5d}\label{classMutex_a3c7db240ed634989205e2b17a3c8fe5d}} 
+void \mbox{\hyperlink{classMutex_a3c7db240ed634989205e2b17a3c8fe5d}{give}} (void)
+\begin{DoxyCompactList}\small\item\em Give back the mutex, allowing other tasks to access the resource protected by the mutex. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMutex_a5da1e7e042bbc8024265eed21d47a194}\label{classMutex_a5da1e7e042bbc8024265eed21d47a194}} 
+Semaphore\+Handle\+\_\+t \mbox{\hyperlink{classMutex_a5da1e7e042bbc8024265eed21d47a194}{handle}}
+\begin{DoxyCompactList}\small\item\em Handle to the Free\+R\+T\+OS mutex being used. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMutex_a1bd8d9978c427a9f314595214c4e605e}\label{classMutex_a1bd8d9978c427a9f314595214c4e605e}} 
+Tick\+Type\+\_\+t \mbox{\hyperlink{classMutex_a1bd8d9978c427a9f314595214c4e605e}{timeout}}
+\begin{DoxyCompactList}\small\item\em How many R\+T\+OS ticks to wait for the mutex. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class which implements a mutex which can guard a resource. 
+
+A mutex (short for M\+U\+Tual E\+Xclusion) is used to ensure that two tasks don\textquotesingle{}t use a resource at the same time. This is one method which can be used to prevent data corruption due to task switching. This class doesn\textquotesingle{}t add functionality to the Free\+R\+T\+OS mutex; it just simplifies the programming interface. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMutex_a1fa013189d4335e8c1963b3ae799c435}\label{classMutex_a1fa013189d4335e8c1963b3ae799c435}} 
+\index{Mutex@{Mutex}!Mutex@{Mutex}}
+\index{Mutex@{Mutex}!Mutex@{Mutex}}
+\doxysubsubsection{\texorpdfstring{Mutex()}{Mutex()}}
+{\footnotesize\ttfamily Mutex\+::\+Mutex (\begin{DoxyParamCaption}\item[{Tick\+Type\+\_\+t}]{timeout = {\ttfamily portMAX\+\_\+DELAY} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a mutex and save a handle to it. 
+
+A mutex {\bfseries{must}} {\bfseries{not}} {\bfseries{be}} {\bfseries{used}} within an interrupt service routine; there are ways to use queues to accomplish the same goal. See the Free\+R\+T\+OS documentation for details. 
+\begin{DoxyParams}{Parameters}
+{\em timeout} & The number of R\+T\+OS ticks to wait for the mutex to become available if another task has it (default {\ttfamily port\+M\+A\+X\+\_\+\+D\+E\+L\+AY} which means wait forever) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMutex_ae45adddf5c24ba65ef16767437f9c032}\label{classMutex_ae45adddf5c24ba65ef16767437f9c032}} 
+\index{Mutex@{Mutex}!take@{take}}
+\index{take@{take}!Mutex@{Mutex}}
+\doxysubsubsection{\texorpdfstring{take()}{take()}}
+{\footnotesize\ttfamily bool Mutex\+::take (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Take the mutex, preventing other tasks from using whatever resource the mutex protects. 
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the mutex was taken or {\ttfamily false} if we timed out 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+M\+E507\+\_\+\+Support/\mbox{\hyperlink{mutex_8h}{mutex.\+h}}\end{DoxyCompactItemize}

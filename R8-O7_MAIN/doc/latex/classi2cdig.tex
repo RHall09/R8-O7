@@ -1,0 +1,133 @@
+\hypertarget{classi2cdig}{}\doxysection{i2cdig Class Reference}
+\label{classi2cdig}\index{i2cdig@{i2cdig}}
+
+
+Class containing functions for interacting with digital i2c expansion bus.  
+
+
+
+
+{\ttfamily \#include $<$digital\+\_\+i2c.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classi2cdig_a7ef94eb16e9b0778571d38111767d92e}\label{classi2cdig_a7ef94eb16e9b0778571d38111767d92e}} 
+\mbox{\hyperlink{classi2cdig_a7ef94eb16e9b0778571d38111767d92e}{i2cdig}} ()
+\begin{DoxyCompactList}\small\item\em Default contructor that disables debugging printouts. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classi2cdig_a389485a72b54de5069c11f73a08c5fc3}{i2cdig}} (bool \mbox{\hyperlink{classi2cdig_ae34aaa4cfd8a16d567bcb01eae3db6a2}{debugflag}})
+\begin{DoxyCompactList}\small\item\em Parameterized constructor that enables debugging prinouts if debugflag == True. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classi2cdig_aae1fae0ace4a4be4e53780357f8849d9}\label{classi2cdig_aae1fae0ace4a4be4e53780357f8849d9}} 
+void \mbox{\hyperlink{classi2cdig_aae1fae0ace4a4be4e53780357f8849d9}{joini2c}} ()
+\begin{DoxyCompactList}\small\item\em Join i2c bus to the specified address for this class object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classi2cdig_a38a9fbb5240fd9782f44978fc1161f32}{configport}} (uint8\+\_\+t portnum, bool i\+\_\+o)
+\begin{DoxyCompactList}\small\item\em Change the configuration of a single I/O port. If the existing configuration is specified, no change is made. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classi2cdig_a31ac29f562bc5ff36e805c4fc32bf561}{readinput}} (uint8\+\_\+t portnum)
+\begin{DoxyCompactList}\small\item\em Read from a port configured as input. Do nothing if port is not configured as input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classi2cdig_aa3277dd90b09076d6080ffa33a1eb0bb}{setoutput}} (uint8\+\_\+t portnum, bool i\+\_\+o)
+\begin{DoxyCompactList}\small\item\em Change the status of a port configured as an output. No change will be made to ports configured as inputs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classi2cdig_a4052460ba554c160c2effe9628e85f40}\label{classi2cdig_a4052460ba554c160c2effe9628e85f40}} 
+uint8\+\_\+t \mbox{\hyperlink{classi2cdig_a4052460ba554c160c2effe9628e85f40}{input\+\_\+port}} = byte(0)
+\begin{DoxyCompactList}\small\item\em The address of the input port which may be read from to determine the state of the attached peripheral inputs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classi2cdig_a1d8fd5ba57b6527df9c286301b42a9f2}\label{classi2cdig_a1d8fd5ba57b6527df9c286301b42a9f2}} 
+uint8\+\_\+t \mbox{\hyperlink{classi2cdig_a1d8fd5ba57b6527df9c286301b42a9f2}{output\+\_\+port}} = byte(1)
+\begin{DoxyCompactList}\small\item\em The address of the output port which may be written to to apply logic H\+I\+GH and L\+OW values to the attached peripheral outputs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classi2cdig_ad7f05b1fdc61982d86a3bdd8652bbb9b}\label{classi2cdig_ad7f05b1fdc61982d86a3bdd8652bbb9b}} 
+uint8\+\_\+t \mbox{\hyperlink{classi2cdig_ad7f05b1fdc61982d86a3bdd8652bbb9b}{pol\+\_\+port}} = byte(2)
+\begin{DoxyCompactList}\small\item\em The address of the polarity port which may be written to to flip the polarity of a peripheral defined as an input. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classi2cdig_a5409019d86ac5ff83fc6b64da2db9a63}\label{classi2cdig_a5409019d86ac5ff83fc6b64da2db9a63}} 
+uint8\+\_\+t \mbox{\hyperlink{classi2cdig_a5409019d86ac5ff83fc6b64da2db9a63}{config\+\_\+port}} = byte(3)
+\begin{DoxyCompactList}\small\item\em The address of the configuration port which may be written to to change the configuration of a port to an input or output, it may also be read to determine the current configuration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classi2cdig_ae0a74f2f80582ecd033de59711954de6}\label{classi2cdig_ae0a74f2f80582ecd033de59711954de6}} 
+uint8\+\_\+t \mbox{\hyperlink{classi2cdig_ae0a74f2f80582ecd033de59711954de6}{address}} = 0b0100000
+\begin{DoxyCompactList}\small\item\em The adress of the P\+C\+A9534 chip. Default is the address with all address pins grounded. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classi2cdig_ae34aaa4cfd8a16d567bcb01eae3db6a2}\label{classi2cdig_ae34aaa4cfd8a16d567bcb01eae3db6a2}} 
+bool \mbox{\hyperlink{classi2cdig_ae34aaa4cfd8a16d567bcb01eae3db6a2}{debugflag}}
+\begin{DoxyCompactList}\small\item\em The boolean flag controlling debug prints to the default serial port. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class containing functions for interacting with digital i2c expansion bus. 
+
+This class contains a variety of methods for interacting with the P\+C\+A9534 8-\/bit digital I2\+C-\/bus. First, the class may be initialized with or without a debugflag. If the debugflag is written to true, then debug statements will be printed to the default serial port by this class object. Further, the class contains methods to join the i2c bus, change the configuration of individual ports, read input ports, and set output ports. The class is built on boolean toggles. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classi2cdig_a389485a72b54de5069c11f73a08c5fc3}\label{classi2cdig_a389485a72b54de5069c11f73a08c5fc3}} 
+\index{i2cdig@{i2cdig}!i2cdig@{i2cdig}}
+\index{i2cdig@{i2cdig}!i2cdig@{i2cdig}}
+\doxysubsubsection{\texorpdfstring{i2cdig()}{i2cdig()}}
+{\footnotesize\ttfamily i2cdig\+::i2cdig (\begin{DoxyParamCaption}\item[{bool}]{debugflag }\end{DoxyParamCaption})}
+
+
+
+Parameterized constructor that enables debugging prinouts if debugflag == True. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em debugflag} & A boolean that turns on debugging prinouts if true. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classi2cdig_a38a9fbb5240fd9782f44978fc1161f32}\label{classi2cdig_a38a9fbb5240fd9782f44978fc1161f32}} 
+\index{i2cdig@{i2cdig}!configport@{configport}}
+\index{configport@{configport}!i2cdig@{i2cdig}}
+\doxysubsubsection{\texorpdfstring{configport()}{configport()}}
+{\footnotesize\ttfamily void i2cdig\+::configport (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{portnum,  }\item[{bool}]{i\+\_\+o }\end{DoxyParamCaption})}
+
+
+
+Change the configuration of a single I/O port. If the existing configuration is specified, no change is made. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em portnum} & The port to be configured. \\
+\hline
+{\em i\+\_\+o} & A boolean representing the state configuration desired. True for input, false for output. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classi2cdig_a31ac29f562bc5ff36e805c4fc32bf561}\label{classi2cdig_a31ac29f562bc5ff36e805c4fc32bf561}} 
+\index{i2cdig@{i2cdig}!readinput@{readinput}}
+\index{readinput@{readinput}!i2cdig@{i2cdig}}
+\doxysubsubsection{\texorpdfstring{readinput()}{readinput()}}
+{\footnotesize\ttfamily bool i2cdig\+::readinput (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{portnum }\end{DoxyParamCaption})}
+
+
+
+Read from a port configured as input. Do nothing if port is not configured as input. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em portnum} & The port to be read. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean representing the state of the input. True for logical high, false, for logical low. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classi2cdig_aa3277dd90b09076d6080ffa33a1eb0bb}\label{classi2cdig_aa3277dd90b09076d6080ffa33a1eb0bb}} 
+\index{i2cdig@{i2cdig}!setoutput@{setoutput}}
+\index{setoutput@{setoutput}!i2cdig@{i2cdig}}
+\doxysubsubsection{\texorpdfstring{setoutput()}{setoutput()}}
+{\footnotesize\ttfamily void i2cdig\+::setoutput (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{portnum,  }\item[{bool}]{i\+\_\+o }\end{DoxyParamCaption})}
+
+
+
+Change the status of a port configured as an output. No change will be made to ports configured as inputs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em portnum} & The port to be configured. \\
+\hline
+{\em i\+\_\+o} & A boolean representing the state desired. True for logic high, false for logic low. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Sensor\+\_\+\+Drivers/\mbox{\hyperlink{digital__i2c_8h}{digital\+\_\+i2c.\+h}}\item 
+src/\+Sensor\+\_\+\+Drivers/\mbox{\hyperlink{digital__i2c_8cpp}{digital\+\_\+i2c.\+cpp}}\end{DoxyCompactItemize}

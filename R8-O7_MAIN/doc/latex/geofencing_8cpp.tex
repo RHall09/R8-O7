@@ -1,0 +1,67 @@
+\hypertarget{geofencing_8cpp}{}\doxysection{src/\+Geofence\+\_\+\+Drivers/geofencing.cpp File Reference}
+\label{geofencing_8cpp}\index{src/Geofence\_Drivers/geofencing.cpp@{src/Geofence\_Drivers/geofencing.cpp}}
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+Include dependency graph for geofencing.\+cpp\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{geofencing_8cpp_a598a3330b3c21701223ee0ca14316eca}\label{geofencing_8cpp_a598a3330b3c21701223ee0ca14316eca}} 
+\#define {\bfseries PI}~3.\+14159265
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{geofencing_8cpp_a683d58c011ebca3aede1d9d873fd354a}{geofencing}} (float lat, float longitude, float $\ast$p\+\_\+arr\+\_\+lat, float $\ast$p\+\_\+arr\+\_\+long, uint8\+\_\+t geofence\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Calculate the shortest distance from current position to geofence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains a single function for returning the shortest straight line distance from a point to the edge of a user define geofence. The geofence must be built as two arrays (one of lattitude points and one of longitude points) that have matching dimensions. This dimension must be contained as an unsigned 8-\/bit integer. Thereby, in this configuration the maximum geofence point definition is 255 pairs of lattitude longitude points. The sorting algorithm used to determine the nearest matching geofence point is calculation intensive. Optimization may be necessary if larger geofences are required. This file is dependent on the Arduino framework and the Arduino cmath header. \begin{DoxyAuthor}{Author}
+Kai Quizon 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+October 25, 2021 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+(c) 2021 by Kai Quizon, released under the L\+G\+PL 3.\+0. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{geofencing_8cpp_a683d58c011ebca3aede1d9d873fd354a}\label{geofencing_8cpp_a683d58c011ebca3aede1d9d873fd354a}} 
+\index{geofencing.cpp@{geofencing.cpp}!geofencing@{geofencing}}
+\index{geofencing@{geofencing}!geofencing.cpp@{geofencing.cpp}}
+\doxysubsubsection{\texorpdfstring{geofencing()}{geofencing()}}
+{\footnotesize\ttfamily float geofencing (\begin{DoxyParamCaption}\item[{float}]{lat,  }\item[{float}]{longitude,  }\item[{float $\ast$}]{p\+\_\+arr\+\_\+lat,  }\item[{float $\ast$}]{p\+\_\+arr\+\_\+long,  }\item[{uint8\+\_\+t}]{geofence\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Calculate the shortest distance from current position to geofence. 
+
+This file acts as a header for the geofencing function defined in \mbox{\hyperlink{geofencing_8cpp}{geofencing.\+cpp}}. \begin{DoxyAuthor}{Author}
+Kai Quizon 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+November 26, 2021 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+(c) 2021 by Kai Quizon, released under the L\+G\+PL 3.\+0.
+\end{DoxyCopyright}
+Taking in the structured KD Tree, perform the search for the nearest neighbors. Index the data and find its closest neighbors. Then calculate the closest distance to a point or line based on the Rickolas Solution. 
+\begin{DoxyParams}{Parameters}
+{\em lat} & Updated lattitude value from the processed G\+PS data. \\
+\hline
+{\em longit} & Updated longitude value from the processed G\+PS data. \\
+\hline
+{\em p\+\_\+arr\+\_\+lat} & Pointer to an array of latitude floats containing the data that comprises the geofence. \\
+\hline
+{\em p\+\_\+arr\+\_\+long} & Pointer to an array of longitude floats containing the data that comprises the geofence. \\
+\hline
+{\em geofence\+\_\+size} & An unsigned integer representing the number of points in the geofence array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The distance from the current position to the nearest edge, and a heading in the form\+: distance, heading 
+\end{DoxyReturn}

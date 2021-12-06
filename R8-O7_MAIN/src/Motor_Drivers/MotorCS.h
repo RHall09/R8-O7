@@ -17,7 +17,7 @@
 
 enum CS_Gains {Prop, Integ, Der};
 
-/** @brief A class containing functions for driving a single motor using the \b MD-L6205D chip.
+/** @brief A class containing functions for operating a PID control system for a single motor.
  *  @details   A class containing functions for driving a single motor using a control system and the \b MD-L6205D chip. Methods include declaraing
  *             PWM setpoints, changing controller gains, and toggling the control system on and off. This class is dependent
  *             on the \ref Motor class.
