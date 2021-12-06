@@ -3,7 +3,7 @@
  *      and an enable pin using the \b MD-L6205D motor driverchip. This class implements a 
  *      PID control loop with user defined gains.
  *  @author Rick Hall
- *  @date 2020-4-Nov
+ *  @date 2021-4-Nov
  *  @copyright (c) 2021 by Rick Hall, released under the LGPL 3.0.
  */
 
@@ -12,7 +12,7 @@
 #include <Motor_Drivers/MotorCS.h>
 
 
-// Constructor Function
+// Constructor Function. Store gains inside class object
 MotorCS::MotorCS(float kProportional, float kIntegral, float kDerivative)
 {
     kP = kProportional;
@@ -20,34 +20,38 @@ MotorCS::MotorCS(float kProportional, float kIntegral, float kDerivative)
     kD = kDerivative;
 }
 
-// Set Gain
+// Change a gain
 void MotorCS::gainSet(CS_Gains k, float gain)
 {
-    if(k = Prop)
+    if(k = Prop)  //Change proportional
     {
         kP = gain;
     }
-    else if(k = Integ)
+    else if(k = Integ)  // Change Integral
     {
         kI = gain;
     }
-    else
+    else   // Change Derivative
     {
         kD = gain;
     }
 
 }
 
-// Start & stop CS computations
+// Start CS calculations
 void MotorCS::startCS(void)
 {
     runCS = true;
 }
+
+// Stop CS Calculations
 void MotorCS::stopCS(void)
 {
     runCS = false;
     integral = 0;
 }
+
+// Determine if the CS is currently running
 bool MotorCS::checkCS(void)
 {
     return runCS;

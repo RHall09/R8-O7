@@ -14,7 +14,6 @@
  *  @details This class allows for interaction with the \b ADS7828 Analog I2C Expansion Bus Chip. It contains methods for joining the i2c bus as a
  *           master and reading inputs from chip. The chip does not support outputs. There is also a method to configure the chip address if a different
  *           address is used via manipulation of the address pins.
-
  */
 
 class i2cana {
@@ -27,6 +26,7 @@ class i2cana {
     
     
     public:
+    // Doxystrings are in the .cpp file. Yea I was weird back then.
     i2cana();
     i2cana(bool debugflag);
     void joini2c();
