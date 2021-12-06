@@ -1,9 +1,10 @@
-/** @file MotorCS.h
- * 
- * 
- * 
+/** @headerfile MotorCS.h ""
+ *      This file contains the class declaration of a class designed to drive a motor with two PWM signals
+ *      and an enable pin using the \b MD-L6205D motor driverchip. This class implements a 
+ *      PID control loop with user defined gains.
  *  @author Rick Hall
- *  @date 2020-4-Nov
+ *  @date 2021-4-Nov
+ *  @copyright (c) 2021 by Rick Hall, released under the LGPL 3.0.
  */
 
 #ifndef MOTOR_CS_H
@@ -41,23 +42,49 @@ protected:
     bool runCS = false;
 
 public:
-    // Constructor Function
+/** @brief Initialize an object of the MotorCS class by feeding it the desired controller gains.
+ *  @details   Initialize an object of the MotorCS class by feeding it the desired controller gains.
+ *             This function only creates an object of the class and stores the controller gains fed.
+ *  @param kProportional The proportional gain desired for implementation in the PID controller.
+ *  @param kIntegral The integral gain desired for implementation in the PID controller.
+ *  @param kDerivative The derivative gain desired for implementation in the PID controller.
+ **/
     MotorCS(float kProportional = 1, float kIntegral = 0.1, float kDerivative = 4);
 
-    // Set Gain
+/** @brief Interact with the enumerated CS_Gains type to change any of the three gains. Write only.
+ *  @param k The desired gain type of CS_Gains to be changed.
+ *  @param gain The new value of the changed CS_Gains value.
+ **/
     void gainSet(CS_Gains k, float gain);
 
-    // Start & stop CS computations
+/** @brief Toggle a boolean \b on that enables the Control system calculations.
+ **/
     void startCS(void);
+
+/** @brief Toggle a boolean \b off that enables the Control system calculations.
+ **/
     void stopCS(void);
+
+/** @brief Check the status of the control system enable boolean.
+ **/
     bool checkCS(void);
 
-    // Change setpoint
+/** @brief Set a new PWM signal setpoint to drive the motors with.
+ *  @param set The new setpoint (PWM signal) desired. Can be any number, but handled internally to between -255 and 255.
+ **/
     void newSetpoint(int16_t set);
 
-    // Run CS with new setpoint
+/** @brief Calculate the new necessary PWM signal to achieve the desired speed of the provided setpoint.
+ *  @param motor The motor to be controlled.
+ *  @param enc_velocity An updated encoder velocity from the attached encoder.
+ *  @param set The new desired setpoint.
+ **/
     void run(Motor motor, int16_t enc_velocity, int16_t set);
-    // Run CS without new setpoint
+
+/** @brief Calculate the new necessary PWM signal to achieve the desired speed of the current stored setpoint.
+ *  @param motor The motor to be controlled.
+ *  @param enc_velocity An updated encoder velocity from the attached encoder.
+ **/
     void run(Motor motor, int16_t enc_velocity);
 
 };

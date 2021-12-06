@@ -1,5 +1,5 @@
 /** @file Motor.cpp
- * 
+ *          File containing the member functions for a class for driving motors using the \b MD-L6205D motor driver chip.
  * 
  * 
  *  @author Rick Hall
@@ -36,13 +36,13 @@ Motor::Motor(int Pin_En, int Pin_1, int Pin_2, Motor_Number mot_num)
 
 }
 
-//Enable Motors
+//Enable Motors by writing enable pin high.
 void Motor::enable(void)
 {
     digitalWrite(PinE, HIGH);
     enabled = true;
 }
-//Disable Motors
+//Disable Motors by writing enable pin low.
 void Motor::disable(void)
 {
     digitalWrite(PinE, LOW);
@@ -76,15 +76,15 @@ void Motor::set(int16_t pwm)
 
     }
 }
-//Set individual motor behavior with PWM %s
-//Stop motors
+
+//Stop motors by pushing 0 PWM signals to each pin
 void Motor::stop(void)
 {
     ledcWrite(motor_channel_1, 0);
     ledcWrite(motor_channel_2, 0);
 }
 
-//Set error-overcurrent flag
+//Set error-overcurrent flag by attempting to read enable pin
 void Motor::checkOvercurrent(void)
 {
     if(!(digitalRead(PinE)))
@@ -95,6 +95,7 @@ void Motor::checkOvercurrent(void)
         this -> disable();
     }
 }
+
 //Clear error-overcurrent flag
 void Motor::clearOvercurrent(void)
 {
