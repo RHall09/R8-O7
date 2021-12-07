@@ -2,10 +2,10 @@ var annotated_dup =
 [
     [ "BaseShare", "classBaseShare.html", "classBaseShare" ],
     [ "DevNull", "classDevNull.html", "classDevNull" ],
-    [ "ESP32Encoder", "classESP32Encoder.html", "classESP32Encoder" ],
+    [ "ESP32Encoder", "classESP32Encoder.html", null ],
     [ "i2cana", "classi2cana.html", "classi2cana" ],
     [ "i2cdig", "classi2cdig.html", "classi2cdig" ],
-    [ "InterruptEncoder", "classInterruptEncoder.html", "classInterruptEncoder" ],
+    [ "InterruptEncoder", "classInterruptEncoder.html", null ],
     [ "Motor", "classMotor.html", "classMotor" ],
     [ "MotorCS", "classMotorCS.html", "classMotorCS" ],
     [ "Mutex", "classMutex.html", "classMutex" ],

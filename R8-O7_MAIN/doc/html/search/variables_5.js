@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['handle_254',['handle',['../classMutex.html#a5da1e7e042bbc8024265eed21d47a194',1,'Mutex::handle()'],['../classQueue.html#a69b90b10718e9469499375c61cc9c236',1,'Queue::handle()']]]
+  ['fence_5fdistance_0',['fence_distance',['../shares_8h.html#a5763ffcc5dd4aaaf79622a8ea7da5e50',1,'shares.h']]],
+  ['fence_5fheading_1',['fence_heading',['../shares_8h.html#a90d5227df11bddbfbd005217364b9e91',1,'shares.h']]]
 ];

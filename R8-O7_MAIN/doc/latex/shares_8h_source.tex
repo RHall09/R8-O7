@@ -1,0 +1,35 @@
+\hypertarget{shares_8h_source}{}\doxysection{shares.\+h}
+\label{shares_8h_source}\index{src/shares.h@{src/shares.h}}
+\mbox{\hyperlink{shares_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#ifndef \_SHARES\_H\_}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define \_SHARES\_H\_}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{taskqueue_8h}{ME507\_Support/taskqueue.h}}>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{taskshare_8h}{ME507\_Support/taskshare.h}}>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <Misc\_Drivers/RegOperators.h>}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{18 \textcolor{keyword}{extern} \mbox{\hyperlink{classQueue}{Queue<float>}} \mbox{\hyperlink{shares_8h_a74a01b05cfc6046d23159ae25476e05e}{latitude\_queue}};}
+\DoxyCodeLine{20 \textcolor{keyword}{extern} \mbox{\hyperlink{classQueue}{Queue<float>}} \mbox{\hyperlink{shares_8h_a6ba4f8a315ad9b5bbfddf5b983cf115f}{longitude\_queue}};}
+\DoxyCodeLine{22 \textcolor{keyword}{extern} \mbox{\hyperlink{classQueue}{Queue<float>}} \mbox{\hyperlink{shares_8h_a5763ffcc5dd4aaaf79622a8ea7da5e50}{fence\_distance}};}
+\DoxyCodeLine{24 \textcolor{keyword}{extern} \mbox{\hyperlink{classQueue}{Queue<float>}} \mbox{\hyperlink{shares_8h_a90d5227df11bddbfbd005217364b9e91}{fence\_heading}};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{27 \textcolor{keyword}{extern} \mbox{\hyperlink{classQueue}{Queue<int16\_t>}} \mbox{\hyperlink{shares_8h_a5a668577c98d90651804f729f9a95247}{tof\_main}};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{30 \textcolor{keyword}{extern} \mbox{\hyperlink{classQueue}{Queue<int16\_t>}} \mbox{\hyperlink{shares_8h_a5196264ee1c7839031ce9be3d26d1c9a}{motorSet\_A\_q}};}
+\DoxyCodeLine{32 \textcolor{keyword}{extern} \mbox{\hyperlink{classQueue}{Queue<int16\_t>}} \mbox{\hyperlink{shares_8h_ab463704887a87b5d2f28c0a67cf3dfe8}{motorSet\_B\_q}};}
+\DoxyCodeLine{34 \textcolor{keyword}{extern} \mbox{\hyperlink{classQueue}{Queue<float>}} \mbox{\hyperlink{shares_8h_ac13665547d0bf13ee1fa3dc73c8e418f}{encVel\_A\_q}};}
+\DoxyCodeLine{36 \textcolor{keyword}{extern} \mbox{\hyperlink{classQueue}{Queue<float>}} \mbox{\hyperlink{shares_8h_a2fa785cff9be4b8a6c4b3efa3ee0fedb}{encVel\_B\_q}};}
+\DoxyCodeLine{38 \textcolor{keyword}{extern} \mbox{\hyperlink{classQueue}{Queue<float>}} \mbox{\hyperlink{shares_8h_aeaed120ec16eec0869d8305e4c1dddf6}{enc\_dt\_A\_q}};}
+\DoxyCodeLine{40 \textcolor{keyword}{extern} \mbox{\hyperlink{classQueue}{Queue<float>}} \mbox{\hyperlink{shares_8h_a7952fb1afd504c990a872e24a5ebdc26}{enc\_dt\_B\_q}};}
+\DoxyCodeLine{42 \textcolor{keyword}{extern} \mbox{\hyperlink{classShare}{Share<uint8\_t>}} \mbox{\hyperlink{shares_8h_a95b344f49926c9e2e8c19efdd94ba92b}{motorFlagRegister}};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#define Run\_Motor\_CS  current\_flag, 5}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#define OverC\_Clear   current\_flag, 6}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#define Overcurrent\_A current\_flag, 7}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#define Overcurrent\_B current\_flag, 8}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_SHARES\_H\_}}
+
+\end{DoxyCode}

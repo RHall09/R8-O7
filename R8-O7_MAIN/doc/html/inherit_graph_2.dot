@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="i2cana",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classi2cana.html",tooltip="Class containing functions for interacting with the ADS7828 Analog i2c expansion bus chip."];
+  Node0 [label="ESP32Encoder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classESP32Encoder.html",tooltip=" "];
 }

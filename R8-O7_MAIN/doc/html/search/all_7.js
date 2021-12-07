@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['handle_47',['handle',['../classMutex.html#a5da1e7e042bbc8024265eed21d47a194',1,'Mutex::handle()'],['../classQueue.html#a69b90b10718e9469499375c61cc9c236',1,'Queue::handle()']]]
+  ['handle_0',['handle',['../classMutex.html#a5da1e7e042bbc8024265eed21d47a194',1,'Mutex::handle()'],['../classQueue.html#a69b90b10718e9469499375c61cc9c236',1,'Queue::handle()']]],
+  ['hardware_20design_1',['Hardware Design',['../page_Hardware.html',1,'']]]
 ];

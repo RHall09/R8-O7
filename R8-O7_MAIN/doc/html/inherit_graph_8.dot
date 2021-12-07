@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="Navigation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classNavigation.html",tooltip="A class containing functions for driving a dual-motor robot within a geofence."];
+  Node0 [label="Mutex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMutex.html",tooltip="Class which implements a mutex which can guard a resource."];
 }

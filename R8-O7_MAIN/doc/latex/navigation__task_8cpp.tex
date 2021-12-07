@@ -11,32 +11,31 @@ Include dependency graph for navigation\+\_\+task.\+cpp\+:
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{navigation__task_8cpp_a50e1bce80bb6e832117b1d1ebe1f2aa3}\label{navigation__task_8cpp_a50e1bce80bb6e832117b1d1ebe1f2aa3}} 
-\#define {\bfseries F\+E\+N\+C\+E\+\_\+\+M\+IN}~(float)3
+\#define {\bfseries FENCE\+\_\+\+MIN}~(float)3
 \item 
 \mbox{\Hypertarget{navigation__task_8cpp_ac3ec78a2fc11fcf630aae7c65952d226}\label{navigation__task_8cpp_ac3ec78a2fc11fcf630aae7c65952d226}} 
-\#define {\bfseries V\+\_\+\+C\+AL}~(float)0.\+3
+\#define {\bfseries V\+\_\+\+CAL}~(float)0.\+3
 \item 
 \mbox{\Hypertarget{navigation__task_8cpp_ab24ec0162584d2189e0e87797e3631da}\label{navigation__task_8cpp_ab24ec0162584d2189e0e87797e3631da}} 
-\#define {\bfseries T\+\_\+\+C\+AL}~(float)0.\+25
+\#define {\bfseries T\+\_\+\+CAL}~(float)0.\+25
 \item 
 \mbox{\Hypertarget{navigation__task_8cpp_a09ae44e902a21e163b94fbaf65f80e1b}\label{navigation__task_8cpp_a09ae44e902a21e163b94fbaf65f80e1b}} 
-\#define {\bfseries C\+R\+U\+I\+S\+E\+\_\+\+V\+EL}~(float) 3
+\#define {\bfseries CRUISE\+\_\+\+VEL}~(float) 3
 \item 
 \mbox{\Hypertarget{navigation__task_8cpp_a2b912ed39df233b43d7a093814705afb}\label{navigation__task_8cpp_a2b912ed39df233b43d7a093814705afb}} 
-\#define {\bfseries E\+V\+ER}~(;;)
+\#define {\bfseries EVER}~(;;)
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{navigation__task_8cpp_ab2732dea6312e7252c824970394c0ad8}\label{navigation__task_8cpp_ab2732dea6312e7252c824970394c0ad8}} 
-void {\bfseries navigation\+\_\+task} (void $\ast$p\+\_\+param)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{navigation__task_8cpp_ab2732dea6312e7252c824970394c0ad8}{navigation\+\_\+task}} (void $\ast$p\+\_\+param)
+\begin{DoxyCompactList}\small\item\em This task runs the navigation of the bot within its geofence. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-This file contains a task which takes inputs from all sensors and the G\+PS to determine the path of the robot and output motor P\+WM values accordingly.
+This file contains a task which takes inputs from all sensors and the GPS to determine the path of the robot and output motor PWM values accordingly.
 
-Update as of 12/4/21\+: Due to limitations in the current sensor module, only G\+PS data is currently implemented in the navigation calculation.
+Update as of 12/4/21\+: Due to limitations in the current sensor module, only GPS data is currently implemented in the navigation calculation.
 
 \begin{DoxyAuthor}{Author}
 Rick Hall 
@@ -44,3 +43,32 @@ Rick Hall
 \begin{DoxyDate}{Date}
 2021-\/Dec-\/02 Original file 
 \end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{navigation__task_8cpp_ab2732dea6312e7252c824970394c0ad8}\label{navigation__task_8cpp_ab2732dea6312e7252c824970394c0ad8}} 
+\index{navigation\_task.cpp@{navigation\_task.cpp}!navigation\_task@{navigation\_task}}
+\index{navigation\_task@{navigation\_task}!navigation\_task.cpp@{navigation\_task.cpp}}
+\doxysubsubsection{\texorpdfstring{navigation\_task()}{navigation\_task()}}
+{\footnotesize\ttfamily void navigation\+\_\+task (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+\_\+params }\end{DoxyParamCaption})}
+
+
+
+This task runs the navigation of the bot within its geofence. 
+
+This file acts as a header for a task which takes inputs from all sensors and the GPS to determine the path of the robot and output motor PWM values accordingly.
+
+\begin{DoxyAuthor}{Author}
+Rick Hall 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2021-\/Dec-\/02 Original file 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+(c) 2021 by Rick Hall, released under the LGPL 3.\+0.
+\end{DoxyCopyright}
+This task updatest the motor setpoints by synthesizing data from the safety sensor suite and the geofence distances. It also determines if it is a safe instance for Show\+Sense moment. If a safe moment is available, trigger the Show\+Sense moment. Ultimately, this task asks as a general \char`\"{}brain\char`\"{} for R8-\/07. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+params} & A pointer to function parameters which we don\textquotesingle{}t use. \\
+\hline
+\end{DoxyParams}
