@@ -20,6 +20,4 @@ digraph "src/shares.h"
   Node8 [label="src/navigation_task.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$navigation__task_8cpp.html",tooltip=" "];
   Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
   Node9 [label="src/sensor_suite_task.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sensor__suite__task_8cpp.html",tooltip=" "];
-  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
-  Node10 [label="src/STM_suite_task.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$STM__suite__task_8cpp.html",tooltip=" "];
 }

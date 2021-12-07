@@ -13,6 +13,7 @@
 #include <cmath>
 #include <Arduino.h>
 
+/// A constant to represent pi easily.
 #define PI 3.14159265
 
 float geofencing(float lat, float longitude, float* p_arr_lat, float* p_arr_long, uint8_t geofence_size) {

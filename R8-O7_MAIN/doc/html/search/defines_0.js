@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['debug_5fprint_5foff_284',['DEBUG_PRINT_OFF',['../devnull_8h.html#a72f843cde7b80d04f2eb5f8170efe333',1,'devnull.h']]]
+  ['cruise_5fvel_0',['CRUISE_VEL',['../navigation__task_8cpp.html#a09ae44e902a21e163b94fbaf65f80e1b',1,'navigation_task.cpp']]]
 ];

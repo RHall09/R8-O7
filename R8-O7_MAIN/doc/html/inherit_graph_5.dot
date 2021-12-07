@@ -4,5 +4,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="Motor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMotor.html",tooltip="A class containing functions for driving a single motor using the MD-L6205D chip."];
+  Node0 [label="InterruptEncoder",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classInterruptEncoder.html",tooltip=" "];
 }

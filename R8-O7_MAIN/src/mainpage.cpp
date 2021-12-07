@@ -1,8 +1,5 @@
 /**
- * 
- * @file mainpage.cpp
- * 
- * @mainpage
+ * \mainpage
  * 
  * @section sec_intro Introduction
  * Welcome to R8-07's documentation homepage. This documentation is tied to source

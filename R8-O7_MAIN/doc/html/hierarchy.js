@@ -1,10 +1,10 @@
 var hierarchy =
 [
     [ "BaseShare", "classBaseShare.html", [
-      [ "Queue< dataType >", "classQueue.html", null ],
       [ "Queue< char >", "classQueue.html", [
         [ "TextQueue", "classTextQueue.html", null ]
       ] ],
+      [ "Queue< dataType >", "classQueue.html", null ],
       [ "Share< DataType >", "classShare.html", null ]
     ] ],
     [ "DevNull", "classDevNull.html", null ],

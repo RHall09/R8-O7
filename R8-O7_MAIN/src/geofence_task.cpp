@@ -14,6 +14,7 @@
 #include "shares.h"
 #include "Geofence_Drivers/geofencing.h"
 
+/// Force a for loop to say for EVER. More fun
 #define EVER (;;)
 
 void geofence_task (void* p_params) {

@@ -1,0 +1,38 @@
+\hypertarget{mutex_8h_source}{}\doxysection{mutex.\+h}
+\label{mutex_8h_source}\index{src/ME507\_Support/mutex.h@{src/ME507\_Support/mutex.h}}
+\mbox{\hyperlink{mutex_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <Arduino.h>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <FreeRTOS.h>}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 }
+\DoxyCodeLine{20 \textcolor{keyword}{class }\mbox{\hyperlink{classMutex}{Mutex}}}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{23     SemaphoreHandle\_t \mbox{\hyperlink{classMutex_a5da1e7e042bbc8024265eed21d47a194}{handle}};    }
+\DoxyCodeLine{24     TickType\_t \mbox{\hyperlink{classMutex_a1bd8d9978c427a9f314595214c4e605e}{timeout}};          }
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{public}:}
+\DoxyCodeLine{35     \mbox{\hyperlink{classMutex_a1fa013189d4335e8c1963b3ae799c435}{Mutex}} (TickType\_t \mbox{\hyperlink{classMutex_a1bd8d9978c427a9f314595214c4e605e}{timeout}} = portMAX\_DELAY)}
+\DoxyCodeLine{36     \{}
+\DoxyCodeLine{37         \mbox{\hyperlink{classMutex_a5da1e7e042bbc8024265eed21d47a194}{handle}} = xSemaphoreCreateMutex ();}
+\DoxyCodeLine{38         this-\/>timeout = \mbox{\hyperlink{classMutex_a1bd8d9978c427a9f314595214c4e605e}{timeout}};}
+\DoxyCodeLine{39     \}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{45     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classMutex_ae45adddf5c24ba65ef16767437f9c032}{take}} (\textcolor{keywordtype}{void})}
+\DoxyCodeLine{46     \{}
+\DoxyCodeLine{47         portBASE\_TYPE result = xSemaphoreTake (\mbox{\hyperlink{classMutex_a5da1e7e042bbc8024265eed21d47a194}{handle}}, \mbox{\hyperlink{classMutex_a1bd8d9978c427a9f314595214c4e605e}{timeout}});}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49         \textcolor{keywordflow}{return} (result == pdTRUE);}
+\DoxyCodeLine{50     \}}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{55     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMutex_a3c7db240ed634989205e2b17a3c8fe5d}{give}} (\textcolor{keywordtype}{void})}
+\DoxyCodeLine{56     \{}
+\DoxyCodeLine{57         xSemaphoreGive (\mbox{\hyperlink{classMutex_a5da1e7e042bbc8024265eed21d47a194}{handle}});}
+\DoxyCodeLine{58     \}}
+\DoxyCodeLine{59 \};}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 }
+
+\end{DoxyCode}

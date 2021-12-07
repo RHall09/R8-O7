@@ -1,8 +1,8 @@
 \hypertarget{main_8cpp}{}\doxysection{src/main.cpp File Reference}
 \label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
 {\ttfamily \#include $<$Arduino.\+h$>$}\newline
-{\ttfamily \#include \char`\"{}M\+E507\+\_\+\+Support/taskshare.\+h\char`\"{}}\newline
-{\ttfamily \#include \char`\"{}M\+E507\+\_\+\+Support/taskqueue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ME507\+\_\+\+Support/taskshare.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ME507\+\_\+\+Support/taskqueue.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}shares.\+h\char`\"{}}\newline
 Include dependency graph for main.\+cpp\+:
 % FIG 0
@@ -27,7 +27,7 @@ JR Ridgely
 2021-\/Oct-\/23 Original file 
 \end{DoxyDate}
 \begin{DoxyCopyright}{Copyright}
-(c) 2021 by JR Ridgely, released under the L\+G\+PL 3.\+0. 
+(c) 2021 by JR Ridgely, released under the LGPL 3.\+0. 
 \end{DoxyCopyright}
 
 
@@ -42,7 +42,7 @@ JR Ridgely
 
 Arduino\textquotesingle{}s low-\/priority loop function, which we don\textquotesingle{}t use. 
 
-A non-\/\+R\+T\+OS Arduino program runs all of its continuously running code in this function after {\ttfamily \mbox{\hyperlink{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}{setup()}}} has finished. When using Free\+R\+T\+OS, {\ttfamily \mbox{\hyperlink{main_8cpp_afe461d27b9c48d5921c00d521181f12f}{loop()}}} implements a low priority task on most microcontrollers and crashes on some others, so we\textquotesingle{}ll not use it. \mbox{\Hypertarget{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}\label{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}} 
+A non-\/\+RTOS Arduino program runs all of its continuously running code in this function after {\ttfamily \mbox{\hyperlink{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}{setup()}}} has finished. When using Free\+RTOS, {\ttfamily \mbox{\hyperlink{main_8cpp_afe461d27b9c48d5921c00d521181f12f}{loop()}}} implements a low priority task on most microcontrollers and crashes on some others, so we\textquotesingle{}ll not use it. \mbox{\Hypertarget{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}\label{main_8cpp_a4fc01d736fe50cf5b977f755b675f11d}} 
 \index{main.cpp@{main.cpp}!setup@{setup}}
 \index{setup@{setup}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{setup()}{setup()}}
@@ -53,7 +53,7 @@ A non-\/\+R\+T\+OS Arduino program runs all of its continuously running code in 
 ~\newline
  
 
-Start the serial port, wait a short time, then say hello. Use the non-\/\+R\+T\+OS delay() function because the R\+T\+OS hasn\textquotesingle{}t been started yet Serial.\+begin (115200); delay (5000); Initialize the recording share to indicate we\textquotesingle{}re not taking data yet begin\+\_\+recording.\+put (false); Create a task which records data x\+Task\+Create (task\+\_\+take\+\_\+data, // Task function \char`\"{}\+Data Acq.\char`\"{}, // Name for debugging printouts 1024, // Stack size for this task N\+U\+LL, // Pointer to no parameters 9, // Priority N\+U\+LL); // Don\textquotesingle{}t save task object pointer Create a task which displays the data which has been recorded x\+Task\+Create (task\+\_\+show\+\_\+data, // Task function \char`\"{}\+Show Data\char`\"{}, // Name for debugging printouts 2048, // Stack size for this task N\+U\+LL, // Pointer to no parameters 3, // Priority N\+U\+LL); // Don\textquotesingle{}t save task object pointer Create a task controls when data acquisition begins x\+Task\+Create (task\+\_\+control, // Task function \char`\"{}\+Control\char`\"{}, // Name for debugging printouts 512, // Stack size for this task N\+U\+LL, // Pointer to no parameters 6, // Priority N\+U\+LL); // Don\textquotesingle{}t save task object pointer If using an S\+T\+M32, we need to call the scheduler startup function now; if using an E\+S\+P32, we need not, as it has already been called \#if (defined S\+T\+M32\+L4xx $\vert$$\vert$ defined S\+T\+M32\+F4xx) v\+Task\+Start\+Scheduler (); \#endif\mbox{\Hypertarget{main_8cpp_a1c626f59becb67075cd4a0c92eb6c4b1}\label{main_8cpp_a1c626f59becb67075cd4a0c92eb6c4b1}} 
+Start the serial port, wait a short time, then say hello. Use the non-\/\+RTOS delay() function because the RTOS hasn\textquotesingle{}t been started yet Serial.\+begin (115200); delay (5000); Initialize the recording share to indicate we\textquotesingle{}re not taking data yet begin\+\_\+recording.\+put (false); Create a task which records data x\+Task\+Create (task\+\_\+take\+\_\+data, // Task function \char`\"{}\+Data Acq.\char`\"{}, // Name for debugging printouts 1024, // Stack size for this task NULL, // Pointer to no parameters 9, // Priority NULL); // Don\textquotesingle{}t save task object pointer Create a task which displays the data which has been recorded x\+Task\+Create (task\+\_\+show\+\_\+data, // Task function \char`\"{}\+Show Data\char`\"{}, // Name for debugging printouts 2048, // Stack size for this task NULL, // Pointer to no parameters 3, // Priority NULL); // Don\textquotesingle{}t save task object pointer Create a task controls when data acquisition begins x\+Task\+Create (task\+\_\+control, // Task function \char`\"{}\+Control\char`\"{}, // Name for debugging printouts 512, // Stack size for this task NULL, // Pointer to no parameters 6, // Priority NULL); // Don\textquotesingle{}t save task object pointer If using an STM32, we need to call the scheduler startup function now; if using an ESP32, we need not, as it has already been called \#if (defined STM32\+L4xx $\vert$$\vert$ defined STM32\+F4xx) v\+Task\+Start\+Scheduler (); \#endif\mbox{\Hypertarget{main_8cpp_a1c626f59becb67075cd4a0c92eb6c4b1}\label{main_8cpp_a1c626f59becb67075cd4a0c92eb6c4b1}} 
 \index{main.cpp@{main.cpp}!task\_control@{task\_control}}
 \index{task\_control@{task\_control}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{task\_control()}{task\_control()}}
@@ -64,11 +64,11 @@ Start the serial port, wait a short time, then say hello. Use the non-\/\+R\+T\+
 ~\newline
  
 
-/ A share which holds a counter of how many times a simulated event occurred Share$<$bool$>$ begin\+\_\+recording (\char`\"{}\+Recording\char`\"{}); / A queue which holds a bunch of data taken by a measurement task Queue$<$uint16\+\_\+t$>$ data\+\_\+queue (100, \char`\"{}\+Data\char`\"{}); / The number of milliseconds between sets of data recorded const uint32\+\_\+t M\+S\+\_\+\+P\+E\+R\+\_\+\+D\+A\+T\+A\+\_\+\+S\+ET = 10000;
+/ A share which holds a counter of how many times a simulated event occurred Share$<$bool$>$ begin\+\_\+recording (\char`\"{}\+Recording\char`\"{}); / A queue which holds a bunch of data taken by a measurement task Queue$<$uint16\+\_\+t$>$ data\+\_\+queue (100, \char`\"{}\+Data\char`\"{}); / The number of milliseconds between sets of data recorded const uint32\+\_\+t MS\+\_\+\+PER\+\_\+\+DATA\+\_\+\+SET = 10000;
 
 
 \begin{DoxyParams}{Parameters}
 {\em p\+\_\+params} & An unused pointer to nonexistent parameters \\
 \hline
 \end{DoxyParams}
-for (;;) \{ begin\+\_\+recording.\+put (true); // Tell recording task to begin v\+Task\+Delay (M\+S\+\_\+\+P\+E\+R\+\_\+\+D\+A\+T\+A\+\_\+\+S\+ET); // Then wait 10 seconds \}
+for (;;) \{ begin\+\_\+recording.\+put (true); // Tell recording task to begin v\+Task\+Delay (MS\+\_\+\+PER\+\_\+\+DATA\+\_\+\+SET); // Then wait 10 seconds \}

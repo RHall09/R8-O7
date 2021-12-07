@@ -13,12 +13,12 @@ Class containing functions for interacting with digital i2c expansion bus.
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classi2cdig_a7ef94eb16e9b0778571d38111767d92e}\label{classi2cdig_a7ef94eb16e9b0778571d38111767d92e}} 
-\mbox{\hyperlink{classi2cdig_a7ef94eb16e9b0778571d38111767d92e}{i2cdig}} ()
+{\bfseries i2cdig} ()
 \begin{DoxyCompactList}\small\item\em Default contructor that disables debugging printouts. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classi2cdig_a389485a72b54de5069c11f73a08c5fc3}{i2cdig}} (bool \mbox{\hyperlink{classi2cdig_ae34aaa4cfd8a16d567bcb01eae3db6a2}{debugflag}})
 \begin{DoxyCompactList}\small\item\em Parameterized constructor that enables debugging prinouts if debugflag == True. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classi2cdig_aae1fae0ace4a4be4e53780357f8849d9}\label{classi2cdig_aae1fae0ace4a4be4e53780357f8849d9}} 
-void \mbox{\hyperlink{classi2cdig_aae1fae0ace4a4be4e53780357f8849d9}{joini2c}} ()
+void {\bfseries joini2c} ()
 \begin{DoxyCompactList}\small\item\em Join i2c bus to the specified address for this class object. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classi2cdig_a38a9fbb5240fd9782f44978fc1161f32}{configport}} (uint8\+\_\+t portnum, bool i\+\_\+o)
 \begin{DoxyCompactList}\small\item\em Change the configuration of a single I/O port. If the existing configuration is specified, no change is made. \end{DoxyCompactList}\item 
@@ -30,29 +30,29 @@ void \mbox{\hyperlink{classi2cdig_aa3277dd90b09076d6080ffa33a1eb0bb}{setoutput}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classi2cdig_a4052460ba554c160c2effe9628e85f40}\label{classi2cdig_a4052460ba554c160c2effe9628e85f40}} 
-uint8\+\_\+t \mbox{\hyperlink{classi2cdig_a4052460ba554c160c2effe9628e85f40}{input\+\_\+port}} = byte(0)
+uint8\+\_\+t {\bfseries input\+\_\+port} = byte(0)
 \begin{DoxyCompactList}\small\item\em The address of the input port which may be read from to determine the state of the attached peripheral inputs. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classi2cdig_a1d8fd5ba57b6527df9c286301b42a9f2}\label{classi2cdig_a1d8fd5ba57b6527df9c286301b42a9f2}} 
-uint8\+\_\+t \mbox{\hyperlink{classi2cdig_a1d8fd5ba57b6527df9c286301b42a9f2}{output\+\_\+port}} = byte(1)
-\begin{DoxyCompactList}\small\item\em The address of the output port which may be written to to apply logic H\+I\+GH and L\+OW values to the attached peripheral outputs. \end{DoxyCompactList}\item 
+uint8\+\_\+t {\bfseries output\+\_\+port} = byte(1)
+\begin{DoxyCompactList}\small\item\em The address of the output port which may be written to to apply logic HIGH and LOW values to the attached peripheral outputs. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classi2cdig_ad7f05b1fdc61982d86a3bdd8652bbb9b}\label{classi2cdig_ad7f05b1fdc61982d86a3bdd8652bbb9b}} 
-uint8\+\_\+t \mbox{\hyperlink{classi2cdig_ad7f05b1fdc61982d86a3bdd8652bbb9b}{pol\+\_\+port}} = byte(2)
+uint8\+\_\+t {\bfseries pol\+\_\+port} = byte(2)
 \begin{DoxyCompactList}\small\item\em The address of the polarity port which may be written to to flip the polarity of a peripheral defined as an input. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classi2cdig_a5409019d86ac5ff83fc6b64da2db9a63}\label{classi2cdig_a5409019d86ac5ff83fc6b64da2db9a63}} 
-uint8\+\_\+t \mbox{\hyperlink{classi2cdig_a5409019d86ac5ff83fc6b64da2db9a63}{config\+\_\+port}} = byte(3)
+uint8\+\_\+t {\bfseries config\+\_\+port} = byte(3)
 \begin{DoxyCompactList}\small\item\em The address of the configuration port which may be written to to change the configuration of a port to an input or output, it may also be read to determine the current configuration. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classi2cdig_ae0a74f2f80582ecd033de59711954de6}\label{classi2cdig_ae0a74f2f80582ecd033de59711954de6}} 
-uint8\+\_\+t \mbox{\hyperlink{classi2cdig_ae0a74f2f80582ecd033de59711954de6}{address}} = 0b0100000
-\begin{DoxyCompactList}\small\item\em The adress of the P\+C\+A9534 chip. Default is the address with all address pins grounded. \end{DoxyCompactList}\item 
+uint8\+\_\+t {\bfseries address} = 0b0100000
+\begin{DoxyCompactList}\small\item\em The adress of the PCA9534 chip. Default is the address with all address pins grounded. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classi2cdig_ae34aaa4cfd8a16d567bcb01eae3db6a2}\label{classi2cdig_ae34aaa4cfd8a16d567bcb01eae3db6a2}} 
-bool \mbox{\hyperlink{classi2cdig_ae34aaa4cfd8a16d567bcb01eae3db6a2}{debugflag}}
+bool {\bfseries debugflag}
 \begin{DoxyCompactList}\small\item\em The boolean flag controlling debug prints to the default serial port. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Class containing functions for interacting with digital i2c expansion bus. 
 
-This class contains a variety of methods for interacting with the P\+C\+A9534 8-\/bit digital I2\+C-\/bus. First, the class may be initialized with or without a debugflag. If the debugflag is written to true, then debug statements will be printed to the default serial port by this class object. Further, the class contains methods to join the i2c bus, change the configuration of individual ports, read input ports, and set output ports. The class is built on boolean toggles. 
+This class contains a variety of methods for interacting with the PCA9534 8-\/bit digital I2\+C-\/bus. First, the class may be initialized with or without a debugflag. If the debugflag is written to true, then debug statements will be printed to the default serial port by this class object. Further, the class contains methods to join the i2c bus, change the configuration of individual ports, read input ports, and set output ports. The class is built on boolean toggles. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classi2cdig_a389485a72b54de5069c11f73a08c5fc3}\label{classi2cdig_a389485a72b54de5069c11f73a08c5fc3}} 

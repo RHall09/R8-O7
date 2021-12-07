@@ -8,10 +8,10 @@ var dir_d5b7f8bf1a04c3e95f0ad58429f00a1e =
       [ "Mutex", "classMutex.html", "classMutex" ]
     ] ],
     [ "taskqueue.h", "taskqueue_8h.html", [
-      [ "Queue", "classQueue.html", "classQueue" ]
+      [ "Queue< dataType >", "classQueue.html", "classQueue" ]
     ] ],
     [ "taskshare.h", "taskshare_8h.html", [
-      [ "Share", "classShare.html", "classShare" ]
+      [ "Share< DataType >", "classShare.html", "classShare" ]
     ] ],
     [ "textqueue.h", "textqueue_8h.html", [
       [ "TextQueue", "classTextQueue.html", "classTextQueue" ]

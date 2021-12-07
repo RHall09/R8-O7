@@ -6,5 +6,5 @@
  */
 #ifndef _TASK_ENCODER_B_
 #define _TASK_ENCODER_B_
-void encoder_B (void* p_params);
+void encoder_B_task (void* p_params);
 #endif // _TASK_ENCODER_B_

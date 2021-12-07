@@ -1,0 +1,50 @@
+\hypertarget{textqueue_8h_source}{}\doxysection{textqueue.\+h}
+\label{textqueue_8h_source}\index{src/ME507\_Support/textqueue.h@{src/ME507\_Support/textqueue.h}}
+\mbox{\hyperlink{textqueue_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{15 \textcolor{comment}{/*    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "{}AS}}
+\DoxyCodeLine{16 \textcolor{comment}{ *    IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,}}
+\DoxyCodeLine{17 \textcolor{comment}{ *    THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR }}
+\DoxyCodeLine{18 \textcolor{comment}{ *    PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIB-\/}}
+\DoxyCodeLine{19 \textcolor{comment}{ *    UTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,}}
+\DoxyCodeLine{20 \textcolor{comment}{ *    OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF }}
+\DoxyCodeLine{21 \textcolor{comment}{ *    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS}}
+\DoxyCodeLine{22 \textcolor{comment}{ *    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN }}
+\DoxyCodeLine{23 \textcolor{comment}{ *    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) }}
+\DoxyCodeLine{24 \textcolor{comment}{ *    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF}}
+\DoxyCodeLine{25 \textcolor{comment}{ *    THE POSSIBILITY OF SUCH DAMAGE. */}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{comment}{// This define prevents this .h file from being included more than once}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#ifndef \_TEXTQUEUE\_H\_}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#define \_TEXTQUEUE\_H\_}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#include <Arduino.h>}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#include "{}FreeRTOS.h"{}}                       \textcolor{comment}{// Main header for FreeRTOS}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{taskqueue_8h}{taskqueue.h}}"{}}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 }
+\DoxyCodeLine{94 \textcolor{keyword}{class }\mbox{\hyperlink{classTextQueue}{TextQueue}} : \textcolor{keyword}{public} Print, \textcolor{keyword}{public} \mbox{\hyperlink{classQueue}{Queue}}<char>}
+\DoxyCodeLine{95 \{}
+\DoxyCodeLine{96 \textcolor{comment}{// No protected data is needed; the parent classes take care of everything}}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 \textcolor{comment}{// Public methods can be called from anywhere in the program where there is}}
+\DoxyCodeLine{99 \textcolor{comment}{// a pointer or reference to an object of this class}}
+\DoxyCodeLine{100 \textcolor{keyword}{public}:}
+\DoxyCodeLine{112     \mbox{\hyperlink{classTextQueue_a16098feae9a37a69f65dd3c1fa081491}{TextQueue}} (BaseType\_t queue\_size, \textcolor{keyword}{const} \textcolor{keywordtype}{char}* p\_name = NULL, }
+\DoxyCodeLine{113                TickType\_t wait\_time = portMAX\_DELAY)}
+\DoxyCodeLine{114         : Print (), \mbox{\hyperlink{classQueue}{Queue}}<char> (queue\_size, p\_name, wait\_time)}
+\DoxyCodeLine{115     \{}
+\DoxyCodeLine{116     \}}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{124     \textcolor{keyword}{virtual} \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{classTextQueue_a615f4828126919020a11e9335c93040f}{write}} (uint8\_t a\_char)}
+\DoxyCodeLine{125     \{}
+\DoxyCodeLine{126         \mbox{\hyperlink{classQueue_ae7859c00b2e2818183bfd54979091e60}{put}} (a\_char);}
+\DoxyCodeLine{127         \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{128     \}}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130 \}; \textcolor{comment}{// class TextQueue }}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_TEXTQUEUE\_H\_}}
+
+\end{DoxyCode}

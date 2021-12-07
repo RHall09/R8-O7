@@ -1,7 +1,7 @@
-\hypertarget{taskqueue_8h}{}\doxysection{src/\+M\+E507\+\_\+\+Support/taskqueue.h File Reference}
+\hypertarget{taskqueue_8h}{}\doxysection{src/\+ME507\+\_\+\+Support/taskqueue.h File Reference}
 \label{taskqueue_8h}\index{src/ME507\_Support/taskqueue.h@{src/ME507\_Support/taskqueue.h}}
 {\ttfamily \#include $<$Arduino.\+h$>$}\newline
-{\ttfamily \#include \char`\"{}Free\+R\+T\+O\+S.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Free\+RTOS.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}baseshare.\+h\char`\"{}}\newline
 Include dependency graph for taskqueue.\+h\+:
 % FIG 0
@@ -11,21 +11,21 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classQueue}{Queue$<$ data\+Type $>$}}
-\begin{DoxyCompactList}\small\item\em Implements a queue to transmit data from one R\+T\+OS task to another. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Implements a queue to transmit data from one RTOS task to another. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-This file contains a very simple wrapper class for the Free\+R\+T\+OS queue. It makes using the queue just a little bit easier in C++ than it is in C. This version has been tested on S\+T\+M32\textquotesingle{}s and E\+S\+P32\textquotesingle{}s only because the insertion and extraction operators {\ttfamily $<$$<$} and {\ttfamily $>$$>$} need specific functions to determine if they\textquotesingle{}re running in I\+SR\textquotesingle{}s or not.
+This file contains a very simple wrapper class for the Free\+RTOS queue. It makes using the queue just a little bit easier in C++ than it is in C. This version has been tested on STM32\textquotesingle{}s and ESP32\textquotesingle{}s only because the insertion and extraction operators {\ttfamily \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}} and {\ttfamily \texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>}} need specific functions to determine if they\textquotesingle{}re running in ISR\textquotesingle{}s or not.
 
 \begin{DoxyDate}{Date}
-2012-\/Oct-\/21 J\+RR Original file 
+2012-\/Oct-\/21 JRR Original file 
 
-2014-\/Aug-\/26 J\+RR Changed file names and queue class name to \mbox{\hyperlink{classQueue}{Queue}} 
+2014-\/Aug-\/26 JRR Changed file names and queue class name to \mbox{\hyperlink{classQueue}{Queue}} 
 
-2020-\/Oct-\/10 J\+RR Made compatible with Arduino/\+Free\+R\+T\+OS environment 
+2020-\/Oct-\/10 JRR Made compatible with Arduino/\+Free\+RTOS environment 
 
-2020-\/Nov-\/18 J\+RR Added {\ttfamily $<$$<$} and {\ttfamily $>$$>$} operators for E\+S\+P32 and S\+T\+M32 
+2020-\/Nov-\/18 JRR Added {\ttfamily \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}} and {\ttfamily \texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>}} operators for ESP32 and STM32 
 
-2021-\/Sep-\/19 J\+RR Added overloads of {\ttfamily get()}, {\ttfamily I\+S\+R\+\_\+get()}, {\ttfamily peek()}, and {\ttfamily I\+S\+R\+\_\+peek()} which return copies
+2021-\/Sep-\/19 JRR Added overloads of {\ttfamily get()}, {\ttfamily ISR\+\_\+get()}, {\ttfamily peek()}, and {\ttfamily ISR\+\_\+peek()} which return copies
 \end{DoxyDate}
-License\+: This file is copyright 2012-\/2020 by JR Ridgely and released under the Lesser G\+NU Public License, version 2. It intended for educational use only, but its use is not limited thereto. 
+License\+: This file is copyright 2012-\/2020 by JR Ridgely and released under the Lesser GNU Public License, version 2. It intended for educational use only, but its use is not limited thereto. 

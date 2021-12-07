@@ -11,15 +11,15 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "encoder_B_task.cpp", "encoder__B__task_8cpp.html", "encoder__B__task_8cpp" ],
     [ "encoder_B_task.h", "encoder__B__task_8h.html", "encoder__B__task_8h" ],
     [ "geofence_task.cpp", "geofence__task_8cpp.html", "geofence__task_8cpp" ],
-    [ "geofence_task.h", "geofence__task_8h.html", "geofence__task_8h" ],
+    [ "geofence_task.h", "geofence__task_8h_source.html", null ],
     [ "main.cpp", "main_8cpp.html", "main_8cpp" ],
     [ "motor_CS_A_task.cpp", "motor__CS__A__task_8cpp.html", "motor__CS__A__task_8cpp" ],
-    [ "motor_CS_A_task.h", "motor__CS__A__task_8h.html", "motor__CS__A__task_8h" ],
+    [ "motor_CS_A_task.h", "motor__CS__A__task_8h_source.html", null ],
     [ "motor_CS_B_task.cpp", "motor__CS__B__task_8cpp.html", "motor__CS__B__task_8cpp" ],
     [ "motor_CS_B_task.h", "motor__CS__B__task_8h.html", "motor__CS__B__task_8h" ],
     [ "navigation_task.cpp", "navigation__task_8cpp.html", "navigation__task_8cpp" ],
-    [ "navigation_task.h", "navigation__task_8h.html", "navigation__task_8h" ],
+    [ "navigation_task.h", "navigation__task_8h_source.html", null ],
     [ "sensor_suite_task.cpp", "sensor__suite__task_8cpp.html", "sensor__suite__task_8cpp" ],
-    [ "shares.h", "shares_8h.html", "shares_8h" ],
-    [ "STM_suite_task.cpp", "STM__suite__task_8cpp.html", "STM__suite__task_8cpp" ]
+    [ "sensor_suite_task.h", "sensor__suite__task_8h_source.html", null ],
+    [ "shares.h", "shares_8h.html", "shares_8h" ]
 ];

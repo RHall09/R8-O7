@@ -14,7 +14,7 @@
 #include <Motor_Drivers/Motor.h>
 
 
-
+/// Enumerated variable for storing and interacting with Control System gains
 enum CS_Gains {Prop, Integ, Der};
 
 /** @brief A class containing functions for operating a PID control system for a single motor.

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['esp32encoder_138',['ESP32Encoder',['../classESP32Encoder.html',1,'']]]
+  ['esp32encoder_0',['ESP32Encoder',['../classESP32Encoder.html',1,'']]]
 ];

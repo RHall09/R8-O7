@@ -1,0 +1,62 @@
+\hypertarget{devnull_8h_source}{}\doxysection{devnull.\+h}
+\label{devnull_8h_source}\index{src/ME507\_Support/devnull.h@{src/ME507\_Support/devnull.h}}
+\mbox{\hyperlink{devnull_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{31 \textcolor{comment}{/*    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "{}AS}}
+\DoxyCodeLine{32 \textcolor{comment}{ *    IS"{} AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,}}
+\DoxyCodeLine{33 \textcolor{comment}{ *    THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR }}
+\DoxyCodeLine{34 \textcolor{comment}{ *    PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIB-\/}}
+\DoxyCodeLine{35 \textcolor{comment}{ *    UTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,}}
+\DoxyCodeLine{36 \textcolor{comment}{ *    OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF }}
+\DoxyCodeLine{37 \textcolor{comment}{ *    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS}}
+\DoxyCodeLine{38 \textcolor{comment}{ *    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN }}
+\DoxyCodeLine{39 \textcolor{comment}{ *    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) }}
+\DoxyCodeLine{40 \textcolor{comment}{ *    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF}}
+\DoxyCodeLine{41 \textcolor{comment}{ *    THE POSSIBILITY OF SUCH DAMAGE. */}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#ifndef \_DEVNULL\_H\_}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#define \_DEVNULL\_H\_}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#include <PrintStream.h>}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{49 \textcolor{comment}{// One of the following two lines should be active and the other commented out}}
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#define DEBUG\_PRINT\_OFF}}
+\DoxyCodeLine{51 \textcolor{comment}{// \#undef DEBUG\_PRINT\_OFF}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 }
+\DoxyCodeLine{65 \textcolor{keyword}{class }\mbox{\hyperlink{classDevNull}{DevNull}}}
+\DoxyCodeLine{66 \{}
+\DoxyCodeLine{67 \textcolor{keyword}{public}:}
+\DoxyCodeLine{74     \mbox{\hyperlink{classDevNull_a35270b6c12d45f14651bf0fc7343eda1}{DevNull}} (\textcolor{keywordtype}{void}) \{ \}}
+\DoxyCodeLine{75 \};}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \mbox{\hyperlink{classDevNull}{DevNull}}\& operator<< (\mbox{\hyperlink{classDevNull}{DevNull}}\& no, \textcolor{keyword}{const} \_\_FlashStringHelper *s);}
+\DoxyCodeLine{79 \mbox{\hyperlink{classDevNull}{DevNull}}\& operator<< (\mbox{\hyperlink{classDevNull}{DevNull}}\& no, \textcolor{keyword}{const} String \&s);}
+\DoxyCodeLine{80 \mbox{\hyperlink{classDevNull}{DevNull}}\& operator<< (\mbox{\hyperlink{classDevNull}{DevNull}}\& no, \textcolor{keyword}{const} \textcolor{keywordtype}{char} s[]);}
+\DoxyCodeLine{81 \mbox{\hyperlink{classDevNull}{DevNull}}\& operator<< (\mbox{\hyperlink{classDevNull}{DevNull}}\& no, \textcolor{keywordtype}{char} c);}
+\DoxyCodeLine{82 \mbox{\hyperlink{classDevNull}{DevNull}}\& operator<< (\mbox{\hyperlink{classDevNull}{DevNull}}\& no, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} c);}
+\DoxyCodeLine{83 \mbox{\hyperlink{classDevNull}{DevNull}}\& operator<< (\mbox{\hyperlink{classDevNull}{DevNull}}\& no, \textcolor{keywordtype}{int} i);}
+\DoxyCodeLine{84 \mbox{\hyperlink{classDevNull}{DevNull}}\& operator<< (\mbox{\hyperlink{classDevNull}{DevNull}}\& no, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i);}
+\DoxyCodeLine{85 \mbox{\hyperlink{classDevNull}{DevNull}}\& operator<< (\mbox{\hyperlink{classDevNull}{DevNull}}\& no, int8\_t i);}
+\DoxyCodeLine{86 \mbox{\hyperlink{classDevNull}{DevNull}}\& operator<< (\mbox{\hyperlink{classDevNull}{DevNull}}\& no, \textcolor{keywordtype}{long} i);}
+\DoxyCodeLine{87 \mbox{\hyperlink{classDevNull}{DevNull}}\& operator<< (\mbox{\hyperlink{classDevNull}{DevNull}}\& no, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long} i);}
+\DoxyCodeLine{88 \mbox{\hyperlink{classDevNull}{DevNull}}\& operator<< (\mbox{\hyperlink{classDevNull}{DevNull}}\& no, \textcolor{keywordtype}{double} d);}
+\DoxyCodeLine{89 \mbox{\hyperlink{classDevNull}{DevNull}}\& operator<< (\mbox{\hyperlink{classDevNull}{DevNull}}\& no, \textcolor{keyword}{const} Printable \&p);}
+\DoxyCodeLine{90 \mbox{\hyperlink{classDevNull}{DevNull}}\& operator<< (\mbox{\hyperlink{classDevNull}{DevNull}}\& no, \textcolor{keywordtype}{bool} b);}
+\DoxyCodeLine{91 \mbox{\hyperlink{classDevNull}{DevNull}}\& operator<< (\mbox{\hyperlink{classDevNull}{DevNull}}\& no, manipulator pf);}
+\DoxyCodeLine{92 \mbox{\hyperlink{classDevNull}{DevNull}}\& operator<< (\mbox{\hyperlink{classDevNull}{DevNull}}\& no, \_Setbase \_\_f);}
+\DoxyCodeLine{93 \mbox{\hyperlink{classDevNull}{DevNull}}\& operator<< (\mbox{\hyperlink{classDevNull}{DevNull}}\& no, \_Setprecision \_\_f);}
+\DoxyCodeLine{94 \mbox{\hyperlink{classDevNull}{DevNull}}\& operator<< (\mbox{\hyperlink{classDevNull}{DevNull}}\& no, \_Setbytesep \_\_f);}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#ifdef DEBUG\_PRINT\_OFF}}
+\DoxyCodeLine{100     \textcolor{keyword}{extern} \mbox{\hyperlink{classDevNull}{DevNull}} \mbox{\hyperlink{devnull_8h_ab37dc5c25ebbcc889f19f2291cc4d317}{Debug}};}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{104     \textcolor{keyword}{extern} Print\& \mbox{\hyperlink{devnull_8h_ab37dc5c25ebbcc889f19f2291cc4d317}{Debug}};}
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_DEVNULL\_H\_}}
+
+\end{DoxyCode}
