@@ -102,12 +102,12 @@ void loop() {
   time(&curr_time);
   
   // grab GPS data and feed to TinyGPS++
-  // gps.encode(GPSSerial.read());
+  gps.encode(GPSSerial.read());
 
   // This code snippet is for testing purposes. It prints GPS data to the serial port, however it doesn't really serve a purpose when BabyBot is running.
-  // if (GPSSerial.available()) {
-  //   char c = GPSSerial.read();
-  //   Serial.write(c);
+  if (GPSSerial.available()) {
+    char c = GPSSerial.read();
+    Serial.write(c);
   // }
 
   // subtract the last reading:
