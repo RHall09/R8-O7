@@ -1,9 +1,12 @@
 /** @file Motor.cpp
- *          File containing the member functions for a class for driving motors using the \b MD-L6205D motor driver chip.
+ *      This file contains the member functions of a class designed to drive a motor with two PWM signals
+ *      and an enable pin. This class does \b NOT implement a control loop; it simply commands the 
+ *      appropriate PWM to the motor.
  * 
  * 
  *  @author Rick Hall
  *  @date 2020-4-Nov
+ *  @copyright (c) 2021 by Rick Hall, released under the LGPL 3.0.
  */
 
 #include <Arduino.h>
@@ -11,6 +14,7 @@
 #include <Motor.h>
 
 //Constructor Function
+
 Motor::Motor(int Pin_En, int Pin_1, int Pin_2, Motor_Number mot_num)
 {
     // Store motor pins 
@@ -36,13 +40,13 @@ Motor::Motor(int Pin_En, int Pin_1, int Pin_2, Motor_Number mot_num)
 
 }
 
-//Enable Motors by writing enable pin high.
+//Enable Motors
 void Motor::enable(void)
 {
     digitalWrite(PinE, HIGH);
     enabled = true;
 }
-//Disable Motors by writing enable pin low.
+//Disable Motors
 void Motor::disable(void)
 {
     digitalWrite(PinE, LOW);
@@ -76,15 +80,15 @@ void Motor::set(int16_t pwm)
 
     }
 }
-
-//Stop motors by pushing 0 PWM signals to each pin
+//Set individual motor behavior with PWM %s
+//Stop motors
 void Motor::stop(void)
 {
     ledcWrite(motor_channel_1, 0);
     ledcWrite(motor_channel_2, 0);
 }
 
-//Set error-overcurrent flag by attempting to read enable pin
+//Set error-overcurrent flag
 void Motor::checkOvercurrent(void)
 {
     if(!(digitalRead(PinE)))
@@ -95,7 +99,6 @@ void Motor::checkOvercurrent(void)
         this -> disable();
     }
 }
-
 //Clear error-overcurrent flag
 void Motor::clearOvercurrent(void)
 {
