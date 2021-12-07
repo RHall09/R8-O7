@@ -16,15 +16,21 @@
 #include "analog_i2c.h"
 #include "digital_i2c.h"
 #include "TinyGPS++.h"
+#include "Adafruit_VL53L1X.h"
 
 
+/// Force a for loop to say for EVER. More fun
 #define EVER (;;)
 
+/// Serial port to which the GPS module is attached
 #define GPSSerial Serial1
 
+/// Interrupt pin that the VL53L1X sensor is attached
 #define IRQ_PIN 2
+/// Shutoff pin that the VL53L1X sensor is attached
 #define XSHUT_PIN 3
 
+/// Object of Adafruit_VL53L1X class for operating a laser TOF sensor
 Adafruit_VL53L1X vl53 = Adafruit_VL53L1X(XSHUT_PIN, IRQ_PIN);
 
 

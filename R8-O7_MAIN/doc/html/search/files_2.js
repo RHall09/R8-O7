@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['encoder_5fa_5ftask_2ecpp_0',['encoder_A_task.cpp',['../encoder__A__task_8cpp.html',1,'']]],
-  ['encoder_5fa_5ftask_2eh_1',['encoder_A_task.h',['../encoder__A__task_8h.html',1,'']]],
-  ['encoder_5fb_5ftask_2ecpp_2',['encoder_B_task.cpp',['../encoder__B__task_8cpp.html',1,'']]],
-  ['encoder_5fb_5ftask_2eh_3',['encoder_B_task.h',['../encoder__B__task_8h.html',1,'']]],
-  ['esp32encoder_2ecpp_4',['ESP32Encoder.cpp',['../ESP32Encoder_8cpp.html',1,'']]]
+  ['devnull_2ecpp_0',['devnull.cpp',['../devnull_8cpp.html',1,'']]],
+  ['devnull_2eh_1',['devnull.h',['../devnull_8h.html',1,'']]],
+  ['digital_5fi2c_2ecpp_2',['digital_i2c.cpp',['../digital__i2c_8cpp.html',1,'']]],
+  ['digital_5fi2c_2eh_3',['digital_i2c.h',['../digital__i2c_8h.html',1,'']]]
 ];

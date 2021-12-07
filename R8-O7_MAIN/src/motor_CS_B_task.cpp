@@ -16,6 +16,7 @@
 #include <ME507_Support/taskqueue.h>
 #include <ME507_Support/taskshare.h>
 
+/// Force a for loop to say for EVER. More fun
 #define EVER (;;)
 
 void motor_task_B (void* p_params) 

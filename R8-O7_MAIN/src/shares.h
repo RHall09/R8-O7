@@ -41,9 +41,14 @@ extern Queue<float> enc_dt_B_q;
 /// Share of motor flag registers, changes if motor faults detected
 extern Share<uint8_t> motorFlagRegister;
 
+
+/// Part of a Rick Flag Register that handles overcurrent motor faults
 #define Run_Motor_CS  current_flag, 5
+/// Part of a Rick Flag Register that handles overcurrent motor faults
 #define OverC_Clear   current_flag, 6
+/// Part of a Rick Flag Register that handles overcurrent motor faults
 #define Overcurrent_A current_flag, 7
+/// Part of a Rick Flag Register that handles overcurrent motor faults
 #define Overcurrent_B current_flag, 8
 
 #endif // _SHARES_H_

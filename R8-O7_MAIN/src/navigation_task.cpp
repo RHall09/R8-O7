@@ -21,15 +21,16 @@
 #include "cmath"
 #include <Navigation_Drivers/nav_module.h>
 
-// Minimum distance to fence
+/// Minimum distance to fence
 #define FENCE_MIN (float)3
-// Calibration for conversion ft/s to pwm
+/// Calibration for conversion ft/s to pwm
 #define V_CAL (float)0.3
-// Calibration for conversion deg/s to pwm
+/// Calibration for conversion deg/s to pwm
 #define T_CAL (float)0.25
-// Preferred robot velocity
+/// Preferred robot velocity
 #define CRUISE_VEL (float) 3
 
+/// Make the loop say for ever hehehe
 #define EVER (;;)
 
 void navigation_task(void* p_param) {

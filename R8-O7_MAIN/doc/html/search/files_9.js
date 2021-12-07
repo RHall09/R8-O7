@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['taskqueue_2eh_0',['taskqueue.h',['../taskqueue_8h.html',1,'']]],
-  ['taskshare_2eh_1',['taskshare.h',['../taskshare_8h.html',1,'']]],
-  ['textqueue_2eh_2',['textqueue.h',['../textqueue_8h.html',1,'']]]
+  ['sensor_5fsuite_5ftask_2ecpp_0',['sensor_suite_task.cpp',['../sensor__suite__task_8cpp.html',1,'']]],
+  ['shares_2eh_1',['shares.h',['../shares_8h.html',1,'']]]
 ];

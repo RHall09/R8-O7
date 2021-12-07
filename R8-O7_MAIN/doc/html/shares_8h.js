@@ -1,5 +1,9 @@
 var shares_8h =
 [
+    [ "OverC_Clear", "shares_8h.html#af30c21aadeee409ce1e71a1b4ec2e109", null ],
+    [ "Overcurrent_A", "shares_8h.html#a5b5c0c298aa9ff689ed5b4c1096c29bb", null ],
+    [ "Overcurrent_B", "shares_8h.html#abadc9034e11634d69bd77a5c10b1cd4e", null ],
+    [ "Run_Motor_CS", "shares_8h.html#a8cad39975947a33c09840966870a1ea3", null ],
     [ "enc_dt_A_q", "shares_8h.html#aeaed120ec16eec0869d8305e4c1dddf6", null ],
     [ "enc_dt_B_q", "shares_8h.html#a7952fb1afd504c990a872e24a5ebdc26", null ],
     [ "encVel_A_q", "shares_8h.html#ac13665547d0bf13ee1fa3dc73c8e418f", null ],

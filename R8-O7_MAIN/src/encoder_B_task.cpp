@@ -16,11 +16,13 @@
 #include <ME507_Support/taskqueue.h>
 #include <ME507_Support/taskshare.h>
 #include <Motor_Drivers/ESP32Encoder.h>
-#include <Motor_Drivers/InterruptEncoder.h> 
+#include <Motor_Drivers/InterruptEncoder.h>
+#include "encoder_B_task.h"
 
+/// Force a for loop to say for EVER. More fun
 #define EVER (;;)
 
-void encoder_B (void* p_params) 
+void encoder_B_task (void* p_params) 
 {
     
     ESP32Encoder my_encoder;
@@ -31,6 +33,8 @@ void encoder_B (void* p_params)
     uint64_t encoder_last_read = 0;
     uint64_t encoder_diff = 0;
     float encoder_velocity = 0;
+
+    /// The pulses per revolution of the encoder
     #define ENCODER_PPR 4000
     
 

@@ -101,15 +101,19 @@ $(document).ready(function(){initNavTree('sensor__suite__task_8cpp.html',''); in
 Macros</h2></td></tr>
 <tr class="memitem:a2b912ed39df233b43d7a093814705afb"><td class="memItemLeft" align="right" valign="top"><a id="a2b912ed39df233b43d7a093814705afb" name="a2b912ed39df233b43d7a093814705afb"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>EVER</b>&#160;&#160;&#160;(;;)</td></tr>
+<tr class="memdesc:a2b912ed39df233b43d7a093814705afb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force a for loop to say for EVER. More fun. <br /></td></tr>
 <tr class="separator:a2b912ed39df233b43d7a093814705afb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e81a3da2c16c2835fbdc871086767ef"><td class="memItemLeft" align="right" valign="top"><a id="a2e81a3da2c16c2835fbdc871086767ef" name="a2e81a3da2c16c2835fbdc871086767ef"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>GPSSerial</b>&#160;&#160;&#160;Serial1</td></tr>
+<tr class="memdesc:a2e81a3da2c16c2835fbdc871086767ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serial port to which the GPS module is attached. <br /></td></tr>
 <tr class="separator:a2e81a3da2c16c2835fbdc871086767ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affe1756c211a5cb663bb38443fd5e307"><td class="memItemLeft" align="right" valign="top"><a id="affe1756c211a5cb663bb38443fd5e307" name="affe1756c211a5cb663bb38443fd5e307"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>IRQ_PIN</b>&#160;&#160;&#160;2</td></tr>
+<tr class="memdesc:affe1756c211a5cb663bb38443fd5e307"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interrupt pin that the VL53L1X sensor is attached. <br /></td></tr>
 <tr class="separator:affe1756c211a5cb663bb38443fd5e307"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3df47cfc735a7cb385c3c7ca9f51709"><td class="memItemLeft" align="right" valign="top"><a id="aa3df47cfc735a7cb385c3c7ca9f51709" name="aa3df47cfc735a7cb385c3c7ca9f51709"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>XSHUT_PIN</b>&#160;&#160;&#160;3</td></tr>
+<tr class="memdesc:aa3df47cfc735a7cb385c3c7ca9f51709"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shutoff pin that the VL53L1X sensor is attached. <br /></td></tr>
 <tr class="separator:aa3df47cfc735a7cb385c3c7ca9f51709"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -121,7 +125,8 @@ Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:acd60012263847b4cf0e1aaedd735d53a"><td class="memItemLeft" align="right" valign="top"><a id="acd60012263847b4cf0e1aaedd735d53a" name="acd60012263847b4cf0e1aaedd735d53a"></a>
-Adafruit_VL53L1X&#160;</td><td class="memItemRight" valign="bottom"><b>vl53</b> = Adafruit_VL53L1X(XSHUT_PIN, IRQ_PIN)</td></tr>
+Adafruit_VL53L1X&#160;</td><td class="memItemRight" valign="bottom"><b>vl53</b> = Adafruit_VL53L1X(<a class="el" href="sensor__suite__task_8cpp.html#aa3df47cfc735a7cb385c3c7ca9f51709">XSHUT_PIN</a>, <a class="el" href="sensor__suite__task_8cpp.html#affe1756c211a5cb663bb38443fd5e307">IRQ_PIN</a>)</td></tr>
+<tr class="memdesc:acd60012263847b4cf0e1aaedd735d53a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object of Adafruit_VL53L1X class for operating a laser TOF sensor. <br /></td></tr>
 <tr class="separator:acd60012263847b4cf0e1aaedd735d53a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>

@@ -13,9 +13,12 @@
 
 #include <Arduino.h>
 
+
+/// Enumerated varaible for assigning unique PWM channels based on motor number
 enum Motor_Number {Motor_0 = 0, Motor_1 =  2, Motor_2 =  4, Motor_3 =  6,
                    Motor_4 = 8, Motor_5 = 10, Motor_6 = 12, Motor_7 = 14};
 
+/// Enumerated variable for storing possible states of the motor flag
 enum MotFlag {ENABLED, ERROR};
 
 

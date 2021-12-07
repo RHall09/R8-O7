@@ -97,11 +97,13 @@ $(document).ready(function(){initNavTree('encoder__A__task_8cpp.html',''); initR
 <code>#include &lt;<a class="el" href="taskshare_8h_source.html">ME507_Support/taskshare.h</a>&gt;</code><br />
 <code>#include &lt;Motor_Drivers/ESP32Encoder.h&gt;</code><br />
 <code>#include &lt;Motor_Drivers/InterruptEncoder.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="encoder__A__task_8h_source.html">encoder_A_task.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:a2b912ed39df233b43d7a093814705afb"><td class="memItemLeft" align="right" valign="top"><a id="a2b912ed39df233b43d7a093814705afb" name="a2b912ed39df233b43d7a093814705afb"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>EVER</b>&#160;&#160;&#160;(;;)</td></tr>
+<tr class="memdesc:a2b912ed39df233b43d7a093814705afb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Force a for loop to say for EVER. More fun. <br /></td></tr>
 <tr class="separator:a2b912ed39df233b43d7a093814705afb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada11a251f6ad7cf711cd6561d33fed1e"><td class="memItemLeft" align="right" valign="top"><a id="ada11a251f6ad7cf711cd6561d33fed1e" name="ada11a251f6ad7cf711cd6561d33fed1e"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>ENCODER_PPR</b>&#160;&#160;&#160;4000</td></tr>
@@ -109,23 +111,22 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aee885237bd314a333237bb8e91cb5119"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="encoder__A__task_8cpp.html#aee885237bd314a333237bb8e91cb5119">encoder_A</a> (void *p_params)</td></tr>
-<tr class="memdesc:aee885237bd314a333237bb8e91cb5119"><td class="mdescLeft">&#160;</td><td class="mdescRight">This task runs the encoder attached to the left motor.  <a href="encoder__A__task_8cpp.html#aee885237bd314a333237bb8e91cb5119">More...</a><br /></td></tr>
-<tr class="separator:aee885237bd314a333237bb8e91cb5119"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18b51480af09a5e6022a4dc7b7c692d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="encoder__A__task_8cpp.html#a18b51480af09a5e6022a4dc7b7c692d8">encoder_A_task</a> (void *p_params)</td></tr>
+<tr class="separator:a18b51480af09a5e6022a4dc7b7c692d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >This file contains a task which periodically reads the encoder for the left motor.</p>
 <dl class="section author"><dt>Author</dt><dd>Rick Hall </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2021-Nov-27 Original file </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="aee885237bd314a333237bb8e91cb5119" name="aee885237bd314a333237bb8e91cb5119"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee885237bd314a333237bb8e91cb5119">&#9670;&nbsp;</a></span>encoder_A()</h2>
+<a id="a18b51480af09a5e6022a4dc7b7c692d8" name="a18b51480af09a5e6022a4dc7b7c692d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18b51480af09a5e6022a4dc7b7c692d8">&#9670;&nbsp;</a></span>encoder_A_task()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void encoder_A </td>
+          <td class="memname">void encoder_A_task </td>
           <td>(</td>
           <td class="paramtype">void *&#160;</td>
           <td class="paramname"><em>p_params</em></td><td>)</td>
@@ -133,14 +134,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>This task runs the encoder attached to the left motor. </p>
-<p >This task updates information pertaining to the encoder attached to the left motor. Relevant updated parameters include: the time interval for speed calculations and the encoder reading. The task handles overflow internally and automatically. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">p_params</td><td>A pointer to function parameters which we don't use. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p >The pulses per revolution of the encoder</p>
 
 </div>
 </div>

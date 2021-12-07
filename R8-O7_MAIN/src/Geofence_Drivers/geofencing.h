@@ -16,7 +16,7 @@
  *           and find its closest neighbors. Then calculate the closest distance to a point or line based on
  *           the Rickolas Solution.
  *  @param lat Updated lattitude value from the processed GPS data.
- *  @param longit Updated longitude value from the processed GPS data.
+ *  @param longitude Updated longitude value from the processed GPS data.
  *  @param p_arr_lat Pointer to an array of latitude floats containing the data that comprises the geofence.
  *  @param p_arr_long Pointer to an array of longitude floats containing the data that comprises the geofence.
  *  @param geofence_size An unsigned integer representing the number of points in the geofence array

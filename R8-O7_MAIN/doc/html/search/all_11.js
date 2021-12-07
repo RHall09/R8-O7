@@ -5,5 +5,6 @@ var searchData=
   ['regoperators_2ecpp_2',['RegOperators.cpp',['../RegOperators_8cpp.html',1,'']]],
   ['results_3',['Results',['../page_Results.html',1,'']]],
   ['run_4',['run',['../classMotorCS.html#ae21ac9c1cab6b7bd958eb44cf123984d',1,'MotorCS::run(Motor motor, int16_t enc_velocity, int16_t set)'],['../classMotorCS.html#ad5901f9a625a64985a8e811bc1d140e2',1,'MotorCS::run(Motor motor, int16_t enc_velocity)']]],
-  ['runcs_5',['runCS',['../classMotorCS.html#a6d30febc32e0b14514d1cbec2d428e87',1,'MotorCS']]]
+  ['run_5fmotor_5fcs_5',['Run_Motor_CS',['../shares_8h.html#a8cad39975947a33c09840966870a1ea3',1,'shares.h']]],
+  ['runcs_6',['runCS',['../classMotorCS.html#a6d30febc32e0b14514d1cbec2d428e87',1,'MotorCS']]]
 ];

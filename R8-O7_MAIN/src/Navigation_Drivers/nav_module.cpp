@@ -1,17 +1,10 @@
-/** @headerfile nav_module.cpp ""
- *      This file contains the class declaration of a class for naturally driving the bot within a geofence.
+/** @file nav_module.cpp
+ *      This file contains the member functions of a class for naturally driving the bot within a geofence.
  *      This class provides all motor set points unless overriden by the Bluetooth control task.
  *  @author Rick Hall
  *  @date 2021-4-Nov
  *  @copyright (c) 2021 by Rick Hall, released under the LGPL 3.0.
  **/
-
-
-
-
-
-
-
 
 #include <Arduino.h>
 #include <Navigation_Drivers/nav_module.h>
