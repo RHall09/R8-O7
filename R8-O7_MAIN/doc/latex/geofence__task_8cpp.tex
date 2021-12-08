@@ -1,0 +1,59 @@
+\hypertarget{geofence__task_8cpp}{}\doxysection{src/geofence\+\_\+task.cpp File Reference}
+\label{geofence__task_8cpp}\index{src/geofence\_task.cpp@{src/geofence\_task.cpp}}
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}geofence\+\_\+task.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shares.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Geofence\+\_\+\+Drivers/geofencing.\+h\char`\"{}}\newline
+Include dependency graph for geofence\+\_\+task.\+cpp\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{geofence__task_8cpp_a2b912ed39df233b43d7a093814705afb}\label{geofence__task_8cpp_a2b912ed39df233b43d7a093814705afb}} 
+\#define {\bfseries EVER}~(;;)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{geofence__task_8cpp_a384e7fb2295c66e4e37ae9afa0e85386}{geofence\+\_\+task}} (void $\ast$p\+\_\+params)
+\begin{DoxyCompactList}\small\item\em This task runs the geofence calculations to determine the nearest collision point of hte bot with the fence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains a task which calculates the shortest straight line distance from the bots current position to the edge of the geofence
+
+\begin{DoxyAuthor}{Author}
+Kai Quizon 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2021-\/Nov-\/27 Original file 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{geofence__task_8cpp_a384e7fb2295c66e4e37ae9afa0e85386}\label{geofence__task_8cpp_a384e7fb2295c66e4e37ae9afa0e85386}} 
+\index{geofence\_task.cpp@{geofence\_task.cpp}!geofence\_task@{geofence\_task}}
+\index{geofence\_task@{geofence\_task}!geofence\_task.cpp@{geofence\_task.cpp}}
+\doxysubsubsection{\texorpdfstring{geofence\_task()}{geofence\_task()}}
+{\footnotesize\ttfamily void geofence\+\_\+task (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+\_\+params }\end{DoxyParamCaption})}
+
+
+
+This task runs the geofence calculations to determine the nearest collision point of hte bot with the fence. 
+
+This file acts as a header for a task that updates the geofence heading and distance.
+
+\begin{DoxyAuthor}{Author}
+Kai Quizon 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2021-\/Nov-\/27 Original file 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+(c) 2021 by Kai Quizon, released under the LGPL 3.\+0.
+\end{DoxyCopyright}
+This task calls \mbox{\hyperlink{geofencing_8cpp}{geofencing.\+cpp}} that geometrically calculates the nearest collision point of the bot with a user defined geofence. At this point, the geofence is defined within \mbox{\hyperlink{geofence__task_8cpp}{geofence\+\_\+task.\+cpp}}, but an SD reader on the board is a planned expansion. 
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+params} & A pointer to function parameters which we don\textquotesingle{}t use. \\
+\hline
+\end{DoxyParams}

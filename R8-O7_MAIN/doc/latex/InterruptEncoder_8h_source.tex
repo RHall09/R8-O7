@@ -1,0 +1,36 @@
+\hypertarget{InterruptEncoder_8h_source}{}\doxysection{Interrupt\+Encoder.\+h}
+\label{InterruptEncoder_8h_source}\index{src/Motor\_Drivers/InterruptEncoder.h@{src/Motor\_Drivers/InterruptEncoder.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#ifndef INTERRUPTENCODER\_H\_}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define INTERRUPTENCODER\_H\_}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define MAX\_ENCODERS 16}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define US\_DEBOUNCE 10}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <Arduino.h>}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{classInterruptEncoder}{InterruptEncoder}} \{}
+\DoxyCodeLine{15 \textcolor{keyword}{private}:}
+\DoxyCodeLine{16 \textcolor{keywordtype}{bool} attached=\textcolor{keyword}{false};}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{public}:}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \textcolor{keywordtype}{int} apin=0;}
+\DoxyCodeLine{23     \textcolor{keywordtype}{int} bpin=0;}
+\DoxyCodeLine{24     \mbox{\hyperlink{classInterruptEncoder}{InterruptEncoder}}();}
+\DoxyCodeLine{25     \textcolor{keyword}{virtual} \mbox{\hyperlink{classInterruptEncoder}{\string~InterruptEncoder}}();}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} attach(\textcolor{keywordtype}{int} aPinNum, \textcolor{keywordtype}{int} bPinNum);}
+\DoxyCodeLine{27     \textcolor{keyword}{volatile} \textcolor{keywordtype}{bool} aState=0;}
+\DoxyCodeLine{28     \textcolor{keyword}{volatile} \textcolor{keywordtype}{bool} bState=0;}
+\DoxyCodeLine{29     \textcolor{keyword}{volatile} int64\_t count=0;}
+\DoxyCodeLine{30     \textcolor{keyword}{volatile} int64\_t microsLastA=0;}
+\DoxyCodeLine{31     \textcolor{keyword}{volatile} int64\_t microsTimeBetweenTicks=0;}
+\DoxyCodeLine{32     int64\_t read();}
+\DoxyCodeLine{33 \};}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* INTERRUPTENCODER\_H\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

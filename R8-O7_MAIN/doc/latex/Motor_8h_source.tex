@@ -1,0 +1,56 @@
+\hypertarget{Motor_8h_source}{}\doxysection{Motor.\+h}
+\label{Motor_8h_source}\index{src/Motor\_Drivers/Motor.h@{src/Motor\_Drivers/Motor.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#ifndef \_MOTOR\_H\_}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define \_MOTOR\_H\_}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <Arduino.h>}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{enum} Motor\_Number \{Motor\_0 = 0, Motor\_1 =  2, Motor\_2 =  4, Motor\_3 =  6,}
+\DoxyCodeLine{17                    Motor\_4 = 8, Motor\_5 = 10, Motor\_6 = 12, Motor\_7 = 14\};}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{enum} MotFlag \{ENABLED, ERROR\};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 }
+\DoxyCodeLine{29 \textcolor{keyword}{class }\mbox{\hyperlink{classMotor}{Motor}}}
+\DoxyCodeLine{30 \{}
+\DoxyCodeLine{31 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{33     int8\_t \mbox{\hyperlink{classMotor_a7e318182af63ca97083fcc50a4de0826}{bot\_mot\_A}} = 0;       \textcolor{comment}{// +|-\/ \%}}
+\DoxyCodeLine{35 \textcolor{comment}{}    \textcolor{keywordtype}{bool} \mbox{\hyperlink{classMotor_aa3e0f7be189db84218c88733bda344be}{enabled}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{37     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classMotor_ae59505b3c7f4c8364053adc022dee159}{mot\_error}} = \textcolor{keyword}{false};}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{40     \textcolor{keywordtype}{int} \mbox{\hyperlink{classMotor_a4dec4469cc65d50e4d714df0c377f3de}{PinE}} = 0;}
+\DoxyCodeLine{42     \textcolor{keywordtype}{int} \mbox{\hyperlink{classMotor_a92723074503dbdae3019103ac62d80f2}{Pin1}} = 0;}
+\DoxyCodeLine{44     \textcolor{keywordtype}{int} \mbox{\hyperlink{classMotor_a6e4dab63a7dc4c9affea916605d84045}{Pin2}} = 0;}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{47     uint8\_t \mbox{\hyperlink{classMotor_a51efd78a7080bc99f36e7f5b5d443019}{motor\_channel\_1}} = 0;}
+\DoxyCodeLine{49     uint8\_t \mbox{\hyperlink{classMotor_a9062f0ee0ba3f2575fc9f3d402d2d9d5}{motor\_channel\_2}} = 0;}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{52     int16\_t \mbox{\hyperlink{classMotor_aba5c1c941cc9b26d8e64009c144b23d8}{current\_pwm}} = 0;}
+\DoxyCodeLine{54     int16\_t \mbox{\hyperlink{classMotor_a6706fe8b14cdee77566a44e51ef27a1c}{curr\_abs\_pwm}} = 0;}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{keyword}{public}:}
+\DoxyCodeLine{57     }
+\DoxyCodeLine{68     \mbox{\hyperlink{classMotor_a1508ef3b178ebbc9efb702f18dd405e3}{Motor}}(\textcolor{keywordtype}{int} Pin\_En, \textcolor{keywordtype}{int} Pin\_1, \textcolor{keywordtype}{int} Pin\_2, Motor\_Number mot\_num);}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{72     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMotor_a4cbefe961c780361fefdb16eea4fe33e}{enable}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{76     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMotor_ae7e38a8e6fa450b56b06e83e93b2654b}{disable}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{84     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMotor_af8511cc423185dfdb783a9cee1696e79}{set}}(int16\_t pwm);}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{89     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMotor_a9dc225bd98371eec21e147d0ff960ce5}{stop}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{95     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMotor_a80561f11613af395e8dfd9934b217f6e}{checkOvercurrent}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{99     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMotor_af2a0066f52e8e57582b5fa67484081ec}{clearOvercurrent}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{106     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classMotor_a8f658b7d6f245359a1d962c339dd6493}{FlagChk}}(MotFlag flag);}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108 \};}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_MOTOR\_H\_}}
+
+\end{DoxyCode}

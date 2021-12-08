@@ -1,0 +1,176 @@
+\hypertarget{classMotorCS}{}\doxysection{Motor\+CS Class Reference}
+\label{classMotorCS}\index{MotorCS@{MotorCS}}
+
+
+A class containing functions for operating a PID control system for a single motor.  
+
+
+
+
+{\ttfamily \#include $<$Motor\+CS.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMotorCS_aeeadab4f2d1b91936ca4a624114988ff}{Motor\+CS}} (float k\+Proportional=1, float k\+Integral=0.\+1, float k\+Derivative=4)
+\begin{DoxyCompactList}\small\item\em Initialize an object of the \mbox{\hyperlink{classMotorCS}{Motor\+CS}} class by feeding it the desired controller gains. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMotorCS_a1d00dee2acacc4eb26c79415f111ebdf}{gain\+Set}} (CS\+\_\+\+Gains k, float gain)
+\begin{DoxyCompactList}\small\item\em Interact with the enumerated CS\+\_\+\+Gains type to change any of the three gains. Write only. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMotorCS_ad0e2b2ff2dd7aa368b2c0854102bf633}\label{classMotorCS_ad0e2b2ff2dd7aa368b2c0854102bf633}} 
+void {\bfseries start\+CS} (void)
+\begin{DoxyCompactList}\small\item\em Toggle a boolean {\bfseries{on}} that enables the Control system calculations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMotorCS_aa9d616ef7ac5108ee53bae4c6d205d72}\label{classMotorCS_aa9d616ef7ac5108ee53bae4c6d205d72}} 
+void {\bfseries stop\+CS} (void)
+\begin{DoxyCompactList}\small\item\em Toggle a boolean {\bfseries{off}} that enables the Control system calculations. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMotorCS_a4bb2fe3ba38740b472a218d94d1f1c4c}{check\+CS}} (void)
+\begin{DoxyCompactList}\small\item\em Check the status of the control system enable boolean. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMotorCS_a7e4001cd97dc6a57c2c18427ada559ac}{new\+Setpoint}} (int16\+\_\+t set)
+\begin{DoxyCompactList}\small\item\em Set a new PWM signal setpoint to drive the motors with. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMotorCS_ae21ac9c1cab6b7bd958eb44cf123984d}{run}} (\mbox{\hyperlink{classMotor}{Motor}} motor, int16\+\_\+t enc\+\_\+velocity, int16\+\_\+t set)
+\begin{DoxyCompactList}\small\item\em Calculate the new necessary PWM signal to achieve the desired speed of the provided setpoint. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMotorCS_ad5901f9a625a64985a8e811bc1d140e2}{run}} (\mbox{\hyperlink{classMotor}{Motor}} motor, int16\+\_\+t enc\+\_\+velocity)
+\begin{DoxyCompactList}\small\item\em Calculate the new necessary PWM signal to achieve the desired speed of the current stored setpoint. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMotorCS_a857165d2a6f28ce0c07c0bc15869f3b4}\label{classMotorCS_a857165d2a6f28ce0c07c0bc15869f3b4}} 
+float {\bfseries kP} = 0
+\begin{DoxyCompactList}\small\item\em Proportional Gain. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMotorCS_a691128fe64cf77f9cd93297101fd6b0f}\label{classMotorCS_a691128fe64cf77f9cd93297101fd6b0f}} 
+float {\bfseries kI} = 0
+\begin{DoxyCompactList}\small\item\em Integral Gain. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMotorCS_a193e5e52d256cb62d62db91eaa734186}\label{classMotorCS_a193e5e52d256cb62d62db91eaa734186}} 
+float {\bfseries kD} = 0
+\begin{DoxyCompactList}\small\item\em Derivative Gain. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMotorCS_a237ac5c05eecdc824494561e79bbf361}\label{classMotorCS_a237ac5c05eecdc824494561e79bbf361}} 
+int16\+\_\+t {\bfseries setpoint} = 0
+\begin{DoxyCompactList}\small\item\em Current Setpoint. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMotorCS_a16394a423688e837992b731108bcc543}\label{classMotorCS_a16394a423688e837992b731108bcc543}} 
+int16\+\_\+t {\bfseries new\+\_\+pwm} = 0
+\begin{DoxyCompactList}\small\item\em Current output. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMotorCS_aa059b1bfa7771f4ccf1d0dbc07aead52}\label{classMotorCS_aa059b1bfa7771f4ccf1d0dbc07aead52}} 
+float {\bfseries last\+\_\+error} = 0
+\begin{DoxyCompactList}\small\item\em Last error. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMotorCS_adac8802077f462874493557a68c51ead}\label{classMotorCS_adac8802077f462874493557a68c51ead}} 
+int16\+\_\+t {\bfseries integral} = 0
+\begin{DoxyCompactList}\small\item\em Integral sum. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMotorCS_a6d30febc32e0b14514d1cbec2d428e87}\label{classMotorCS_a6d30febc32e0b14514d1cbec2d428e87}} 
+bool {\bfseries run\+CS} = false
+\begin{DoxyCompactList}\small\item\em CS Control Boolean. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class containing functions for operating a PID control system for a single motor. 
+
+A class containing functions for driving a single motor using a control system and the {\bfseries{MD-\/\+L6205D}} chip. Methods include declaraing PWM setpoints, changing controller gains, and toggling the control system on and off. This class is dependent on the \mbox{\hyperlink{classMotor}{Motor}} class. This class {\bfseries{does}} implements a control system for driving the motor with a speed, allowing for consisten speed under varying load conditions. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMotorCS_aeeadab4f2d1b91936ca4a624114988ff}\label{classMotorCS_aeeadab4f2d1b91936ca4a624114988ff}} 
+\index{MotorCS@{MotorCS}!MotorCS@{MotorCS}}
+\index{MotorCS@{MotorCS}!MotorCS@{MotorCS}}
+\doxysubsubsection{\texorpdfstring{MotorCS()}{MotorCS()}}
+{\footnotesize\ttfamily Motor\+CS\+::\+Motor\+CS (\begin{DoxyParamCaption}\item[{float}]{k\+Proportional = {\ttfamily 1},  }\item[{float}]{k\+Integral = {\ttfamily 0.1},  }\item[{float}]{k\+Derivative = {\ttfamily 4} }\end{DoxyParamCaption})}
+
+
+
+Initialize an object of the \mbox{\hyperlink{classMotorCS}{Motor\+CS}} class by feeding it the desired controller gains. 
+
+Initialize an object of the \mbox{\hyperlink{classMotorCS}{Motor\+CS}} class by feeding it the desired controller gains. This function only creates an object of the class and stores the controller gains fed. 
+\begin{DoxyParams}{Parameters}
+{\em k\+Proportional} & The proportional gain desired for implementation in the PID controller. \\
+\hline
+{\em k\+Integral} & The integral gain desired for implementation in the PID controller. \\
+\hline
+{\em k\+Derivative} & The derivative gain desired for implementation in the PID controller. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMotorCS_a4bb2fe3ba38740b472a218d94d1f1c4c}\label{classMotorCS_a4bb2fe3ba38740b472a218d94d1f1c4c}} 
+\index{MotorCS@{MotorCS}!checkCS@{checkCS}}
+\index{checkCS@{checkCS}!MotorCS@{MotorCS}}
+\doxysubsubsection{\texorpdfstring{checkCS()}{checkCS()}}
+{\footnotesize\ttfamily bool Motor\+CS\+::check\+CS (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Check the status of the control system enable boolean. 
+
+\begin{DoxyReturn}{Returns}
+A boolean representing the status of the Control System. True for on, false for off. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMotorCS_a1d00dee2acacc4eb26c79415f111ebdf}\label{classMotorCS_a1d00dee2acacc4eb26c79415f111ebdf}} 
+\index{MotorCS@{MotorCS}!gainSet@{gainSet}}
+\index{gainSet@{gainSet}!MotorCS@{MotorCS}}
+\doxysubsubsection{\texorpdfstring{gainSet()}{gainSet()}}
+{\footnotesize\ttfamily void Motor\+CS\+::gain\+Set (\begin{DoxyParamCaption}\item[{CS\+\_\+\+Gains}]{k,  }\item[{float}]{gain }\end{DoxyParamCaption})}
+
+
+
+Interact with the enumerated CS\+\_\+\+Gains type to change any of the three gains. Write only. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The desired gain type of CS\+\_\+\+Gains to be changed. \\
+\hline
+{\em gain} & The new value of the changed CS\+\_\+\+Gains value. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMotorCS_a7e4001cd97dc6a57c2c18427ada559ac}\label{classMotorCS_a7e4001cd97dc6a57c2c18427ada559ac}} 
+\index{MotorCS@{MotorCS}!newSetpoint@{newSetpoint}}
+\index{newSetpoint@{newSetpoint}!MotorCS@{MotorCS}}
+\doxysubsubsection{\texorpdfstring{newSetpoint()}{newSetpoint()}}
+{\footnotesize\ttfamily void Motor\+CS\+::new\+Setpoint (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{set }\end{DoxyParamCaption})}
+
+
+
+Set a new PWM signal setpoint to drive the motors with. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em set} & The new setpoint (PWM signal) desired. Can be any number, but handled internally to between -\/255 and 255. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMotorCS_ad5901f9a625a64985a8e811bc1d140e2}\label{classMotorCS_ad5901f9a625a64985a8e811bc1d140e2}} 
+\index{MotorCS@{MotorCS}!run@{run}}
+\index{run@{run}!MotorCS@{MotorCS}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Motor\+CS\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMotor}{Motor}}}]{motor,  }\item[{int16\+\_\+t}]{enc\+\_\+velocity }\end{DoxyParamCaption})}
+
+
+
+Calculate the new necessary PWM signal to achieve the desired speed of the current stored setpoint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em motor} & The motor to be controlled. \\
+\hline
+{\em enc\+\_\+velocity} & An updated encoder velocity from the attached encoder. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMotorCS_ae21ac9c1cab6b7bd958eb44cf123984d}\label{classMotorCS_ae21ac9c1cab6b7bd958eb44cf123984d}} 
+\index{MotorCS@{MotorCS}!run@{run}}
+\index{run@{run}!MotorCS@{MotorCS}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Motor\+CS\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMotor}{Motor}}}]{motor,  }\item[{int16\+\_\+t}]{enc\+\_\+velocity,  }\item[{int16\+\_\+t}]{set }\end{DoxyParamCaption})}
+
+
+
+Calculate the new necessary PWM signal to achieve the desired speed of the provided setpoint. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em motor} & The motor to be controlled. \\
+\hline
+{\em enc\+\_\+velocity} & An updated encoder velocity from the attached encoder. \\
+\hline
+{\em set} & The new desired setpoint. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Motor\+\_\+\+Drivers/Motor\+CS.\+h\item 
+src/\+Motor\+\_\+\+Drivers/\mbox{\hyperlink{MotorCS_8cpp}{Motor\+CS.\+cpp}}\end{DoxyCompactItemize}

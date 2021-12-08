@@ -1,0 +1,65 @@
+\hypertarget{ESP32Encoder_8h_source}{}\doxysection{ESP32\+Encoder.\+h}
+\label{ESP32Encoder_8h_source}\index{src/Motor\_Drivers/ESP32Encoder.h@{src/Motor\_Drivers/ESP32Encoder.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <Arduino.h>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <driver/gpio.h>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <driver/pcnt.h>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define MAX\_ESP32\_ENCODERS PCNT\_UNIT\_MAX}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define     \_INT16\_MAX 32766}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define     \_INT16\_MIN -\/32766}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{enum} encType \{}
+\DoxyCodeLine{16 single,}
+\DoxyCodeLine{17 half,}
+\DoxyCodeLine{18 full}
+\DoxyCodeLine{19 \};}
+\DoxyCodeLine{20 \textcolor{keyword}{enum} puType \{}
+\DoxyCodeLine{21 UP,}
+\DoxyCodeLine{22 DOWN,}
+\DoxyCodeLine{23 NONE}
+\DoxyCodeLine{24 \};}
+\DoxyCodeLine{25 \textcolor{keyword}{class }\mbox{\hyperlink{classESP32Encoder}{ESP32Encoder}} \{}
+\DoxyCodeLine{26 \textcolor{keyword}{private}:}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} attach(\textcolor{keywordtype}{int} aPintNumber, \textcolor{keywordtype}{int} bPinNumber, \textcolor{keyword}{enum} encType et);}
+\DoxyCodeLine{28     \textcolor{keywordtype}{boolean} attached=\textcolor{keyword}{false};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31     \textcolor{keyword}{static}  pcnt\_isr\_handle\_t user\_isr\_handle; \textcolor{comment}{//user's ISR service handle}}
+\DoxyCodeLine{32     \textcolor{keywordtype}{bool} direction;}
+\DoxyCodeLine{33     \textcolor{keywordtype}{bool} working;}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \textcolor{keyword}{static} \textcolor{keywordtype}{bool} attachedInterrupt;}
+\DoxyCodeLine{36     int64\_t getCountRaw();}
+\DoxyCodeLine{37 \textcolor{keyword}{public}:}
+\DoxyCodeLine{38     \mbox{\hyperlink{classESP32Encoder}{ESP32Encoder}}();}
+\DoxyCodeLine{39     \mbox{\hyperlink{classESP32Encoder}{\string~ESP32Encoder}}();}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} attachHalfQuad(\textcolor{keywordtype}{int} aPintNumber, \textcolor{keywordtype}{int} bPinNumber);}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} attachFullQuad(\textcolor{keywordtype}{int} aPintNumber, \textcolor{keywordtype}{int} bPinNumber);}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} attachSingleEdge(\textcolor{keywordtype}{int} aPintNumber, \textcolor{keywordtype}{int} bPinNumber);}
+\DoxyCodeLine{43     int64\_t getCount();}
+\DoxyCodeLine{44     int64\_t clearCount();}
+\DoxyCodeLine{45     int64\_t pauseCount();}
+\DoxyCodeLine{46     int64\_t resumeCount();}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     \textcolor{keywordtype}{boolean} isAttached()\{\textcolor{keywordflow}{return} attached;\}}
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} setCount(int64\_t value);}
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} setFilter(uint16\_t value);}
+\DoxyCodeLine{51     \textcolor{keyword}{static} \mbox{\hyperlink{classESP32Encoder}{ESP32Encoder}} *encoders[MAX\_ESP32\_ENCODERS];}
+\DoxyCodeLine{52     gpio\_num\_t aPinNumber;}
+\DoxyCodeLine{53     gpio\_num\_t bPinNumber;}
+\DoxyCodeLine{54     pcnt\_unit\_t unit;}
+\DoxyCodeLine{55     \textcolor{keywordtype}{bool} fullQuad=\textcolor{keyword}{false};}
+\DoxyCodeLine{56     \textcolor{keywordtype}{int} countsMode = 2;}
+\DoxyCodeLine{57     \textcolor{keyword}{volatile} int64\_t count=0;}
+\DoxyCodeLine{58     pcnt\_config\_t r\_enc\_config;}
+\DoxyCodeLine{59     \textcolor{keyword}{static} \textcolor{keyword}{enum} puType useInternalWeakPullResistors;}
+\DoxyCodeLine{60 \};}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 \textcolor{comment}{//Added by Sloeber }}
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{64 }
+
+\end{DoxyCode}

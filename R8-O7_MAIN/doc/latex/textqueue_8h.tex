@@ -1,0 +1,21 @@
+\hypertarget{textqueue_8h}{}\doxysection{src/\+ME507\+\_\+\+Support/textqueue.h File Reference}
+\label{textqueue_8h}\index{src/ME507\_Support/textqueue.h@{src/ME507\_Support/textqueue.h}}
+{\ttfamily \#include $<$Arduino.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Free\+RTOS.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}taskqueue.\+h\char`\"{}}\newline
+Include dependency graph for textqueue.\+h\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classTextQueue}{Text\+Queue}}
+\begin{DoxyCompactList}\small\item\em Implements a queue to transmit text from one RTOS task to another. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains a class which implements a Free\+RTOS queue specifically for text, allowing a stream insertion operator to be used to put all sorts of things (strings, numbers, {\itshape etc}.) into the queue. The stream extraction operator has been tested on STM32\textquotesingle{}s and ESP32\textquotesingle{}s only; the extraction operator {\ttfamily \texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>}} needs somewhat processor specific functions to determine if it\textquotesingle{}s running in an ISR or not.
+
+\begin{DoxyDate}{Date}
+2021-\/Sep-\/17 JRR Original file
+\end{DoxyDate}
+License\+: This file is copyright 2021 by JR Ridgely and released under the Lesser GNU Public License, version 2.\+1. It intended for educational use only, but its use is not limited thereto. 
