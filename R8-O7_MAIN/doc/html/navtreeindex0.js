@@ -237,6 +237,9 @@ var NAVTREEINDEX0 =
 "navigation__task_8cpp.html#ac3ec78a2fc11fcf630aae7c65952d226":[7,0,0,17,4],
 "navigation__task_8h_source.html":[7,0,0,18],
 "page_Hardware.html":[3],
+"page_Hardware.html#Hardware_Decisions":[3,0],
+"page_Hardware.html#section_MechanicalDesign":[3,2],
+"page_Hardware.html#section_electronics":[3,1],
 "page_Results.html":[5],
 "page_Software.html":[4],
 "pages.html":[],
@@ -246,8 +249,5 @@ var NAVTREEINDEX0 =
 "sensor__suite__task_8cpp.html#a5e27bcbaee2183a3fe52dacb62ed31cd":[7,0,0,19,4],
 "sensor__suite__task_8cpp.html#aa3df47cfc735a7cb385c3c7ca9f51709":[7,0,0,19,3],
 "sensor__suite__task_8cpp.html#acd60012263847b4cf0e1aaedd735d53a":[7,0,0,19,5],
-"sensor__suite__task_8cpp.html#affe1756c211a5cb663bb38443fd5e307":[7,0,0,19,2],
-"sensor__suite__task_8h_source.html":[7,0,0,20],
-"shares_8h.html":[7,0,0,21],
-"shares_8h.html#a2fa785cff9be4b8a6c4b3efa3ee0fedb":[7,0,0,21,7]
+"sensor__suite__task_8cpp.html#affe1756c211a5cb663bb38443fd5e307":[7,0,0,19,2]
 };
