@@ -3,7 +3,7 @@
  * @author Kai Quizon
  * @date   October 25, 2021
  * @copyright (c) 2021 by Kai Quizon, released under the LGPL 3.0.
- **/
+ */
 
 #include <Wire.h>
 #include <Arduino.h>

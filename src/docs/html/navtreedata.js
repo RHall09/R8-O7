@@ -68,7 +68,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "ESP32Encoder_8cpp.html",
-"globals_vars.html"
+"globals_func.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

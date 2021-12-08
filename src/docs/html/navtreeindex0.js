@@ -62,8 +62,9 @@ var NAVTREEINDEX0 =
 "RegOperators_8h.html#ada285298d7abddc4d8b83747e71d0955":[7,0,2,1,4],
 "RegOperators_8h.html#ae5db26aa84987f7b169a898bf4c02034":[7,0,2,1,7],
 "RegOperators_8h_source.html":[7,0,2,1],
-"anagloc__i2c_8h_source.html":[7,0,5,0],
-"analog__i2c_8cpp.html":[7,0,5,1],
+"analog__i2c_8cpp.html":[7,0,5,0],
+"analog__i2c_8h.html":[7,0,5,1],
+"analog__i2c_8h_source.html":[7,0,5,1],
 "annotated.html":[6,0],
 "baseshare_8cpp.html":[7,0,1,0],
 "baseshare_8cpp.html#a4700b5f4d08a994556955c2aa75f3236":[7,0,1,0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "geofencing_8h_source.html":[7,0,0,1],
 "globals.html":[7,1,0],
 "globals_defs.html":[7,1,4],
-"globals_enum.html":[7,1,3],
-"globals_func.html":[7,1,1]
+"globals_enum.html":[7,1,3]
 };
