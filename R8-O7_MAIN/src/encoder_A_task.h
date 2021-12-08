@@ -14,5 +14,5 @@
  *           handles overflow internally and automatically. Dependent on hephaestus's \ref ESP32Encoder.
  *  @param   p_params A pointer to function parameters which we don't use.
  */
-void encoder_A (void* p_params);
+void encoder_A_task (void* p_params);
 #endif // _TASK_ENCODER_A_

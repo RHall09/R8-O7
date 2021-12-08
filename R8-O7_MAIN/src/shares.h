@@ -40,6 +40,8 @@ extern Queue<float> enc_dt_A_q;
 extern Queue<float> enc_dt_B_q;
 /// Share of motor flag registers, changes if motor faults detected
 extern Share<uint8_t> motorFlagRegister;
+/// Share of object detected by auxillary sensors
+extern Share<bool> Obj_flag;
 
 
 /// Part of a Rick Flag Register that handles overcurrent motor faults
