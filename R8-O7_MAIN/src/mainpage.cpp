@@ -6,9 +6,10 @@
  * code located at:\n
  * https://github.com/RHall09/R8-O7 \n
  * \n 
+ * @image html J4K3.png "J4-K3, Jake the Droid Interacting with Two Young Guests, courtesy of Orange County Register."
  * This project set out to develop a “Crowd Interaction Bot” similar to those developed as free meandering animatronics in theme parks. 
  * The primary inspiration for this project lies in J4-K3, or Jake the Droid. J4-K3 is an autonomous, free-roaming, interactive animatronic 
- * that is capable of advanced crowd navigation, interaction, and avoidance. J4-K3 is a closed project and is no longer in action in Disneyland 
+ * that is capable of advanced crowd navigation, interaction, and avoidance, as seen above.. J4-K3 is a closed project and is no longer in action in Disneyland 
  * Park. \n 
  * \n 
  * Using J4-K3’s premise of crowd interaction with a focus on safety, we set out to build a bot that could be contained within a user defined 
