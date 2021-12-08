@@ -14,12 +14,13 @@
 
 #define EVER (;;)
 
-BluetoothSerial SerialBT;
+BluetoothSerial SerialBT;zd
 void setup() {
 Serial.begin(115200);
 SerialBT.begin("ESP32test"); //Bluetooth device name
 Serial.println("Device Initialized, Ready for Pairing");
 
+// Unfinished, place code for recieving bluetooth over serial port here
 for EVER  
 { 
     //Analog Input for Y axis, rescale for pwm (-255 to 255)
