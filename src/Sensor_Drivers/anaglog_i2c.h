@@ -1,8 +1,8 @@
 /** @file analog_i2c.h
  *  @brief         This file contains the header for a class that acts as a driver for the \b ADS7828 8 Channel Analog I2C expansion bus. Member functions are contained in \ref analog_i2c.cpp
- * @author Kai Quizon
- * @date   October 25, 2021
- * @copyright (c) 2021 by Kai Quizon, released under the LGPL 3.0.
+ *  @author Kai Quizon
+ *  @date   October 25, 2021
+ *  @copyright (c) 2021 by Kai Quizon, released under the LGPL 3.0.
  **/
 
 #ifndef ANALOG_I2C_H
