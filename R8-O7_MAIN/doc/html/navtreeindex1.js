@@ -1,5 +1,8 @@
 var NAVTREEINDEX1 =
 {
+"sensor__suite__task_8h_source.html":[7,0,0,20],
+"shares_8h.html":[7,0,0,21],
+"shares_8h.html#a2fa785cff9be4b8a6c4b3efa3ee0fedb":[7,0,0,21,7],
 "shares_8h.html#a5196264ee1c7839031ce9be3d26d1c9a":[7,0,0,21,13],
 "shares_8h.html#a5763ffcc5dd4aaaf79622a8ea7da5e50":[7,0,0,21,8],
 "shares_8h.html#a5a668577c98d90651804f729f9a95247":[7,0,0,21,15],

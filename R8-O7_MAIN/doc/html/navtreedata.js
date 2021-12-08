@@ -28,7 +28,11 @@ var NAVTREE =
     [ "Introduction", "index.html#sec_intro", null ],
     [ "Directory", "index.html#sec_directory", null ],
     [ "References", "index.html#sec_references", null ],
-    [ "Hardware Design", "page_Hardware.html", null ],
+    [ "Hardware Design", "page_Hardware.html", [
+      [ "Major Design Decisions", "page_Hardware.html#Hardware_Decisions", null ],
+      [ "Sensors, Actuators, and Electronics", "page_Hardware.html#section_electronics", null ],
+      [ "Mechanical Design", "page_Hardware.html#section_MechanicalDesign", null ]
+    ] ],
     [ "Software Design", "page_Software.html", null ],
     [ "Results", "page_Results.html", null ],
     [ "Classes", "annotated.html", [
@@ -57,7 +61,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "ESP32Encoder_8cpp.html",
-"shares_8h.html#a5196264ee1c7839031ce9be3d26d1c9a"
+"sensor__suite__task_8h_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
