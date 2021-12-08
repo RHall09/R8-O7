@@ -1,5 +1,5 @@
-/** @headerfile motor_CS_A_task.h ""
- *  This file acts as a header for a task that runs the motor control system.
+/** @file motor_CS_A_task.h
+ *  @brief This file acts as a header for a task that runs the motor control system.
  * 
  *  @author Rick Hall
  *  @date   2021-Nov-27 Original file

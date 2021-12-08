@@ -1,5 +1,6 @@
-/** @headerfile navigation_task.h ""
- *  This file acts as a header for a task which takes inputs from all sensors 
+/** @file navigation_task.h
+ *  @brief The header for the main brain of R8-07.
+ *  @details This file acts as a header for a task which takes inputs from all sensors 
  *  and the GPS to determine the path of the robot and output motor
  *  PWM values accordingly.
  * 

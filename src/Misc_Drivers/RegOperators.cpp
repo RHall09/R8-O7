@@ -1,5 +1,6 @@
 /** @file RegOperators.cpp
- *    This file contains a compilation of functions that may
+ *  @brief Some bit banger functions to simplify the toggling of bits.
+ * @details   This file contains a compilation of functions that may
  *    be used to set, clear, toggle, and check the bits of a 
  *    flag register in memory. All functions are overloaded for
  *    8 or 16 bit flag registers.

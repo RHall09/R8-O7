@@ -1,5 +1,6 @@
-/** @headerfile nav_module.h ""
- *      This file contains the class declaration of a class for naturally driving the bot within a geofence.
+/** @file nav_module.h
+ *  @brief A c;ass declaration for the main brain of R8-07, navigating on available data. 
+ * @details This file contains the class declaration of a class for naturally driving the bot within a geofence.
  *      This class provides all motor set points unless overriden by the Bluetooth control task.
  *  @author Rick Hall
  *  @date 2021-4-Nov

@@ -25,6 +25,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="R5Example.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">R8-O7 Crowd Interaction Astromech<span id="projectnumber">&#160;807</span>
    </div>
@@ -98,7 +99,7 @@ $(document).ready(function(){initNavTree('classMotor.html',''); initResizable();
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1508ef3b178ebbc9efb702f18dd405e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMotor.html#a1508ef3b178ebbc9efb702f18dd405e3">Motor</a> (int Pin_En, int Pin_1, int Pin_2, Motor_Number mot_num)</td></tr>
+<tr class="memitem:a1508ef3b178ebbc9efb702f18dd405e3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMotor.html#a1508ef3b178ebbc9efb702f18dd405e3">Motor</a> (int Pin_En, int Pin_1, int Pin_2, <a class="el" href="Motor_8h.html#acbb1d8ebb054539ae61a1ddd7dfaab6e">Motor_Number</a> mot_num)</td></tr>
 <tr class="memdesc:a1508ef3b178ebbc9efb702f18dd405e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the <b><a class="el" href="classMotor.html" title="A class containing functions for driving a single motor using the MD-L6205D chip.">Motor</a></b> class object, create appropriate PWM channels, and initially disable motors.  <a href="classMotor.html#a1508ef3b178ebbc9efb702f18dd405e3">More...</a><br /></td></tr>
 <tr class="separator:a1508ef3b178ebbc9efb702f18dd405e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4cbefe961c780361fefdb16eea4fe33e"><td class="memItemLeft" align="right" valign="top"><a id="a4cbefe961c780361fefdb16eea4fe33e" name="a4cbefe961c780361fefdb16eea4fe33e"></a>
@@ -121,7 +122,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>disable</b> (void)</t
 <tr class="memitem:af2a0066f52e8e57582b5fa67484081ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMotor.html#af2a0066f52e8e57582b5fa67484081ec">clearOvercurrent</a> (void)</td></tr>
 <tr class="memdesc:af2a0066f52e8e57582b5fa67484081ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear for overcurrent conditions in the motor.  <a href="classMotor.html#af2a0066f52e8e57582b5fa67484081ec">More...</a><br /></td></tr>
 <tr class="separator:af2a0066f52e8e57582b5fa67484081ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f658b7d6f245359a1d962c339dd6493"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMotor.html#a8f658b7d6f245359a1d962c339dd6493">FlagChk</a> (MotFlag flag)</td></tr>
+<tr class="memitem:a8f658b7d6f245359a1d962c339dd6493"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMotor.html#a8f658b7d6f245359a1d962c339dd6493">FlagChk</a> (<a class="el" href="Motor_8h.html#a963e840946fa79b881fff46dc2a82238">MotFlag</a> flag)</td></tr>
 <tr class="memdesc:a8f658b7d6f245359a1d962c339dd6493"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check <a class="el" href="classMotor.html" title="A class containing functions for driving a single motor using the MD-L6205D chip.">Motor</a> flags.  <a href="classMotor.html#a8f658b7d6f245359a1d962c339dd6493">More...</a><br /></td></tr>
 <tr class="separator:a8f658b7d6f245359a1d962c339dd6493"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -199,7 +200,7 @@ int16_t&#160;</td><td class="memItemRight" valign="bottom"><b>curr_abs_pwm</b> =
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">Motor_Number&#160;</td>
+          <td class="paramtype"><a class="el" href="Motor_8h.html#acbb1d8ebb054539ae61a1ddd7dfaab6e">Motor_Number</a>&#160;</td>
           <td class="paramname"><em>mot_num</em>&#160;</td>
         </tr>
         <tr>
@@ -275,7 +276,7 @@ int16_t&#160;</td><td class="memItemRight" valign="bottom"><b>curr_abs_pwm</b> =
         <tr>
           <td class="memname">bool Motor::FlagChk </td>
           <td>(</td>
-          <td class="paramtype">MotFlag&#160;</td>
+          <td class="paramtype"><a class="el" href="Motor_8h.html#a963e840946fa79b881fff46dc2a82238">MotFlag</a>&#160;</td>
           <td class="paramname"><em>flag</em></td><td>)</td>
           <td></td>
         </tr>
@@ -341,8 +342,8 @@ int16_t&#160;</td><td class="memItemRight" valign="bottom"><b>curr_abs_pwm</b> =
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>src/Motor_Drivers/<a class="el" href="Motor_8h_source.html">Motor.h</a></li>
-<li>src/Motor_Drivers/<a class="el" href="Motor_8cpp.html">Motor.cpp</a></li>
+<li>Motor_Drivers/<a class="el" href="Motor_8h_source.html">Motor.h</a></li>
+<li>Motor_Drivers/<a class="el" href="Motor_8cpp.html">Motor.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

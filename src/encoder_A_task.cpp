@@ -1,8 +1,9 @@
 /** @file encoder_A_task.cpp
- *  This file contains a task which periodically reads the encoder for the left motor. 
+ *  @brief This file contains a task which periodically reads the encoder for the left motor. 
  * 
  *  @author Rick Hall
  *  @date   2021-Nov-27 Original file
+ *  @copyright (c) 2021 by Rick Hall, released under the LGPL 3.0.
  */
 
 #include <Arduino.h>

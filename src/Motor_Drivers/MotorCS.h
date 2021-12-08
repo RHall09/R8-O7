@@ -1,5 +1,6 @@
-/** @headerfile MotorCS.h ""
- *      This file contains the class declaration of a class designed to drive a motor with two PWM signals
+/** @file MotorCS.h
+ *  @brief File acts as a header for a class for interacting with \b MD-L6205D motor driver chip.
+ * @details     This file contains the class declaration of a class designed to drive a motor with two PWM signals
  *      and an enable pin using the \b MD-L6205D motor driverchip. This class implements a 
  *      PID control loop with user defined gains.
  *  @author Rick Hall

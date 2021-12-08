@@ -1,10 +1,12 @@
 /** @file sensor_suite_task.cpp
- *  This file contains a task which updates the read values off of *all* sensors
+ *  @brief The task that checks the status of all active sensors.
+ *  @details This file contains a task which updates the read values off of *all* sensors
  *  directly related to guest safety. This includes the crowd interaction suite
  *  and the foot mounted checks.
  * 
  *  @author Kai Quizon
  *  @date   2021-Nov-27 Original file 
+ *  @copyright (c) 2021 by Kai Quizon, released under the LGPL 3.0.
  */
 
 #include <Arduino.h>
@@ -69,4 +71,6 @@ void sensor_suite_task(void* p_param) {
                 tof_main.put(distance);
             }
         }
+
+        // Now update the
 }

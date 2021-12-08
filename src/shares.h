@@ -1,6 +1,7 @@
 /** @file shares.h
+ * @brief Extern declarations of all RTOS shares and queues.
  *  This file contains extern declarations of shares and queues which are used
- *  in more than one file of a demonstration project.
+ *  in more than one file of a this RTOS system.
  * 
  *  @author Kai Quizon
  *  @date   2021-Oct-23 Original file

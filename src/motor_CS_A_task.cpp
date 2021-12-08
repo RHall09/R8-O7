@@ -1,8 +1,9 @@
 /** @file motor_CS_A_task.cpp
- *  This file contains a task which... 
+ *  @brief This file contains a task which runs a control system to control the necessary PWM to a motor to run at consistent speed.. 
  * 
  *  @author Rick Hall
  *  @date   2021-Nov-27 Original file
+ *  @copyright (c) 2021 by Kai Quizon, released under the LGPL 3.0.
  */
 
 #include <Arduino.h>

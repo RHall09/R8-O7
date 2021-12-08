@@ -1,5 +1,5 @@
 /**  @file ESP32Encoder.cpp
- *   		Member functions of an Encoder class by contributor Hephaestus. Capable of handling multiple times of encoders
+ *   @brief		Member functions of an Encoder class by contributor Hephaestus. Capable of handling multiple times of encoders
  *			designed for use with the ESP32 MCU.
  *   @date Oct 15, 2018
  *   @author hephaestus

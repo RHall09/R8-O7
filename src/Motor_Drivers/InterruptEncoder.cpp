@@ -1,5 +1,5 @@
 /**  @file InterruptEncoder.cpp
- *   		Member functions of a dependency of the \ref ESP32Encoder class. Allows for operation of encoders with interrupt service routines.
+ *   @brief		Member functions of a dependency of the \ref ESP32Encoder class. Allows for operation of encoders with interrupt service routines.
  *   @date Oct 8, 2020
  *   @author hephaestus
  **/

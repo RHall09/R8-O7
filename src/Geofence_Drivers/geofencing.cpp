@@ -1,5 +1,6 @@
 /** @file geofencing.cpp
- *          This file contains a single function for returning the shortest straight line distance from a point
+ *  @brief Contains member function for calculating distance to geofence.
+ *  @details This file contains a single function for returning the shortest straight line distance from a point
  *          to the edge of a user define geofence. The geofence must be built as two arrays (one of lattitude points
  *          and one of longitude points) that have matching dimensions. This dimension must be contained as an unsigned 8-bit
  *          integer. Thereby, in this configuration the maximum geofence point definition is 255 pairs of lattitude longitude points.

@@ -25,6 +25,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="R5Example.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">R8-O7 Crowd Interaction Astromech<span id="projectnumber">&#160;807</span>
    </div>
@@ -89,6 +90,9 @@ $(document).ready(function(){initNavTree('geofencing_8cpp.html',''); initResizab
   <div class="headertitle"><div class="title">geofencing.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Contains member function for calculating distance to geofence.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;cmath&gt;</code><br />
 <code>#include &lt;Arduino.h&gt;</code><br />
 </div><table class="memberdecls">
@@ -106,7 +110,8 @@ Functions</h2></td></tr>
 <tr class="separator:a683d58c011ebca3aede1d9d873fd354a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >This file contains a single function for returning the shortest straight line distance from a point to the edge of a user define geofence. The geofence must be built as two arrays (one of lattitude points and one of longitude points) that have matching dimensions. This dimension must be contained as an unsigned 8-bit integer. Thereby, in this configuration the maximum geofence point definition is 255 pairs of lattitude longitude points. The sorting algorithm used to determine the nearest matching geofence point is calculation intensive. Optimization may be necessary if larger geofences are required. This file is dependent on the Arduino framework and the Arduino cmath header. </p><dl class="section author"><dt>Author</dt><dd>Kai Quizon </dd></dl>
+<div class="textblock"><p >Contains member function for calculating distance to geofence. </p>
+<p >This file contains a single function for returning the shortest straight line distance from a point to the edge of a user define geofence. The geofence must be built as two arrays (one of lattitude points and one of longitude points) that have matching dimensions. This dimension must be contained as an unsigned 8-bit integer. Thereby, in this configuration the maximum geofence point definition is 255 pairs of lattitude longitude points. The sorting algorithm used to determine the nearest matching geofence point is calculation intensive. Optimization may be necessary if larger geofences are required. This file is dependent on the Arduino framework and the Arduino cmath header. </p><dl class="section author"><dt>Author</dt><dd>Kai Quizon </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>October 25, 2021 </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>(c) 2021 by Kai Quizon, released under the LGPL 3.0. </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
@@ -155,10 +160,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Calculate the shortest distance from current position to geofence. </p>
-<p >This file acts as a header for the geofencing function defined in <a class="el" href="geofencing_8cpp.html">geofencing.cpp</a>. </p><dl class="section author"><dt>Author</dt><dd>Kai Quizon </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>November 26, 2021 </dd></dl>
-<dl class="section copyright"><dt>Copyright</dt><dd>(c) 2021 by Kai Quizon, released under the LGPL 3.0.</dd></dl>
-<p>Taking in the structured KD Tree, perform the search for the nearest neighbors. Index the data and find its closest neighbors. Then calculate the closest distance to a point or line based on the Rickolas Solution. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >Taking in the structured KD Tree, perform the search for the nearest neighbors. Index the data and find its closest neighbors. Then calculate the closest distance to a point or line based on the Rickolas Solution. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">lat</td><td>Updated lattitude value from the processed GPS data. </td></tr>
     <tr><td class="paramname">longitude</td><td>Updated longitude value from the processed GPS data. </td></tr>

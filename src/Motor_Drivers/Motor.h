@@ -1,5 +1,5 @@
-/** @headerfile Motor.h ""
- *          File acting as a header for a class that drives a motor using the \b MD-L6205D motor driver chip.
+/** @file Motor.h
+ *  @brief      File acting as a header for a class that drives a motor using the \b MD-L6205D motor driver chip.
  *          See \ref Motor.cpp for the member functions.
  * 
  * 

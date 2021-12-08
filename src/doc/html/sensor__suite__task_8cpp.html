@@ -25,6 +25,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="R5Example.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">R8-O7 Crowd Interaction Astromech<span id="projectnumber">&#160;807</span>
    </div>
@@ -90,8 +91,11 @@ $(document).ready(function(){initNavTree('sensor__suite__task_8cpp.html',''); in
   <div class="headertitle"><div class="title">sensor_suite_task.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>The task that checks the status of all active sensors.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
-<code>#include &quot;geofence_task.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="geofence__task_8h_source.html">geofence_task.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="shares_8h_source.html">shares.h</a>&quot;</code><br />
 <code>#include &quot;analog_i2c.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="digital__i2c_8h_source.html">digital_i2c.h</a>&quot;</code><br />
@@ -131,10 +135,8 @@ Adafruit_VL53L1X&#160;</td><td class="memItemRight" valign="bottom"><b>vl53</b> 
 <tr class="separator:acd60012263847b4cf0e1aaedd735d53a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >This file contains a task which updates the read values off of <em>all</em> sensors directly related to guest safety. This includes the crowd interaction suite and the foot mounted checks.</p>
-<dl class="section author"><dt>Author</dt><dd>Kai Quizon </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2021-Nov-27 Original file</dd></dl>
-<p>This file contains a task which updates the read values off of <em>all</em> sensors directly related to guest safety. This includes the crowd interaction suite and the foot mounted checks.</p>
+<div class="textblock"><p >The task that checks the status of all active sensors. </p>
+<p >This file contains a task which updates the read values off of <em>all</em> sensors directly related to guest safety. This includes the crowd interaction suite and the foot mounted checks.</p>
 <dl class="section author"><dt>Author</dt><dd>Kai Quizon </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2021-Nov-27 Original file </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>(c) 2021 by Kai Quizon, released under the LGPL 3.0. </dd></dl>

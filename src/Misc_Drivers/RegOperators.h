@@ -1,5 +1,6 @@
-/** @headerfile RegOperators.h
- *    This file contains a compilation of functions that may
+/** @file RegOperators.h
+ *  @brief Header for a class that makes working with individual bits easier.
+ * @details   This file contains a compilation of functions that may
  *    be used to set, clear, toggle, and check the bits of a 
  *    flag register in memory. All functions are overloaded for
  *    8 or 16 bit flag registers. All functions are overloaded for

@@ -1,5 +1,6 @@
-/** @file sensor_suite_task.cpp
- *  This file contains a task which updates the read values off of *all* sensors
+/** @file sensor_suite_task.h
+ * @brief The header for the sensor suite task which updates all sensors.
+ *  @details This file acts as a header for a task which updates the read values off of *all* sensors
  *  directly related to guest safety. This includes the crowd interaction suite
  *  and the foot mounted checks.
  * 

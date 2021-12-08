@@ -1,5 +1,6 @@
 /** @file Motor.cpp
- *      This file contains the member functions of a class designed to drive a motor with two PWM signals
+ *  @brief Drives a motor when fed a PWM signal (+/-)
+ *  @details     This file contains the member functions of a class designed to drive a motor with two PWM signals
  *      and an enable pin. This class does \b NOT implement a control loop; it simply commands the 
  *      appropriate PWM to the motor.
  * 

@@ -1,5 +1,6 @@
 /** @file MotorCS.cpp
- *      This file contains the member functions of a class designed to drive a motor with two PWM signals
+ *  @brief Member functions of a class to drive a motor from \b MD-L6205D.
+ *  @details     This file contains the member functions of a class designed to drive a motor with two PWM signals
  *      and an enable pin using the \b MD-L6205D motor driverchip. This class implements a 
  *      PID control loop with user defined gains.
  *  @author Rick Hall

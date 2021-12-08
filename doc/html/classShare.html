@@ -25,6 +25,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="R5Example.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">R8-O7 Crowd Interaction Astromech<span id="projectnumber">&#160;807</span>
    </div>
@@ -171,7 +172,7 @@ class Share&lt; DataType &gt;</div><p >Class for data to be shared in a thread-s
 <h1><a class="anchor" id="usage_share"></a>
 Usage</h1>
 <p >The following bits of code show how to set up and use a share to transfer data of type <code>uint16_t</code> from one hypothetical task called <code>task_A</code> to another called <code>task_B</code>.</p>
-<p >In the file which contains <code><a class="el" href="main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d">setup()</a></code> we create a shared data object. The constructor of the <code>Share&lt;uint16_t&gt;</code> class is given a name for the share; the name will be shown on system diagnostic printouts. If it is desired to print diagnostic information to a serial monitor, a pointer to an output stream may also be given: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="taskshare_8h.html">taskshare.h</a>&quot;</span></div>
+<p >In the file which contains <code><a class="el" href="main_8cpp.html#a4fc01d736fe50cf5b977f755b675f11d" title="The basic setup task from arduino, contains all task declarations for FreeRTOS.">setup()</a></code> we create a shared data object. The constructor of the <code>Share&lt;uint16_t&gt;</code> class is given a name for the share; the name will be shown on system diagnostic printouts. If it is desired to print diagnostic information to a serial monitor, a pointer to an output stream may also be given: </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="taskshare_8h.html">taskshare.h</a>&quot;</span></div>
 <div class="line">...</div>
 <div class="line">Share&lt;uint16_t&gt; my_share (<span class="stringliteral">&quot;Data_3&quot;</span>, &amp;Serial);</div>
 <div class="ttc" id="ataskshare_8h_html"><div class="ttname"><a href="taskshare_8h.html">taskshare.h</a></div><div class="ttdoc">Data which can be shared between tasks in a thread-safe manner.</div></div>
@@ -544,7 +545,7 @@ template&lt;class DataType &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>src/ME507_Support/<a class="el" href="taskshare_8h_source.html">taskshare.h</a></li>
+<li>ME507_Support/<a class="el" href="taskshare_8h_source.html">taskshare.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

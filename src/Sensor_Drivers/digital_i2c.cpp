@@ -1,5 +1,5 @@
 /** @file digital_i2c.cpp
- *          This file contains the member functions of a class that acts as a driver for the \b PCA9534 8-bit I2C-bus with 8 digital I/O pins.
+ *   @brief       This file contains the member functions of a class that acts as a driver for the \b PCA9534 8-bit I2C-bus with 8 digital I/O pins.
  * @author Kai Quizon
  * @date   October 25, 2021
  * @copyright (c) 2021 by Kai Quizon, released under the LGPL 3.0.

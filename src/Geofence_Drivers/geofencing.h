@@ -1,5 +1,5 @@
-/** @headerfile geofencing.h ""
- *          This file acts as a header for the geofencing function defined in \ref geofencing.cpp.
+/** @file geofencing.h
+ *  @brief        This file acts as a header for the geofencing function defined in \ref geofencing.cpp.
  * @author Kai Quizon
  * @date   November 26, 2021
  * @copyright (c) 2021 by Kai Quizon, released under the LGPL 3.0.

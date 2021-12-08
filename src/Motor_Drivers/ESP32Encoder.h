@@ -1,5 +1,5 @@
 /**  @file ESP32Encoder.cpp
- *   		Header for the encoder functions contained in \ref ESP32Encoder.cpp.
+ *   @brief		Header for the encoder functions contained in \ref ESP32Encoder.cpp.
  *   @date Oct 15, 2018
  *   @author hephaestus
  **/

@@ -58,6 +58,7 @@ var NAVTREE =
         [ "All", "globals.html", null ],
         [ "Functions", "globals_func.html", null ],
         [ "Variables", "globals_vars.html", null ],
+        [ "Enumerations", "globals_enum.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -67,7 +68,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "ESP32Encoder_8cpp.html",
-"sensor__suite__task_8cpp.html#a2e81a3da2c16c2835fbdc871086767ef"
+"globals_vars.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

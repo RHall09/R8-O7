@@ -1,5 +1,5 @@
-/** @headerfile geofence_task.h ""
- *  This file acts as a header for a task that updates the geofence heading and distance.
+/** @file geofence_task.h 
+ *  @brief This file acts as a header for a task that updates the geofence heading and distance.
  * 
  *  @author Kai Quizon
  *  @date   2021-Nov-27 Original file

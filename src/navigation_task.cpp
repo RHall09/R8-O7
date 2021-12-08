@@ -1,5 +1,6 @@
 /** @file navigation_task.cpp
- *  This file contains a task which takes inputs from all sensors 
+ * @brief The main brain for R8-07, takes in data and outputs motor setpoints.
+ * @details  This file contains a task which takes inputs from all sensors 
  *  and the GPS to determine the path of the robot and output motor
  *  PWM values accordingly.
  * 
@@ -9,6 +10,7 @@
  * 
  *  @author Rick Hall
  *  @date   2021-Dec-02 Original file 
+ *  @copyright (c) 2021 by Kai Quizon, released under the LGPL 3.0.
  */
 
 #include <Arduino.h>
