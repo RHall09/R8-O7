@@ -77,7 +77,7 @@ void navigation_task(void* p_param) {
         if(!bit_chk(Overcurrent_A) | !bit_chk(Overcurrent_B))
         {
             // So long as the nav delay timer is not set, run algorithm
-            if(nav_timer = 0)
+            if(nav_timer == 0)
             {
                 // First update the distance to the fence and the heading
                 fnc_head = fence_heading.get();

@@ -1,8 +1,0 @@
-/** \mainpage 
- *  
- *  This is a class that computes statistical information for a set of data that is entered, one 
- *  point at a time. The class does not store the data; merely return statistical properties of the 
- *  dataset (namely average and standard deviation). See the attached documentation for more details.
- *  
- *  
- */ 

@@ -57,7 +57,8 @@ void sensor_suite_task(void* p_param) {
         // Now update the main Time of Flight Sensor
           int16_t distance;
 
-        if (vl53.dataReady()) {
+        if (vl53.dataReady()) 
+        {
             // new measurement for the taking!
             distance = vl53.distance();
             if (distance == -1) {
@@ -67,5 +68,5 @@ void sensor_suite_task(void* p_param) {
             else {
                 tof_main.put(distance);
             }
-    }
+        }
 }
