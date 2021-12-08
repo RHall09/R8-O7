@@ -170,7 +170,7 @@
  * geofence, the bearing of the robot, and a pre-defined minimum distance to the fence to turn the robot in a manner inversely proportional to the distance to the 
  * geofence and the relative bearing from the robot to the fence. The geometric principle utilized is illustrated in the figure below. \n 
  * 
- * @image Curvaturefromfence.png "Geometry of Naturally Avoiding Geofence with a curve"
+ * @image html CurvaturefromFence.png "Geometry of Naturally Avoiding Geofence with a curve"
  * 
  * Using these computations, the navigation task computes the desired speed and turn rate of the robot, then converts those values into setpoint PWM values to be output to the motor task.
  * 
@@ -178,7 +178,7 @@
  * The Bluetooth module was designed to provide an interface between R-8O7 and a smartphone-based application in order to enable the user to remotely control the 
  * robot, as well as toggle various functions. The image below illustrates the GUI presented to the user when the application is launched from a smartphone. \n
  * 
- * @image BluetoothGUI.png "Bluetooth App GUI for Remote Control" 
+ * @image html BluetoothGUI.png "Bluetooth App GUI for Remote Control" 
  * 
  * The user is able to first connect to R-8O7 via Bluetooth using the ‘Bluetooth Connect’ button. They are presented with a list of paired devices from their phone, 
  * one of which is the built in Bluetooth module on the ESP32. The user is then able to use the joystick on the screen to control the throttle and direction of the 
@@ -186,7 +186,7 @@
  * wishes to disconnect from R-8O7, they can do so via the disconnect button. MITAppinventor was used to synthesize the application, and the block code for the program 
  * can be seen below. \n 
  * 
- * @image "MITCode.png" "Overview of Block Code Structure for Bluetooth App"
+ * @image html "MITCode.png" "Overview of Block Code Structure for Bluetooth App"
  * 
  * The block code sets up the Bluetooth interface on the app, controls the function and reset of the joystick, initializes button and switch states to default states 
  * upon application launch, and manages the way through which the app sends data to the ESP32 over the Bluetooth serial port. \n 
@@ -209,7 +209,7 @@
  * attached. In an attempt to verify functionality of our code, we loaded a heavily modified version of our program onto a small testing bot (occasionally referred to as BabyBot) 
  * that we had used for preliminary single-sensor object avoidance testing. Due to significant differences in the operation of the motors and the lack of the primary sensor suite, 
  * neither the object avoidance algorithm nor the motor control system were utilized in the testing bot. \n 
- * @image BabyBot.png "BabyBot :)"
+ * @image html BabyBot.png "BabyBot :)"
  * With the test bot, we were able to define a geofence for testing within the tennis courts located on Cal Poly campus and test the geofence algorithm, to mixed results. 
  * The geofence algorithm worked as intended, however the GPS module of the ESP32 HUZZAH was not as accurate as we had hoped. The navigation algorithm for the bot had two 
  * primary avoidance tactics – a turn value added to the bot’s forward velocity inversely proportional to the distance to the fence and an immediate stop-and-turn algorithm 
@@ -220,12 +220,20 @@
  * \n 
  * Overall, many of the elements of our software were tested, to varying extents, but the lack of functionality of the full R8-O7 robot prevented us from testing the software 
  * as a unit or fixing errors in the interaction between software segments. With regards to our specific design specifications, the testing results are summarized in the table below.
- * @image Parameters.png
+ * 
+ * @image html Parameters.png
  * 
  * While the full program could not properly run without the motor driver chip and proper attachment of the sensor array, basic functionality of many of the components has been 
  * verified such that it may be tested upon replacement of the PCB. Further, the laser-cut structure of R8-O7 remains incomplete. Given proper time and availability of resources, 
  * this project could easily be resumed, building off of our current hardware and software. To that end, it is our intention to, if possible, pass R8-O7 on to willing engineering 
- * students within Mustang Band. Though our contribution to the project has had mixed results, we are hopeful that R8-O7 may be completed at a later date. 
+ * students within Mustang Band. Though our contribution to the project has had mixed results, we are hopeful that R8-O7 may be completed at a later date. \n 
+ * \n 
+ * Below is a video outlining the function of the geofence with BabyBot.
+ * @htmlonly
+ * <iframe width="420" height="315"
+ * src="https://www.youtube.com/watch?v=XXrl6sB2Q9w" allowfullscreen>
+ * </iframe>
+ * @endhtmlonly
  * 
  * 
  */

@@ -180,7 +180,7 @@ var NAVTREEINDEX0 =
 "encoder__A__task_8cpp.html#a18b51480af09a5e6022a4dc7b7c692d8":[7,0,0,6,1],
 "encoder__A__task_8cpp.html#a2b912ed39df233b43d7a093814705afb":[7,0,0,6,0],
 "encoder__A__task_8h.html":[7,0,0,7],
-"encoder__A__task_8h.html#aee885237bd314a333237bb8e91cb5119":[7,0,0,7,0],
+"encoder__A__task_8h.html#a18b51480af09a5e6022a4dc7b7c692d8":[7,0,0,7,0],
 "encoder__A__task_8h_source.html":[7,0,0,7],
 "encoder__B__task_8cpp.html":[7,0,0,8],
 "encoder__B__task_8cpp.html#a2b912ed39df233b43d7a093814705afb":[7,0,0,8,0],
@@ -242,12 +242,12 @@ var NAVTREEINDEX0 =
 "page_Hardware.html#section_electronics":[3,1],
 "page_Results.html":[5],
 "page_Software.html":[4],
+"page_Software.html#section_Bluetooth":[4,4],
+"page_Software.html#section_Geofence":[4,0],
+"page_Software.html#section_Navigation":[4,3],
+"page_Software.html#section_motorcontrol":[4,1],
+"page_Software.html#section_sensorsuite":[4,2],
 "pages.html":[],
 "sensor__suite__task_8cpp.html":[7,0,0,19],
-"sensor__suite__task_8cpp.html#a2b912ed39df233b43d7a093814705afb":[7,0,0,19,0],
-"sensor__suite__task_8cpp.html#a2e81a3da2c16c2835fbdc871086767ef":[7,0,0,19,1],
-"sensor__suite__task_8cpp.html#a5e27bcbaee2183a3fe52dacb62ed31cd":[7,0,0,19,4],
-"sensor__suite__task_8cpp.html#aa3df47cfc735a7cb385c3c7ca9f51709":[7,0,0,19,3],
-"sensor__suite__task_8cpp.html#acd60012263847b4cf0e1aaedd735d53a":[7,0,0,19,5],
-"sensor__suite__task_8cpp.html#affe1756c211a5cb663bb38443fd5e307":[7,0,0,19,2]
+"sensor__suite__task_8cpp.html#a2b912ed39df233b43d7a093814705afb":[7,0,0,19,0]
 };

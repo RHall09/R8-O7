@@ -33,7 +33,13 @@ var NAVTREE =
       [ "Sensors, Actuators, and Electronics", "page_Hardware.html#section_electronics", null ],
       [ "Mechanical Design", "page_Hardware.html#section_MechanicalDesign", null ]
     ] ],
-    [ "Software Design", "page_Software.html", null ],
+    [ "Software Design", "page_Software.html", [
+      [ "Geofence Algorithm", "page_Software.html#section_Geofence", null ],
+      [ "Motor Control System", "page_Software.html#section_motorcontrol", null ],
+      [ "Sensor Suite", "page_Software.html#section_sensorsuite", null ],
+      [ "Navigation Algorithm", "page_Software.html#section_Navigation", null ],
+      [ "Bluetooth Control", "page_Software.html#section_Bluetooth", null ]
+    ] ],
     [ "Results", "page_Results.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -61,7 +67,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "ESP32Encoder_8cpp.html",
-"sensor__suite__task_8h_source.html"
+"sensor__suite__task_8cpp.html#a2e81a3da2c16c2835fbdc871086767ef"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

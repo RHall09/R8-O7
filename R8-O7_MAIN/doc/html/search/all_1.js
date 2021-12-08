@@ -8,6 +8,8 @@ var searchData=
   ['bit_5fset_5',['bit_set',['../RegOperators_8cpp.html#a097cbf922172ebc72de6e3243f3a7a2a',1,'bit_set(uint8_t reg, uint8_t bit):&#160;RegOperators.cpp'],['../RegOperators_8cpp.html#a539a827c978605e95ef8427f9fc4a8f8',1,'bit_set(uint8_t *p_reg, uint8_t bit):&#160;RegOperators.cpp'],['../RegOperators_8cpp.html#ab41fbcb858aa9f35e8039246b1bfb528',1,'bit_set(uint16_t reg, uint8_t bit):&#160;RegOperators.cpp'],['../RegOperators_8cpp.html#aa6afbd961a542f5da9d98927bcc34b49',1,'bit_set(uint16_t *p_reg, uint8_t bit):&#160;RegOperators.cpp']]],
   ['bit_5ftog_6',['bit_tog',['../RegOperators_8cpp.html#a7f1e929794a4886756c2fd4b96e554e2',1,'bit_tog(uint8_t reg, uint8_t bit):&#160;RegOperators.cpp'],['../RegOperators_8cpp.html#a2151b55207c483e77f2260619dc1bc59',1,'bit_tog(uint8_t *p_reg, uint8_t bit):&#160;RegOperators.cpp'],['../RegOperators_8cpp.html#ab9bffb574a36fb7903847c2d5b8d196f',1,'bit_tog(uint16_t reg, uint8_t bit):&#160;RegOperators.cpp'],['../RegOperators_8cpp.html#a6ff18eaa42881d2d919f73eea4748e3c',1,'bit_tog(uint16_t *p_reg, uint8_t bit):&#160;RegOperators.cpp']]],
   ['bot_5fmot_5fa_7',['bot_mot_A',['../classMotor.html#a7e318182af63ca97083fcc50a4de0826',1,'Motor']]],
-  ['buf_5fsize_8',['buf_size',['../classQueue.html#a2ede016bcaf8f330cd87f56a600218b1',1,'Queue']]],
-  ['butt_5fin_9',['butt_in',['../classQueue.html#ad3c592b245b39ce229b157935f5a65fa',1,'Queue']]]
+  ['bot_5fspeed_8',['Bot_Speed',['../shares_8h.html#a6fd3ee183b456537b23a562c58712a22',1,'shares.h']]],
+  ['bot_5fturnrate_9',['Bot_turnrate',['../shares_8h.html#ab85caad9a7903b6208134765569db346',1,'shares.h']]],
+  ['buf_5fsize_10',['buf_size',['../classQueue.html#a2ede016bcaf8f330cd87f56a600218b1',1,'Queue']]],
+  ['butt_5fin_11',['butt_in',['../classQueue.html#ad3c592b245b39ce229b157935f5a65fa',1,'Queue']]]
 ];

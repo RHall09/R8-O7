@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['setpoint_0',['setpoint',['../classMotorCS.html#a237ac5c05eecdc824494561e79bbf361',1,'MotorCS']]]
+  ['runcs_0',['runCS',['../classMotorCS.html#a6d30febc32e0b14514d1cbec2d428e87',1,'MotorCS']]]
 ];
