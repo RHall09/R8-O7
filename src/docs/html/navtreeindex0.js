@@ -1,9 +1,5 @@
 var NAVTREEINDEX0 =
 {
-<<<<<<< HEAD
-"index.html":[],
-"pages.html":[]
-=======
 "ESP32Encoder_8cpp.html":[7,0,3,0],
 "ESP32Encoder_8h_source.html":[7,0,3,1],
 "InterruptEncoder_8cpp.html":[7,0,3,2],
@@ -253,11 +249,5 @@ var NAVTREEINDEX0 =
 "geofencing_8h_source.html":[7,0,0,1],
 "globals.html":[7,1,0],
 "globals_defs.html":[7,1,4],
-<<<<<<< HEAD
 "globals_enum.html":[7,1,3]
-=======
-"globals_enum.html":[7,1,3],
-"globals_func.html":[7,1,1]
->>>>>>> main
->>>>>>> cc2ee24bfa38f61a85c526db328ee33434a93ca7
 };
