@@ -1,4 +1,26 @@
 /*
+<<<<<<< HEAD
+ @licstart  The following is the entire license notice for the
+ JavaScript code in this file.
+
+ Copyright (C) 1997-2019 by Dimitri van Heesch
+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of version 2 of the GNU General Public License as 
+ published by the Free Software Foundation.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License along
+ with this program; if not, write to the Free Software Foundation, Inc.,
+ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+ @licend  The above is the entire license notice
+ for the JavaScript code in this file
+=======
  @licstart  The following is the entire license notice for the JavaScript code in this file.
 
  The MIT License (MIT)
@@ -21,6 +43,7 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
  @licend  The above is the entire license notice for the JavaScript code in this file
+>>>>>>> main
  */
 var navTreeSubIndices = new Array();
 var arrowDown = '&#9660;';
@@ -325,6 +348,13 @@ function selectAndHighlight(hash,n)
     $(n.itemDiv).addClass('selected');
     $(n.itemDiv).attr('id','selected');
   }
+<<<<<<< HEAD
+  if ($('#nav-tree-contents .item:first').hasClass('selected')) {
+    $('#nav-sync').css('top','30px');
+  } else {
+    $('#nav-sync').css('top','5px');
+  }
+=======
   var topOffset=5;
   if (typeof page_layout!=='undefined' && page_layout==1) {
     topOffset+=$('#top').outerHeight();
@@ -333,6 +363,7 @@ function selectAndHighlight(hash,n)
     topOffset+=25;
   }
   $('#nav-sync').css('top',topOffset+'px');
+>>>>>>> main
   showRoot();
 }
 
