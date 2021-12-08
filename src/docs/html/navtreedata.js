@@ -1,30 +1,4 @@
 /*
-<<<<<<< HEAD
-@licstart  The following is the entire license notice for the
-JavaScript code in this file.
-
-Copyright (C) 1997-2019 by Dimitri van Heesch
-
-This program is free software; you can redistribute it and/or modify
-it under the terms of version 2 of the GNU General Public License as published by
-the Free Software Foundation
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License along
-with this program; if not, write to the Free Software Foundation, Inc.,
-51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-
-@licend  The above is the entire license notice
-for the JavaScript code in this file
-*/
-var NAVTREE =
-[
-  [ "R8-O7 Crowd Interaction Astromech", "index.html", ]
-=======
  @licstart  The following is the entire license notice for the JavaScript code in this file.
 
  The MIT License (MIT)
@@ -89,21 +63,12 @@ var NAVTREE =
       ] ]
     ] ]
   ] ]
->>>>>>> main
 ];
 
 var NAVTREEINDEX =
 [
-<<<<<<< HEAD
-"index.html"
-=======
 "ESP32Encoder_8cpp.html",
-<<<<<<< HEAD
 "globals_func.html"
-=======
-"globals_vars.html"
->>>>>>> main
->>>>>>> cc2ee24bfa38f61a85c526db328ee33434a93ca7
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

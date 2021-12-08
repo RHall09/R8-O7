@@ -1,27 +1,4 @@
 /*
-<<<<<<< HEAD
- @licstart  The following is the entire license notice for the
- JavaScript code in this file.
-
- Copyright (C) 1997-2017 by Dimitri van Heesch
-
- This program is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
-
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
-
- You should have received a copy of the GNU General Public License along
- with this program; if not, write to the Free Software Foundation, Inc.,
- 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-
- @licend  The above is the entire license notice
- for the JavaScript code in this file
-=======
  @licstart  The following is the entire license notice for the JavaScript code in this file.
 
  The MIT License (MIT)
@@ -44,7 +21,6 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
  @licend  The above is the entire license notice for the JavaScript code in this file
->>>>>>> main
  */
 function initResizable()
 {
@@ -77,11 +53,7 @@ function initResizable()
       date.setTime(date.getTime()+(10*365*24*60*60*1000)); // default expiration is one week
       expiration = date.toGMTString();
     }
-<<<<<<< HEAD
-    document.cookie = cookie_namespace + "_" + cookie + "=" + val + "; expires=" + expiration+"; path=/";
-=======
     document.cookie = cookie_namespace + "_" + cookie + "=" + val + "; SameSite=Lax; expires=" + expiration+"; path=/";
->>>>>>> main
   }
 
   function resizeWidth()
@@ -103,12 +75,6 @@ function initResizable()
   {
     var headerHeight = header.outerHeight();
     var footerHeight = footer.outerHeight();
-<<<<<<< HEAD
-    var windowHeight = $(window).height() - headerHeight - footerHeight;
-    content.css({height:windowHeight + "px"});
-    navtree.css({height:windowHeight + "px"});
-    sidenav.css({height:windowHeight + "px"});
-=======
     var windowHeight = $(window).height();
     var contentHeight,navtreeHeight,sideNavHeight;
     if (typeof page_layout==='undefined' || page_layout==0) { /* DISABLE_INDEX=NO */
@@ -123,7 +89,6 @@ function initResizable()
     content.css({height:contentHeight + "px"});
     navtree.css({height:navtreeHeight + "px"});
     sidenav.css({height:sideNavHeight + "px"});
->>>>>>> main
     var width=$(window).width();
     if (width!=collapsedWidth) {
       if (width<desktop_vp && collapsedWidth>=desktop_vp) {
@@ -137,13 +102,9 @@ function initResizable()
       }
       collapsedWidth=width;
     }
-<<<<<<< HEAD
-    (document.getElementById(location.hash.slice(1))||document.body).scrollIntoView();
-=======
     if (location.hash.slice(1)) {
       (document.getElementById(location.hash.slice(1))||document.body).scrollIntoView();
     }
->>>>>>> main
   }
 
   function collapseExpand()

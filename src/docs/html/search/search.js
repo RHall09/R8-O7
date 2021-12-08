@@ -1,27 +1,4 @@
 /*
-<<<<<<< HEAD
- @licstart  The following is the entire license notice for the
- JavaScript code in this file.
-
- Copyright (C) 1997-2017 by Dimitri van Heesch
-
- This program is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
-
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
-
- You should have received a copy of the GNU General Public License along
- with this program; if not, write to the Free Software Foundation, Inc.,
- 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-
- @licend  The above is the entire license notice
- for the JavaScript code in this file
-=======
  @licstart  The following is the entire license notice for the JavaScript code in this file.
 
  The MIT License (MIT)
@@ -44,7 +21,6 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
  @licend  The above is the entire license notice for the JavaScript code in this file
->>>>>>> main
  */
 function convertToId(search)
 {
@@ -104,16 +80,10 @@ function getYPos(item)
           storing this instance.  Is needed to be able to set timeouts.
    resultPath - path to use for external files
 */
-<<<<<<< HEAD
-function SearchBox(name, resultsPath, inFrame, label)
-{
-  if (!name || !resultsPath) {  alert("Missing parameters to SearchBox."); }
-=======
 function SearchBox(name, resultsPath, label, extension)
 {
   if (!name || !resultsPath) {  alert("Missing parameters to SearchBox."); }
   if (!extension || extension == "") { extension = ".html"; }
->>>>>>> main
 
   // ---------- Instance variables
   this.name                  = name;
@@ -126,13 +96,8 @@ function SearchBox(name, resultsPath, label, extension)
   this.hideTimeout           = 0;
   this.searchIndex           = 0;
   this.searchActive          = false;
-<<<<<<< HEAD
-  this.insideFrame           = inFrame;
-  this.searchLabel           = label;
-=======
   this.searchLabel           = label;
   this.extension             = extension;
->>>>>>> main
 
   // ----------- DOM Elements
 
@@ -170,32 +135,6 @@ function SearchBox(name, resultsPath, label, extension)
     var searchSelectWindow = this.DOMSearchSelectWindow();
     var searchField        = this.DOMSearchSelect();
 
-<<<<<<< HEAD
-    if (this.insideFrame)
-    {
-      var left = getXPos(searchField);
-      var top  = getYPos(searchField);
-      left += searchField.offsetWidth + 6;
-      top += searchField.offsetHeight;
-
-      // show search selection popup
-      searchSelectWindow.style.display='block';
-      left -= searchSelectWindow.offsetWidth;
-      searchSelectWindow.style.left =  left + 'px';
-      searchSelectWindow.style.top  =  top  + 'px';
-    }
-    else
-    {
-      var left = getXPos(searchField);
-      var top  = getYPos(searchField);
-      top += searchField.offsetHeight;
-
-      // show search selection popup
-      searchSelectWindow.style.display='block';
-      searchSelectWindow.style.left =  left + 'px';
-      searchSelectWindow.style.top  =  top  + 'px';
-    }
-=======
     var left = getXPos(searchField);
     var top  = getYPos(searchField);
     top += searchField.offsetHeight;
@@ -204,7 +143,6 @@ function SearchBox(name, resultsPath, label, extension)
     searchSelectWindow.style.display='block';
     searchSelectWindow.style.left =  left + 'px';
     searchSelectWindow.style.top  =  top  + 'px';
->>>>>>> main
 
     // stop selection hide timer
     if (this.hideTimeout)
@@ -248,16 +186,9 @@ function SearchBox(name, resultsPath, label, extension)
         }
         return;
       }
-<<<<<<< HEAD
-      else if (window.frames.MSearchResults.searchResults)
-      {
-        var elem = window.frames.MSearchResults.searchResults.NavNext(0);
-        if (elem) elem.focus();
-=======
       else
       {
         window.frames.MSearchResults.postMessage("take_focus", "*");
->>>>>>> main
       }
     }
     else if (e.keyCode==27) // Escape out of the search field
@@ -401,21 +332,13 @@ function SearchBox(name, resultsPath, label, extension)
     if (idx!=-1)
     {
        var hexCode=idx.toString(16);
-<<<<<<< HEAD
-       resultsPage = this.resultsPath + '/' + indexSectionNames[this.searchIndex] + '_' + hexCode + '.html';
-=======
        resultsPage = this.resultsPath + '/' + indexSectionNames[this.searchIndex] + '_' + hexCode + this.extension;
->>>>>>> main
        resultsPageWithSearch = resultsPage+'?'+escape(searchValue);
        hasResultsPage = true;
     }
     else // nothing available for this search term
     {
-<<<<<<< HEAD
-       resultsPage = this.resultsPath + '/nomatches.html';
-=======
        resultsPage = this.resultsPath + '/nomatches' + this.extension;
->>>>>>> main
        resultsPageWithSearch = resultsPage;
        hasResultsPage = false;
     }
@@ -426,28 +349,6 @@ function SearchBox(name, resultsPath, label, extension)
     if (domPopupSearchResultsWindow.style.display!='block')
     {
        var domSearchBox = this.DOMSearchBox();
-<<<<<<< HEAD
-       this.DOMSearchClose().style.display = 'inline';
-       if (this.insideFrame)
-       {
-         var domPopupSearchResults = this.DOMPopupSearchResults();
-         domPopupSearchResultsWindow.style.position = 'relative';
-         domPopupSearchResultsWindow.style.display  = 'block';
-         var width = document.body.clientWidth - 8; // the -8 is for IE :-(
-         domPopupSearchResultsWindow.style.width    = width + 'px';
-         domPopupSearchResults.style.width          = width + 'px';
-       }
-       else
-       {
-         var domPopupSearchResults = this.DOMPopupSearchResults();
-         var left = getXPos(domSearchBox) + 150; // domSearchBox.offsetWidth;
-         var top  = getYPos(domSearchBox) + 20;  // domSearchBox.offsetHeight + 1;
-         domPopupSearchResultsWindow.style.display = 'block';
-         left -= domPopupSearchResults.offsetWidth;
-         domPopupSearchResultsWindow.style.top     = top  + 'px';
-         domPopupSearchResultsWindow.style.left    = left + 'px';
-       }
-=======
        this.DOMSearchClose().style.display = 'inline-block';
        var domPopupSearchResults = this.DOMPopupSearchResults();
        var left = getXPos(domSearchBox) + 150; // domSearchBox.offsetWidth;
@@ -461,7 +362,6 @@ function SearchBox(name, resultsPath, label, extension)
        domPopupSearchResultsWindow.style.top     = top  + 'px';
        domPopupSearchResultsWindow.style.left    = left + 'px';
        domPopupSearchResultsWindow.style.width   = width + 'px';
->>>>>>> main
     }
 
     this.lastSearchValue = searchValue;
@@ -517,20 +417,12 @@ function SearchResults(name)
 
       while (element && element!=parentElement)
       {
-<<<<<<< HEAD
-        if (element.nodeName == 'DIV' && element.className == 'SRChildren')
-=======
         if (element.nodeName.toLowerCase() == 'div' && element.className == 'SRChildren')
->>>>>>> main
         {
           return element;
         }
 
-<<<<<<< HEAD
-        if (element.nodeName == 'DIV' && element.hasChildNodes())
-=======
         if (element.nodeName.toLowerCase() == 'div' && element.hasChildNodes())
->>>>>>> main
         {
            element = element.firstChild;
         }
@@ -848,10 +740,7 @@ function createResults()
     if (searchData[e][1].length==2) // single result
     {
       srLink.setAttribute('href',searchData[e][1][1][0]);
-<<<<<<< HEAD
-=======
       srLink.setAttribute('onclick','parent.searchBox.CloseResultsWindow()');
->>>>>>> main
       if (searchData[e][1][1][1])
       {
        srLink.setAttribute('target','_parent');
@@ -873,10 +762,7 @@ function createResults()
         setKeyActions(srChild,'return searchResults.NavChild(event,'+e+','+c+')');
         setClassAttr(srChild,'SRScope');
         srChild.setAttribute('href',searchData[e][1][c+1][0]);
-<<<<<<< HEAD
-=======
         srChild.setAttribute('onclick','parent.searchBox.CloseResultsWindow()');
->>>>>>> main
         if (searchData[e][1][c+1][1])
         {
          srChild.setAttribute('target','_parent');
