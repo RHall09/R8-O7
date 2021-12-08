@@ -43,6 +43,16 @@ extern Share<uint8_t> motorFlagRegister;
 /// Share of object detected by auxillary sensors
 extern Share<bool> Obj_flag;
 
+/// Share of navigation toggle 
+extern Share<Bool> Navigation_enable;
+/// Share of geofence toggle 
+extern Share<Bool> Geofence_enable;
+/// Share of sensor suite toggle 
+extern Share<Bool> Sensor_enable;
+/// Queue of throttle output from bluetooth task
+extern Queue<float> Bot_Speed[1];
+/// Queue of direction output from bluetooth task
+extern Queue<float> Bot_turnrate[1];
 
 /// Part of a Rick Flag Register that handles overcurrent motor faults
 #define Run_Motor_CS  current_flag, 5
